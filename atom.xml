@@ -3,11 +3,11 @@
   <title> 云湍小站 </title>
   
   <subtitle> 来自云上的湍流 </subtitle>
-  <link href="https://gitee.com/cloudstill/yuntuan-railway-station.git/atom.xml" rel="self"/>
+  <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
-  <link href="https://gitee.com/cloudstill/yuntuan-railway-station.git/"/>
+  <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
   <updated>2022-09-07T02:30:48.221Z</updated>
-  <id>https://gitee.com/cloudstill/yuntuan-railway-station.git/</id>
+  <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
     <name>云湍/Cloudstill</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>来自云上的湍流</title>
-    <link href="https://gitee.com/cloudstill/yuntuan-railway-station.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"/>
-    <id>https://gitee.com/cloudstill/yuntuan-railway-station.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/</id>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/</id>
     <published>2022-09-07T02:13:09.000Z</published>
     <updated>2022-09-07T02:30:48.221Z</updated>
     
@@ -27,14 +27,14 @@
     
     
     
-    <category term="博客，简介" scheme="https://gitee.com/cloudstill/yuntuan-railway-station.git/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AE%80%E4%BB%8B/"/>
+    <category term="博客，简介" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AE%80%E4%BB%8B/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://gitee.com/cloudstill/yuntuan-railway-station.git/2022/09/01/hello-world/"/>
-    <id>https://gitee.com/cloudstill/yuntuan-railway-station.git/2022/09/01/hello-world/</id>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/09/01/hello-world/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/09/01/hello-world/</id>
     <published>2022-09-01T07:38:26.549Z</published>
     <updated>2022-09-01T07:38:26.550Z</updated>
     
