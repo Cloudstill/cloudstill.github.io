@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-09-21T09:04:34.982Z</updated>
+  <updated>2022-10-05T13:20:29.692Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/</id>
     <published>2022-09-07T02:13:09.000Z</published>
-    <updated>2022-09-21T09:04:34.982Z</updated>
+    <updated>2022-10-05T13:20:29.692Z</updated>
     
-    <content type="html"><![CDATA[<p>这只是一个测试，正式内容敬请期待<br><img src="/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/Users/admin/Desktop/云湍小站总站/云湍小站/source/_posts/来自云上的湍流/test_01.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>这只是一个测试，正式内容敬请期待<br><img src="test_01.jpg" alt="一张图片"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;这只是一个测试，正式内容敬请期待&lt;br&gt;&lt;img src=&quot;/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/Users</summary>
+    <summary type="html">&lt;p&gt;这只是一个测试，正式内容敬请期待&lt;br&gt;&lt;img src=&quot;test_01.jpg&quot; alt=&quot;一张图片&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
