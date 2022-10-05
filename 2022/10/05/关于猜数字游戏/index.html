@@ -9,6 +9,8 @@
     
     <title>
         
+            关于猜数字游戏 |
+        
         云湍小站
     </title>
     
@@ -46,47 +48,13 @@
 <main class="page-container">
 
     
-        <div class="first-screen-container flex-center fade-in-down-animation">
-    <div class="content flex-center">
-        <div class="description">
-            死并非生的对立面，而是作为生的一部分永存。
-        </div>
-        
-            <div class="s-icon-list">
-                
-                    
-                        
-                            <span class="s-icon-item qq">
-                                <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8kOonkD9pM-ostsVHMcIa7HXWI2i1pIc&noverify=0&personal_qrcode_source=3">
-                                    <i class="fab fa-qq"></i>
-                                </a>
-                            </span>
-                        
-                    
-                
-                    
-                        
-                            <span class="s-icon-item email">
-                                <a href="mailto:851137399@qq.com">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </span>
-                        
-                    
-                
-            </div>
-        
-    </div>
-</div>
-
-    
 
     <div class="page-main-content">
 
         <div class="page-main-content-top">
             <header class="header-wrapper">
 
-    <div class="header-content has-first-screen">
+    <div class="header-content">
         <div class="left">
             
             <a class="logo-title" href="/">
@@ -99,7 +67,7 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/"
                             >
                                 首页
@@ -144,7 +112,7 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/">首页</a>
                 </li>
             
@@ -173,103 +141,249 @@
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">关于猜数字游戏</span>
+        </div>
+
         
-            <li class="home-article-item">
-
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/%E5%A4%B4%E5%83%8F.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">云湍/Cloudstill</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-10-05 22:27:23</span>
+        <span class="mobile">2022-10-05 22:27</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
                 
+                    <li>
+                        <a href="/tags/c%EF%BC%8C%E6%B8%B8%E6%88%8F/">c，游戏</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
-                <h3 class="home-article-title">
-                    <a href="/2022/10/05/%E5%85%B3%E4%BA%8E%E7%8C%9C%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/">
-                        关于猜数字游戏
-                    </a>
-                </h3>
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>706 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
 
-                <div class="home-article-content markdown-body">
-                    
-                        初学c语言，做了一个基于c语言的比较经典的猜数字游戏。以下为源代码以及部分运行图片。
-#include&lt;stdio.h&gt;
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>初学c语言，做了一个基于c语言的比较经典的猜数字游戏。<br>以下为源代码以及部分运行图片。</p>
+<pre><code>#include&lt;stdio.h&gt;
 #include&lt;time.h&gt;
 #include&lt;stdlib.h&gt;
-//#define ...
-                    
-                </div>
+//#define max 100   //随机生成最大的数为100
+//#define min 0   //随机生成最小的数为0
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Oct 05 2022 22:27:23 GMT+0800">2022-10-05</span></span>
+int main()
+&#123;
+    int min = 1;
+    int x, y, z, max;
+    int a = 0;
+    
+    printf(&quot;欢迎来到猜数字游戏，本游戏由云湍编写，版本号v1.5.5\n本游戏会随机生成一个数字，你需要用尽量少的次数猜出这个数字\n&quot;);
+    printf(&quot;请选择模式：\n1.简单模式 数字范围1~100\n2.普通模式 数字范围1~1000\n3.困难模式 数字范围1~10000\n4.自定义模式\n输入对应的序号数字即可选择模式\n&quot;);
+    scanf_s(&quot;%d&quot;, &amp;z);
+
+    switch (z)
+    &#123;
+    case 1:
+        max = 100;
+        break;
+    case 2:
+        max = 1000;
+        break;
+    case 3:
+        max = 10000;
+        break;
+    case 4:
+        printf(&quot;请输入数字范围的上限\n&quot;);
+        scanf_s(&quot;%d&quot;, &amp;max);
+        break;
+    &#125;
+    
+    srand(time(0));
+    x = rand() % (max - min) + min;  // “%”为模运算
+    
+    while (1) 
+    &#123;
+        printf(&quot;请输入一个数字\n&quot;);
+        scanf_s(&quot;%d&quot;, &amp;y);
+        if (y &lt; x)
+            printf(&quot;小了\n&quot;);
+        else if (y == x)
+        &#123;
+            printf(&quot;恭喜，答对了\n&quot;);
+            a = a + 1;
+            break;
+        &#125;
+        else if (y &gt; x)
+            printf(&quot;大了\n&quot;);
+        a++;
+    &#125;
+    
+    printf(&quot;您已累计尝试%d次\n&quot;, a);
+
+    switch (z)
+    &#123;
+    case 1:
+        if (a == 1)
+        &#123;
+            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
+        &#125;
+        if (a &gt; 1 &amp;&amp; a &lt; 6) 
+        &#123;
+            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
+        &#125;
+        if (a &gt; 5 &amp;&amp; a &lt; 9)
+        &#123;
+        printf(&quot;非常不错！您的水平已经很高了\n&quot;);
+        &#125;
+        if (a &gt; 8)
+        &#123;
+        printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
+        &#125;
+        break;
+    
+    case 2:
+        if (a == 1)
+        &#123;
+            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
+        &#125;
+        if (a &gt; 1 &amp;&amp; a &lt; 16)
+        &#123;
+            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
+        &#125;
+        if (a &gt; 15 &amp;&amp; a &lt; 19)
+        &#123;
+            printf(&quot;非常不错！您的水平已经很高了\n&quot;);
+        &#125;
+        if (a &gt; 18)
+        &#123;
+            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
+        &#125;
+        break;
+    
+    case 3:
+        if (a == 1)
+        &#123;
+            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
+        &#125;
+        if (a &gt; 1 &amp;&amp; a &lt; 26)
+        &#123;
+            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
+        &#125;
+        if (a &gt; 25 &amp;&amp; a &lt; 29)
+        &#123;
+            printf(&quot;非常不错！您的水平已经很高了\n&quot;);
+        &#125;
+        if (a &gt; 28)
+        &#123;
+            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
+        &#125;
+        break;
+    
+    case 4:
+        printf(&quot;感谢您的参与，该模式下无评分系统\n&quot;);
+        break;
+    &#125;
+
+    system(&quot;pause&quot;);
+    return 0;
+&#125;
+
+![](./来自云上的湍流/pic_01.jpg)
+</code></pre>
+
+        </div>
+
         
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/c%EF%BC%8C%E6%B8%B8%E6%88%8F/">c，游戏</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2022/10/05/%E5%85%B3%E4%BA%8E%E7%8C%9C%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/">
-                        来自云上的湍流
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        欢迎来到本blog，很高兴在此与大家相识！
-
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Sep 07 2022 10:13:09 GMT+0800">2022-09-07</span></span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AE%80%E4%BB%8B/">博客，简介</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：关于猜数字游戏</li>
+        <li>本文作者：云湍/Cloudstill</li>
+        <li>创建时间：2022-10-05 22:27:23</li>
+        <li>
+            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/05/关于猜数字游戏/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
     </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
-    
-
-    
 </div>
 
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/c%EF%BC%8C%E6%B8%B8%E6%88%8F/">#c，游戏</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">来自云上的湍流</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -316,6 +430,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -372,6 +503,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -414,7 +553,6 @@
 
 
 
-
 <script src="/js/utils.js"></script>
 
 <script src="/js/main.js"></script>
@@ -437,6 +575,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

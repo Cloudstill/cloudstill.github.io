@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-10-05T13:20:29.692Z</updated>
+  <updated>2022-10-05T14:35:14.834Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -17,18 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于猜数字游戏</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/05/%E5%85%B3%E4%BA%8E%E7%8C%9C%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/05/%E5%85%B3%E4%BA%8E%E7%8C%9C%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/</id>
+    <published>2022-10-05T14:27:23.000Z</published>
+    <updated>2022-10-05T14:35:14.834Z</updated>
+    
+    <content type="html"><![CDATA[<p>初学c语言，做了一个基于c语言的比较经典的猜数字游戏。<br>以下为源代码以及部分运行图片。</p><pre><code>#include&lt;stdio.h&gt;#include&lt;time.h&gt;#include&lt;stdlib.h&gt;//#define max 100   //随机生成最大的数为100//#define min 0   //随机生成最小的数为0int main()&#123;    int min = 1;    int x, y, z, max;    int a = 0;        printf(&quot;欢迎来到猜数字游戏，本游戏由云湍编写，版本号v1.5.5\n本游戏会随机生成一个数字，你需要用尽量少的次数猜出这个数字\n&quot;);    printf(&quot;请选择模式：\n1.简单模式 数字范围1~100\n2.普通模式 数字范围1~1000\n3.困难模式 数字范围1~10000\n4.自定义模式\n输入对应的序号数字即可选择模式\n&quot;);    scanf_s(&quot;%d&quot;, &amp;z);    switch (z)    &#123;    case 1:        max = 100;        break;    case 2:        max = 1000;        break;    case 3:        max = 10000;        break;    case 4:        printf(&quot;请输入数字范围的上限\n&quot;);        scanf_s(&quot;%d&quot;, &amp;max);        break;    &#125;        srand(time(0));    x = rand() % (max - min) + min;  // “%”为模运算        while (1)     &#123;        printf(&quot;请输入一个数字\n&quot;);        scanf_s(&quot;%d&quot;, &amp;y);        if (y &lt; x)            printf(&quot;小了\n&quot;);        else if (y == x)        &#123;            printf(&quot;恭喜，答对了\n&quot;);            a = a + 1;            break;        &#125;        else if (y &gt; x)            printf(&quot;大了\n&quot;);        a++;    &#125;        printf(&quot;您已累计尝试%d次\n&quot;, a);    switch (z)    &#123;    case 1:        if (a == 1)        &#123;            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);        &#125;        if (a &gt; 1 &amp;&amp; a &lt; 6)         &#123;            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);        &#125;        if (a &gt; 5 &amp;&amp; a &lt; 9)        &#123;        printf(&quot;非常不错！您的水平已经很高了\n&quot;);        &#125;        if (a &gt; 8)        &#123;        printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);        &#125;        break;        case 2:        if (a == 1)        &#123;            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);        &#125;        if (a &gt; 1 &amp;&amp; a &lt; 16)        &#123;            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);        &#125;        if (a &gt; 15 &amp;&amp; a &lt; 19)        &#123;            printf(&quot;非常不错！您的水平已经很高了\n&quot;);        &#125;        if (a &gt; 18)        &#123;            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);        &#125;        break;        case 3:        if (a == 1)        &#123;            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);        &#125;        if (a &gt; 1 &amp;&amp; a &lt; 26)        &#123;            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);        &#125;        if (a &gt; 25 &amp;&amp; a &lt; 29)        &#123;            printf(&quot;非常不错！您的水平已经很高了\n&quot;);        &#125;        if (a &gt; 28)        &#123;            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);        &#125;        break;        case 4:        printf(&quot;感谢您的参与，该模式下无评分系统\n&quot;);        break;    &#125;    system(&quot;pause&quot;);    return 0;&#125;![](./来自云上的湍流/pic_01.jpg)</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;初学c语言，做了一个基于c语言的比较经典的猜数字游戏。&lt;br&gt;以下为源代码以及部分运行图片。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+#include&amp;lt;time.h&amp;gt;
+#include&amp;lt;stdlib.h&amp;gt;
+//#</summary>
+      
+    
+    
+    
+    
+    <category term="c，游戏" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/c%EF%BC%8C%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>来自云上的湍流</title>
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/</id>
     <published>2022-09-07T02:13:09.000Z</published>
-    <updated>2022-10-05T13:20:29.692Z</updated>
+    <updated>2022-10-05T14:28:50.705Z</updated>
     
-    <content type="html"><![CDATA[<p>这只是一个测试，正式内容敬请期待<br><img src="test_01.jpg" alt="一张图片"></p>]]></content>
+    <content type="html"><![CDATA[<p>欢迎来到本blog，很高兴在此与大家相识！<br><img src="test_01.jpg"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;这只是一个测试，正式内容敬请期待&lt;br&gt;&lt;img src=&quot;test_01.jpg&quot; alt=&quot;一张图片&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;欢迎来到本blog，很高兴在此与大家相识！&lt;br&gt;&lt;img src=&quot;test_01.jpg&quot;&gt;&lt;/p&gt;
 </summary>
       
     
@@ -36,26 +62,6 @@
     
     
     <category term="博客，简介" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C%E7%AE%80%E4%BB%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/09/01/hello-world/"/>
-    <id>https://gitee.com/cloudstill/cloudstill.git/2022/09/01/hello-world/</id>
-    <published>2022-09-01T07:38:26.549Z</published>
-    <updated>2022-09-01T07:38:26.550Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub<i class="fas fa-external-link-alt"></i></a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing<i class="fas fa-external-link-alt"></i></a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server<i class="fas fa-external-link-alt"></i></a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating<i class="fas fa-external-link-alt"></i></a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a class=&quot;link&quot; href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;! This is your very first post. Check </summary>
-      
-    
-    
-    
     
   </entry>
   
