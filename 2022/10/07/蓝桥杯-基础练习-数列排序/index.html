@@ -9,7 +9,7 @@
     
     <title>
         
-            C语言教程_02：一个简单的C程序 |
+            蓝桥杯_基础练习_数列排序 |
         
         云湍小站
     </title>
@@ -171,7 +171,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">C语言教程_02：一个简单的C程序</span>
+            <span class="title-hover-animation">蓝桥杯_基础练习_数列排序</span>
         </div>
 
         
@@ -188,8 +188,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-10-06 20:20:11</span>
-        <span class="mobile">2022-10-06 20:20</span>
+        <span class="pc">2022-10-07 00:25:54</span>
+        <span class="mobile">2022-10-07 00:25</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -197,7 +197,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/">C语言教程</a>&nbsp;
+                        <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>&nbsp;
                     </li>
                 
             </ul>
@@ -213,7 +213,7 @@
                     </li>
                 
                     <li>
-                        | <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>&nbsp;
+                        | <a href="/tags/%E7%BB%83%E4%B9%A0/">练习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -223,12 +223,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>886 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>441 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -244,27 +244,53 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p>
-<pre><code>#include &lt;stdio.h&gt;
-
+            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>资源限制<br>内存限制：512.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s<br>问题描述<br>　　给定一个长度为n的数列，将这个数列按从小到大的顺序排列。1&lt;&#x3D;n&lt;&#x3D;200<br>输入格式<br>　　第一行为一个整数n。<br>　　第二行包含n个整数，为待排序的数，每个整数的绝对值小于10000。<br>输出格式<br>　　输出一行，按从小到大的顺序输出排序后的数列。<br>样例输入<br>5<br>8 3 6 4 9<br>样例输出<br>3 4 6 8 9</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>将数列放入数组中，将其依次进行两两比较并移动，保证较小的数永远位于较大的数右边，当遍历整个数组后即可输出合规的结果。为了简化程序，考虑引入函数来执行两两比较并移动的操作，此处需要注意的是局部变量和全局变量的关系，考虑引入指针来解决此问题。</p>
+<h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><pre><code>#include&lt;stdio.h&gt;
 int main()
 &#123;
-    /* 我的第一个 C 程序 */
-    printf(&quot;Hello, World! \n&quot;);
+    int n,m;
+    int a, b, c;
+    int NUM[200];
 
+    printf(&quot;输入一个n来限定一个数列长度，其中1&lt;=n&lt;=200\n&quot;);
+    scanf_s(&quot;%d&quot;, &amp;n);
+    printf(&quot;输入n个整数，每个整数的绝对值小于10000\n&quot;);
+    for (m = 0; m &lt; n; m++)
+    &#123;
+        scanf_s(&quot;%d&quot;, &amp;NUM[m]);
+    &#125;
+    for (a = 0; a &lt; n; a++) 
+    &#123;
+        for (b = 0; b &lt; n; b++)
+        &#123;
+            if (a &lt; b)
+            &#123;
+                swap(&amp;NUM[a], &amp;NUM[b]);
+            &#125;
+        &#125;
+    &#125;
+    for (c = 0; c &lt; n; c++) 
+    &#123;
+        printf(&quot;%d &quot;, NUM[c]);
+    &#125;
     return 0;
 &#125;
 
-// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译
-// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察
+int swap(int* num1, int* num2)
+&#123;
+    int i;
+    if ( *num1 &gt; *num2 )
+    &#123;
+        i = *num2;
+        *num2 = *num1;
+        *num1 = i;
+    &#125;
+    return 0;
+&#125;
 </code></pre>
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="02.jpg"></p>
-<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由#include打头的部分，二是int main()，三则是{}内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p>
-<p>#include &lt;stdio.h&gt;<br>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p>
-<p>int main()<br>int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数。在程序中这一部分称为函数头。main函数作为C程序中至关重要的部分，在每一个C程序中都会有一个main函数，作为一个程序的入口部分，也就是说程序都是从main函数头开始执行，然后进入到main函数中，执行其中语句的。()内的内容是我们可以填充的，初学C程序，可以暂且不管。</p>
-<p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是fotmat的缩写，意为格式化，故printf的意思就是格式化输出。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。<br>return 0并不属于执行语句，我们将其称之为return语句。return的作用是向程序返回一个值，在这里就是0，而0又恰好是一个整数，符合int类型。</p>
-<p>值得一提的是，C程序是严格区分中英文的，一切语句都要用英文进行书写，且在函数体内部的内容，执行语句和return语句末尾，都要加上；表示一条语句的结束，这也就意味着，C程序在编译时会跳过空格以及空行（和注释）直接跳到下一条语句。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对这样一个代码进行逐字分析后，相信大家对于C程序的概念有了一个具体的认知，并且，对于C语言不再过于恐惧。</p>
+<h3 id="实例输出"><a href="#实例输出" class="headerlink" title="实例输出"></a>实例输出</h3><p>1<a href="./%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F/1.png"></a></p>
+<h2 id="进阶方向"><a href="#进阶方向" class="headerlink" title="进阶方向"></a>进阶方向</h2><p>考虑简化。</p>
 
         </div>
 
@@ -272,11 +298,11 @@ int main()
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：C语言教程_02：一个简单的C程序</li>
+        <li>本文标题：蓝桥杯_基础练习_数列排序</li>
         <li>本文作者：云湍/Cloudstill</li>
-        <li>创建时间：2022-10-06 20:20:11</li>
+        <li>创建时间：2022-10-07 00:25:54</li>
         <li>
-            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C语言教程-02：一个简单的C程序/
+            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/07/蓝桥杯-基础练习-数列排序/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -295,7 +321,7 @@ int main()
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>&nbsp;
+                        <a href="/tags/%E7%BB%83%E4%B9%A0/">#练习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -304,29 +330,14 @@ int main()
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-02/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">菜鸟教程C语言经典100例-02</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"
+                           href="/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-02/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">C语言教程_01：编译环境</span>
+                                <span class="post-nav-title-item">菜鸟教程C语言经典100例-02</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -544,7 +555,7 @@ int main()
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">一个简单的C程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">1.1.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">代码分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">程序实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.</span> <span class="nav-text">实例输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E6%96%B9%E5%90%91"><span class="nav-number">2.</span> <span class="nav-text">进阶方向</span></a></li></ol>
     </div>
 </div>
         </aside>
