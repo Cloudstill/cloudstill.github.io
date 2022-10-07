@@ -43,11 +43,11 @@
   </entry>
   
   <entry>
-    <title>菜鸟教程C语言经典100例-02</title>
-    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-02/"/>
-    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-02/</id>
+    <title>菜鸟教程C语言经典100例_02</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B_02/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/07/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B_02/</id>
     <published>2022-10-06T16:13:13.000Z</published>
-    <updated>2022-10-07T02:30:37.271Z</updated>
+    <updated>2022-10-07T02:36:03.832Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>企业发放的奖金根据利润提成。<br>利润(I)低于或等于10万元时，奖金可提10%；<br>利润高于10万元，低于20万元时，低于10万元的部分按10%提成，高于10万元的部分，可提成7.5%；<br>20万到40万之间时，高于20万元的部分，可提成5%；<br>40万到60万之间时高于40万元的部分，可提成3%；<br>60万到100万之间时，高于60万元的部分，可提成1.5%；<br>高于100万元时，超过100万元的部分按1%提成。<br>从键盘输入当月利润I，求应发放奖金总数？</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>通过判定利润i的大小对其进行分段计算。</p><h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><pre><code>#include&lt;stdio.h&gt;int main()&#123;    double i,j;    double i_1, i_2, i_3, i_4, i_5;    printf(&quot;请输入利润\n&quot;);    scanf_s(&quot;%d&quot;, &amp;i);    i_1 = 100000 * 0.10;    i_2 = i_1 + 100000 * 0.075;    i_3 = i_1 + i_2 + 200000 * 0.05;    i_4 = i_1 + i_2 + i_3 + 200000 * 0.03;    i_5 = i_1 + i_2 + i_3 + i_4 + 400000 * 0.01;    if (i &lt;= 100000)     &#123;        j = i * 0.10;    &#125;    else if (i&lt;=200000)    &#123;        j = i_1 + (i - 100000) * 0.075;    &#125;    else if (i &lt;= 400000)    &#123;        j = i_2 + (i - 200000) * 0.05;    &#125;    else if (i &lt;= 600000)    &#123;        j = i_3 + (i - 400000) * 0.03;    &#125;    else if (i &lt;= 1000000)    &#123;        j = i_4 + (i - 600000) * 0.015;    &#125;    else if (i &gt; 1000000)    &#123;        j = i_5 + (i - 1000000) * 0.01;    &#125;    printf(&quot;提成为：%lf&quot;, j);    return 0;&#125;</code></pre><h2 id="进阶方向"><a href="#进阶方向" class="headerlink" title="进阶方向"></a>进阶方向</h2><p>简化程序。</p>]]></content>
     
