@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-10-11T15:22:28.046Z</updated>
+  <updated>2022-10-18T16:29:43.215Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/11/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/11/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
     <published>2022-10-11T15:21:16.000Z</published>
-    <updated>2022-10-11T15:22:28.046Z</updated>
+    <updated>2022-10-18T16:29:43.215Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p><p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p><p>你可以按任意顺序返回答案。</p><p>示例 1：</p><p>输入：nums &#x3D; [2,7,11,15], target &#x3D; 9<br>输出：[0,1]<br>解释：因为 nums[0] + nums[1] &#x3D;&#x3D; 9 ，返回 [0, 1] 。<br>示例 2：</p><p>输入：nums &#x3D; [3,2,4], target &#x3D; 6<br>输出：[1,2]<br>示例 3：</p><p>输入：nums &#x3D; [3,3], target &#x3D; 6<br>输出：[0,1]</p><p>提示：</p><p>2 &lt;&#x3D; nums.length &lt;&#x3D; 104<br>-109 &lt;&#x3D; nums[i] &lt;&#x3D; 109<br>-109 &lt;&#x3D; target &lt;&#x3D; 109<br>只会存在一个有效答案<br>进阶：你可以想出一个时间复杂度小于 O(n2) 的算法吗？</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>太难了，还不会。</p><h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><p>有人相爱，有人夜里开车看海，有人leetcode第一题都做不出来。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数</summary>
+      
     
     
     
@@ -40,11 +47,24 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-Fibonacci%E6%95%B0%E5%88%97/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-Fibonacci%E6%95%B0%E5%88%97/</id>
     <published>2022-10-09T11:46:21.000Z</published>
-    <updated>2022-10-09T11:51:20.382Z</updated>
+    <updated>2022-10-18T16:26:07.308Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>资源限制<br>内存限制：256.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s<br>问题描述<br>Fibonacci数列的递推公式为：Fn&#x3D;Fn-1+Fn-2，其中F1&#x3D;F2&#x3D;1。</p><p>当n比较大时，Fn也非常大，现在我们想知道，Fn除以10007的余数是多少。</p><p>输入格式<br>输入包含一个整数n。<br>输出格式<br>输出一行，包含一个整数，表示Fn除以10007的余数。<br>说明：在本题中，答案是要求Fn除以10007的余数，因此我们只要能算出这个余数即可，而不需要先计算出Fn的准确值，再将计算的结果除以10007取余数，直接计算余数往往比先算出原数再取余简单。</p><p>样例输入<br>10<br>样例输出<br>55<br>样例输入<br>22<br>样例输出<br>7704<br>数据规模与约定<br>1 &lt;&#x3D; n &lt;&#x3D; 1,000,000。</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>运用一个循环遍历直至求解。</p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>需要注意的是，由于C语言中全局对全局变量和局部变量所分配的内存空间不同，在本例中使用局部变量可能会导致栈内存溢出，你可以点击此处了解什么是栈内存。<br>同时，将%放在循环内也可以有效避免数字过大。</p><h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><pre><code>#include&lt;stdio.h&gt;#define Max 1000001#define mod 10007 int F[Max];int main()&#123;    int n;    int m=3;    F[1]=F[2]=1;    int result;    scanf(&quot;%d&quot;,&amp;n);    while(m&lt;=n)    &#123;        F[m]=(F[m-1]+F[m-2])%mod;        m++;    &#125;    printf(&quot;%d&quot;,F[m-1]);    return 0;&#125;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;资源限制&lt;br&gt;内存限制：256.0MB   C&amp;#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限</summary>
+      
     
     
     
+    <category term="蓝桥杯" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="练习" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
@@ -183,9 +203,9 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</id>
     <published>2022-10-06T11:59:16.000Z</published>
-    <updated>2022-10-06T13:44:59.414Z</updated>
+    <updated>2022-10-18T16:19:13.981Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的编译器必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款编译器由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的编译器，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程选用Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过Visual Studio 2022和其他编译器，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载到Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的编译器必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款编译器由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的编译器，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程选用Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过Visual Studio 2022和其他编译器，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载到Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的编译器，是许多比赛项目的指定的编译器之一。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
     
     
       
