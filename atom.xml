@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-10-18T16:29:43.215Z</updated>
+  <updated>2022-10-19T05:26:06.727Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C语言教程_03：printf与转义字符</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9A%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9A%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</id>
+    <published>2022-10-19T04:50:15.000Z</published>
+    <updated>2022-10-19T05:26:06.727Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pringf"><a href="#pringf" class="headerlink" title="pringf"></a>pringf</h2><p>在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：</p><p>  #include &lt;stdio.h&gt;</p><pre><code>  int main()  &#123;      /* 我的第一个 C 程序 */      printf(&quot;Hello, World! \n&quot;);        return 0;  &#125;</code></pre><p>在上一节我们介绍C程序结构时，我们并没有探讨printf后面跟的()以及其中的内容。以上述程序为例子：<br>  printf(“Hello, World! \n”)<br>括号所构成的一个整体可以看作printf的一个宾语，相当于语言学中的动宾结构。<br>而括号内的内容我们可以看到是由一对引号包裹在内的，并且当我们实际运行该程序时，这个引号并没有显示出来，而引号内的其他内容（除了\n）都被原样打印了出来。<br>由此我们可以知道printf在打印时，会原样地打印出括号内引号所包裹的大部分内容。<br>那么，为什么\n不会被打印呢？</p><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>转义字符（Escape character），所有的ASCII码都可以用“\”加数字（一般是8进制数字）来表示。而C中定义了一些字母前加”&quot;来表示常见的那些不能显示的ASCII字符，如\0,\t,\n等，就称为转义字符，因为后面的字符，都不是它本来的ASCII字符意思了。<br>关于ASCII码大家可以自行或<a class="link" href="http://c.biancheng.net/c/ascii/">点击此处<i class="fas fa-external-link-alt"></i></a>了解更多。</p><h3 id="n"><a href="#n" class="headerlink" title="\n"></a>\n</h3><p>在介绍printf时，我们曾疑惑于为何\n不会被打印出来，而在刚刚我们了解到了转义字符，明白了转义字符的意义，同时也知道了转义字符不会被显示出来的机制。<br>那么\n所代表的是什么意思呢？<br>如果你尝试过在我们演示的代码里加入多行printf而不加\n，你会发现这些内容前后连接到了一起；而如果你加入了\n，你会发现它们一行一行分布。<br>由此我们可以知道\n所起到的是换行的作用。<br>那么除了\n，还有哪些转义字符呢？</p><h3 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h3><p> 转义字符   意义                               ASCII码值（十进制）<br>  \a     响铃(BEL)                              007<br>  \b     退格(BS) ，将当前位置移到前一列          008<br>  \f     换页(FF)，将当前位置移到下页开头          012<br>  \n     换行(LF) ，将当前位置移到下一行开头      010<br>  \r     回车(CR) ，将当前位置移到本行开头        013<br>  \t     水平制表(HT)                           009<br>  \v     垂直制表(VT)                            011<br>  &#39;     单引号                                  039<br>  &quot;     双引号                                  034<br>  \     反斜杠                                  092</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>转义字符是C语言中为数不多需要记忆的东西，但我们并不倡导死记硬背，你应当去尝试上述每一个转义字符，在实践中感受它们的作用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;pringf&quot;&gt;&lt;a href=&quot;#pringf&quot; class=&quot;headerlink&quot; title=&quot;pringf&quot;&gt;&lt;/a&gt;pringf&lt;/h2&gt;&lt;p&gt;在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：&lt;/p&gt;
+&lt;p&gt;  #inc</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_03：printf与转义字符</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</id>
+    <published>2022-10-19T04:50:15.000Z</published>
+    <updated>2022-10-19T05:01:39.422Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：</p><p>  #include &lt;stdio.h&gt;</p><pre><code>  int main()  &#123;      /* 我的第一个 C 程序 */      printf(&quot;Hello, World! \n&quot;);        return 0;  &#125;</code></pre><p>在上一节我们介绍C程序结构时，我们并没有探讨printf后面跟的()以及其中的内容。以上述程序为例子</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：&lt;/p&gt;
+&lt;p&gt;  #include &amp;lt;stdio.h</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode_1_两数之和</title>
@@ -177,9 +231,9 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/</id>
     <published>2022-10-06T12:20:11.000Z</published>
-    <updated>2022-10-06T13:45:04.745Z</updated>
+    <updated>2022-10-19T04:56:50.355Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p><pre><code>#include &lt;stdio.h&gt;int main()&#123;    /* 我的第一个 C 程序 */    printf(&quot;Hello, World! \n&quot;);    return 0;&#125;// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</code></pre><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="02.jpg"></p><h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由#include打头的部分，二是int main()，三则是{}内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p><p>#include &lt;stdio.h&gt;<br>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p><p>int main()<br>int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数。在程序中这一部分称为函数头。main函数作为C程序中至关重要的部分，在每一个C程序中都会有一个main函数，作为一个程序的入口部分，也就是说程序都是从main函数头开始执行，然后进入到main函数中，执行其中语句的。()内的内容是我们可以填充的，初学C程序，可以暂且不管。</p><p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是fotmat的缩写，意为格式化，故printf的意思就是格式化输出。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。<br>return 0并不属于执行语句，我们将其称之为return语句。return的作用是向程序返回一个值，在这里就是0，而0又恰好是一个整数，符合int类型。</p><p>值得一提的是，C程序是严格区分中英文的，一切语句都要用英文进行书写，且在函数体内部的内容，执行语句和return语句末尾，都要加上；表示一条语句的结束，这也就意味着，C程序在编译时会跳过空格以及空行（和注释）直接跳到下一条语句。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对这样一个代码进行逐字分析后，相信大家对于C程序的概念有了一个具体的认知，并且，对于C语言不再过于恐惧。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p><pre><code>#include &lt;stdio.h&gt;int main()&#123;    /* 我的第一个 C 程序 */    printf(&quot;Hello, World! \n&quot;);    return 0;&#125;// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</code></pre><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="02.jpg"></p><h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由#include打头的部分，二是int main()，三则是{}内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p><p>#include &lt;stdio.h&gt;<br>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p><p>int main()<br>int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数。在程序中这一部分称为函数头。main函数作为C程序中至关重要的部分，在每一个C程序中都会有一个main函数，作为一个程序的入口部分，也就是说程序都是从main函数头开始执行，然后进入到main函数中，执行其中语句的。()内的内容是我们可以填充的，初学C程序，可以暂且不管。</p><p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是format的缩写，意为格式化，故printf的意思就是格式化输出。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。<br>return 0并不属于执行语句，我们将其称之为return语句。return的作用是向程序返回一个值，在这里就是0，而0又恰好是一个整数，符合int类型。</p><p>值得一提的是，C程序是严格区分中英文的，一切语句都要用英文进行书写，且在函数体内部的内容，执行语句和return语句末尾，都要加上；表示一条语句的结束，这也就意味着，C程序在编译时会跳过空格以及空行（和注释）直接跳到下一条语句。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对这样一个代码进行逐字分析后，相信大家对于C程序的概念有了一个具体的认知，并且，对于C语言不再过于恐惧。</p>]]></content>
     
     
       
