@@ -9,7 +9,7 @@
     
     <title>
         
-            C语言教程_03：printf与转义字符 |
+            C语言教程_04：变量与常量 |
         
         云湍小站
     </title>
@@ -171,7 +171,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">C语言教程_03：printf与转义字符</span>
+            <span class="title-hover-animation">C语言教程_04：变量与常量</span>
         </div>
 
         
@@ -188,8 +188,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-10-19 12:50:15</span>
-        <span class="mobile">2022-10-19 12:50</span>
+        <span class="pc">2022-10-19 18:37:08</span>
+        <span class="mobile">2022-10-19 18:37</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -223,12 +223,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>712 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.9k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>6 分钟</span>
         </span>
     
     
@@ -244,82 +244,106 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="pringf"><a href="#pringf" class="headerlink" title="pringf"></a>pringf</h2><p>在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：</p>
-<p>  #include &lt;stdio.h&gt;</p>
-<pre><code>  int main()
-  &#123;
-      /* 我的第一个 C 程序 */
-      printf(&quot;Hello, World! \n&quot;);
-  
-      return 0;
-  &#125;
-</code></pre>
-<p>在上一节我们介绍C程序结构时，我们并没有探讨printf后面跟的()以及其中的内容。以上述程序为例子：<br>  printf(“Hello, World! \n”)<br>括号所构成的一个整体可以看作printf的一个宾语，相当于语言学中的动宾结构。<br>而括号内的内容我们可以看到是由一对引号包裹在内的，并且当我们实际运行该程序时，这个引号并没有显示出来，而引号内的其他内容（除了\n）都被原样打印了出来。<br>由此我们可以知道printf在打印时，会原样地打印出括号内引号所包裹的大部分内容。<br>那么，为什么\n不会被打印呢？</p>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>转义字符（Escape character），所有的ASCII码都可以用“\”加数字（一般是8进制数字）来表示。而C中定义了一些字母前加”&quot;来表示常见的那些不能显示的ASCII字符，如\0,\t,\n等，就称为转义字符，因为后面的字符，都不是它本来的ASCII字符意思了。<br>关于ASCII码大家可以自行或<a class="link" target="_blank" rel="noopener" href="http://c.biancheng.net/c/ascii/">点击此处<i class="fas fa-external-link-alt"></i></a>了解更多。</p>
-<h3 id="关于-n"><a href="#关于-n" class="headerlink" title="关于\n"></a>关于\n</h3><p>在介绍printf时，我们曾疑惑于为何\n不会被打印出来，而在刚刚我们了解到了转义字符，明白了转义字符的意义，同时也知道了转义字符不会被显示出来的机制。<br>那么\n所代表的是什么意思呢？<br>如果你尝试过在我们演示的代码里加入多行printf而不加\n，你会发现这些内容前后连接到了一起；而如果你加入了\n，你会发现它们一行一行分布。<br>由此我们可以知道\n所起到的是换行的作用。<br>那么除了\n，还有哪些转义字符呢？</p>
-<h3 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h3><table>
+            <h2 id="生活中变量与常量"><a href="#生活中变量与常量" class="headerlink" title="生活中变量与常量"></a>生活中变量与常量</h2><p>生活中会遇到很多量，一件商品的价格是一个量、每个月的生活费也是一个量。这些量可以被分为两类：常量和变量。<br>什么是常量？<br>顾名思义，一个常数、一个不变化的量，我们最熟悉的常量就是PAI、自然对数e。<br>什么是变量？<br>同样是顾名思义，一个变化的量就是变量。<br>常量大家都可以理解，可变量未必理解的容易，这里我们以《植物大战僵尸为例》<br><img src="1.png"><br>在上图中，我们拥有100阳光，而一株豌豆的阳光价格为100。<br>我们所持有的阳光数量会随着我们对阳光的获取或消耗而变化，这就是变量；但是豌豆的价格却始终是100，这就是一个常量。</p>
+<h2 id="C语言中的变量与常量"><a href="#C语言中的变量与常量" class="headerlink" title="C语言中的变量与常量"></a>C语言中的变量与常量</h2><p>生活中的变量和常量我们已经了解，那么C语言中的呢？<br>在C语言中，对应一个量而言，我们可以对其进行声明和定义两类操作。任何一个量，它的初始化，也就是声明都是必不可少的，这也就意味着，如何你没有对其进行定义，系统会随机对其定义一个值。<br>一个不变化的变量可以发挥常量的作用，可一个常量却不能变化，为了便于学习，我们在本节只介绍变量。</p>
+<h3 id="C语言中变量的声明"><a href="#C语言中变量的声明" class="headerlink" title="C语言中变量的声明"></a>C语言中变量的声明</h3><p>在最开始我们介绍C程序时，我们说过一句话“int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数”，当时你可能对这句话不太理解，没关系当我们介绍完变量的声明后，你就会明白。<br>首先我们必须要理解为什么要声明变量，在C语言中会有很多字符，如果我们不声明一个字符，我们就无法判定这个字符是一个变量名，更别说它的类型了。<br>敏锐的读者会注意到上述文字中的两个关键点，变量名和变量的类型</p>
+<h3 id="变量名的命名规范与艺术"><a href="#变量名的命名规范与艺术" class="headerlink" title="变量名的命名规范与艺术"></a>变量名的命名规范与艺术</h3><p>如同人有名字一样，每一个变量也有着它的名字，作为程序员的我们，就像变量的父母一样，拥有着给它们取名的权利。同样，正如现实生活中取名字有一定规范一样，我们给变量取名也要遵循一定的规则，具体规则如下：<br>1.变量名的开头必须字母，大小写均可；<br>2.变量名中不可以有符号，但是可以有下划线，也就是“_”；<br>3.变量名中允许使用任意的大小写字母以及数字；</p>
+<p>如同人有名字一样，变量名也有“好听”与“不好听”的区别。只不过不同于人对名字的要求，变量名遵循一个简单的原则，即“顾名思义”。<br>一个好的变量名应当是简洁明了的，用abcd来表示四个变量这样简单的命名方式固然方便快捷，可在一个有着很多变量的程序中轻易就会被混淆，加之很少有人会有勤写注释的习惯，一个自己写的程序过上几天也会看得一头雾水。<br>而用number_1，number_2来表示两个变量这样的命名方式呢？<br>这样的命名方式确实做到了顾名思义，也值得我们倡导，可在实际编写中，number不如简化成num，num_1,num_2这样的命名方式会更加简明。<br>一个好的C程序并不是说没有bug就可以了，变量名的艺术也值得我们深入研究。</p>
+<p>注：实际操作中变量名的取名要视环境而定，比如那种写一次就行了的比赛题目，随便取个abcd完全可以。</p>
+<h3 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h3><p>在之前我们就说过int作为关键字所声明的是int型，即整型，可视为整数。<br>然而，这里我们必须修正一下int型并不等同于整型，它是属于整型的短整型。有短整型就有长整型，有整数就有小数，有整数型就有小数型。只不过在C语言中小数并不称为小数，小数型也不叫小数型，它们分别称为浮点数和浮点型，除此之外还有一种类型为字符型。<br>整数型和字符型可以并为整数类型，它们遵循以下表格中的规律：</p>
+<table>
     <thead>
         <tr>
-            <th>转义字符</th>
-            <th>意义</th>
-            <th>ASCII码值（十进制）</th>
+            <th>类型</th>
+            <th>存储大小</th>
+            <th>值范围</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>\a</td>
-            <td>响铃(BEL)</td>
-            <td>007</td>
+            <td>char</td>
+            <td>1 字节</td>
+            <td>-128 到 127 或 0 到 255</td>
         </tr>
         <tr>
-            <td>\b</td>
-            <td>退格(BS) ，将当前位置移到前一列</td>
-            <td>008</td>
+            <td>unsigned char</td>
+            <td>1 字节</td>
+            <td>0 到 255</td>
         </tr>
         <tr>
-            <td>\f</td>
-            <td>换页(FF)，将当前位置移到下页开头</td>
-            <td>012</td>
+            <td>signed char</td>
+            <td>1 字节</td>
+            <td>-128 到 127</td>
         </tr>
         <tr>
-            <td>\n</td>
-            <td>换行(LF) ，将当前位置移到下一行开头</td>
-            <td>010</td>
+            <td>int</td>
+            <td>2 或 4 字节</td>
+            <td>-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td>
         </tr>
         <tr>
-            <td>\r</td>
-            <td>回车(CR) ，将当前位置移到本行开头</td>
-            <td>013</td>
+            <td>unsigned int</td>
+            <td>2 或 4 字节</td>
+            <td>0 到 65,535 或 0 到 4,294,967,295</td>
         </tr>
         <tr>
-            <td>\t</td>
-            <td>水平制表(HT)</td>
-            <td>009</td>
+            <td>short</td>
+            <td>2 字节</td>
+            <td>-32,768 到 32,767</td>
         </tr>
         <tr>
-            <td>\v</td>
-            <td>垂直制表(VT)</td>
-            <td>011</td>
+            <td>unsigned short</td>
+            <td>2 字节</td>
+            <td>0 到 65,535</td>
         </tr>
         <tr>
-            <td>\'</td>
-            <td>单引号</td>
-            <td>039</td>
+            <td>long</td>
+            <td>4 字节</td>
+            <td>-2,147,483,648 到 2,147,483,647</td>
         </tr>
         <tr>
-            <td>\"</td>
-            <td>双引号</td>
-            <td>034</td>
-        </tr>
-        <tr>
-            <td>\\</td>
-            <td>反斜杠</td>
-            <td>092</td>
+            <td>unsigned long</td>
+            <td>4 字节</td>
+            <td>0 到 4,294,967,295</td>
         </tr>
     </tbody>
 </table>
 
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>转义字符是C语言中为数不多需要记忆的东西，但我们并不倡导死记硬背，你应当去尝试上述每一个转义字符，在实践中感受它们的作用。</p>
+<p>注：各种类型的存储大小与系统位数有关，但目前通用的以64位为主。</p>
+<p>而与整数类型相对的浮点类型则遵循以下表格：</p>
+<table>
+    <thead>
+        <tr>
+            <th>类型</th>
+            <th>存储大小</th>
+            <th>值范围</th>
+            <th>精度</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>float</td>
+            <td>4 字节</td>
+            <td>1.2E-38 到 3.4E+38</td>
+            <th>6 位有效位</th>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>8 字节</td>
+            <td>2.3E-308 到 1.7E+308</td>
+            <th>15 位有效位</th>
+        </tr>
+        <tr>
+            <td>long double</td>
+            <td>16 字节</td>
+            <td>3.4E-4932 到 1.1E+4932</td>
+            <th>19 位有效位</th>
+        </tr>
+    </tbody>
+</table>
+
+<p>对于这样的表格记忆是很困难的，我们只需要记住一些基础的就可以应对大多数情况了。<br>我们可以先记住char为字符型，int为短整型，如果数据很大就换成long。如果数据为小数就用单精度浮点型float声明，对精度要求很高或是数据过大就用双精度型double。</p>
+<h3 id="C语言中变量的定义"><a href="#C语言中变量的定义" class="headerlink" title="C语言中变量的定义"></a>C语言中变量的定义</h3><p>当我们声明一个变量后，我们需要对它进行赋值，这个过程就称之为定义，变量的定义可以以多个方式进行，这里我们以int为例，有以下情况：<br>1.声明时定义<br>  int example_1 &#x3D; 1；<br>在声明的同时定义，把1的值赋给变量example_1；<br>2.声明后定义<br>  int example_2；<br>  emaxple_2 &#x3D; 2;<br>在声明后定义，将2的值赋给变量example_2;<br>变量的定义相对自由，&#x3D;后面可以跟其他变量和表达式（如 加+ 减- 乘* 除&#x2F; 所连接的式子）。<br>值得注意的是，在上面我介绍&#x3D;时我所用的是赋值而非相等，这是一个比较严谨的称呼，在C语言中判断是否相等时我们需要用的是&#x3D;&#x3D;；另一个值得注意的点是，当&#x3D;左右数据类型不相等时，会转化成左边变量的数据类型，这也就意味着，将浮点型赋值给整数型时会损失小数点后的内容，将高精度浮点型赋值给低精度浮点型时会损失所相差的那一部分精度。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Frank曾经说过，变量是玩会的而不是学会的，这也就是为什么我要以《植物大战僵尸》为例的原因。<br>单纯的介绍变量并不能让人完全理解它，在下一节我们将学习C语言中的输入与输出（我们已经学过的printf就是一个输出语句），届时我们就能领会到变量的神奇之处。</p>
 
         </div>
 
@@ -327,11 +351,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：C语言教程_03：printf与转义字符</li>
+        <li>本文标题：C语言教程_04：变量与常量</li>
         <li>本文作者：云湍/Cloudstill</li>
-        <li>创建时间：2022-10-19 12:50:15</li>
+        <li>创建时间：2022-10-19 18:37:08</li>
         <li>
-            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C语言教程-03：printf与转义字符/
+            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/19/C语言教程-04：变量与常量/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -359,29 +383,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">C语言教程_04：变量与常量</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/10/11/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"
+                           href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">LeetCode_1_两数之和</span>
+                                <span class="post-nav-title-item">C语言教程_03：printf与转义字符</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -599,7 +608,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pringf"><span class="nav-number">1.</span> <span class="nav-text">pringf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">转义字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-n"><span class="nav-number">2.1.</span> <span class="nav-text">关于\n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E8%A1%A8"><span class="nav-number">2.2.</span> <span class="nav-text">转义字符表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">生活中变量与常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">C语言中的变量与常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">C语言中变量的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E4%B8%8E%E8%89%BA%E6%9C%AF"><span class="nav-number">2.2.</span> <span class="nav-text">变量名的命名规范与艺术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">变量的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.4.</span> <span class="nav-text">C语言中变量的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol>
     </div>
 </div>
         </aside>
