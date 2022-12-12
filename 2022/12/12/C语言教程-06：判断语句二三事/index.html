@@ -9,7 +9,7 @@
     
     <title>
         
-            关于猜数字游戏 |
+            C语言教程_06：判断语句二三事 |
         
         云湍小站
     </title>
@@ -171,7 +171,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">关于猜数字游戏</span>
+            <span class="title-hover-animation">C语言教程_06：判断语句二三事</span>
         </div>
 
         
@@ -188,47 +188,17 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-10-05 22:27:23</span>
-        <span class="mobile">2022-10-05 22:27</span>
+        <span class="pc">2022-12-12 12:09:49</span>
+        <span class="mobile">2022-12-12 12:09</span>
     </span>
     
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
     
 
     
     
-        <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>675 字</span>
-        </span>
-    
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -244,146 +214,18 @@
         
 
         <div class="article-content markdown-body">
-            <p>初学c语言，做了一个基于C语言的比较经典的猜数字游戏。<br>以下为源代码以及部分运行图片。</p>
-<pre><code>#include&lt;stdio.h&gt;
-#include&lt;time.h&gt;
-#include&lt;stdlib.h&gt;
-
-int main()
-&#123;
-    int min = 1;
-    int x, y, z, max;
-    int a = 0;
-    
-    printf(&quot;欢迎来到猜数字游戏，本游戏由云湍编写，版本号v1.5.5\n
-    本游戏会随机生成一个数字，你需要用尽量少的次数猜出这个数字\n&quot;);
-    printf(&quot;请选择模式：\n
-    1.简单模式 数字范围1~100\n
-    2.普通模式 数字范围1~1000\n
-    3.困难模式 数字范围1~10000\n
-    4.自定义模式\n输入对应的序号数字即可选择模式\n&quot;);
-    scanf_s(&quot;%d&quot;, &amp;z);
-
-    switch (z)
-    &#123;
-    case 1:
-        max = 100;
-        break;
-    case 2:
-        max = 1000;
-        break;
-    case 3:
-        max = 10000;
-        break;
-    case 4:
-        printf(&quot;请输入数字范围的上限\n&quot;);
-        scanf_s(&quot;%d&quot;, &amp;max);
-        break;
-    &#125;
-    
-    srand(time(0));
-    x = rand() % (max - min) + min;  // “%”为模运算
-    
-    while (1) 
-    &#123;
-        printf(&quot;请输入一个数字\n&quot;);
-        scanf_s(&quot;%d&quot;, &amp;y);
-        if (y &lt; x)
-            printf(&quot;小了\n&quot;);
-        else if (y == x)
-        &#123;
-            printf(&quot;恭喜，答对了\n&quot;);
-            a = a + 1;
-            break;
-        &#125;
-        else if (y &gt; x)
-            printf(&quot;大了\n&quot;);
-        a++;
-    &#125;
-    
-    printf(&quot;您已累计尝试%d次\n&quot;, a);
-
-    switch (z)
-    &#123;
-    case 1:
-        if (a == 1)
-        &#123;
-            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
-        &#125;
-        if (a &gt; 1 &amp;&amp; a &lt; 6) 
-        &#123;
-            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
-        &#125;
-        if (a &gt; 5 &amp;&amp; a &lt; 9)
-        &#123;
-        printf(&quot;非常不错！您的水平已经很高了\n&quot;);
-        &#125;
-        if (a &gt; 8)
-        &#123;
-        printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
-        &#125;
-        break;
-    
-    case 2:
-        if (a == 1)
-        &#123;
-            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
-        &#125;
-        if (a &gt; 1 &amp;&amp; a &lt; 16)
-        &#123;
-            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
-        &#125;
-        if (a &gt; 15 &amp;&amp; a &lt; 19)
-        &#123;
-            printf(&quot;非常不错！您的水平已经很高了\n&quot;);
-        &#125;
-        if (a &gt; 18)
-        &#123;
-            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
-        &#125;
-        break;
-    
-    case 3:
-        if (a == 1)
-        &#123;
-            printf(&quot;一发入魂！您的运气也太好了吧\n&quot;);
-        &#125;
-        if (a &gt; 1 &amp;&amp; a &lt; 26)
-        &#123;
-            printf(&quot;出神入化！您真是实力与运气并存\n&quot;);
-        &#125;
-        if (a &gt; 25 &amp;&amp; a &lt; 29)
-        &#123;
-            printf(&quot;非常不错！您的水平已经很高了\n&quot;);
-        &#125;
-        if (a &gt; 28)
-        &#123;
-            printf(&quot;勉勉强强！您的水平还需要提高\n&quot;);
-        &#125;
-        break;
-    
-    case 4:
-        printf(&quot;感谢您的参与，该模式下无评分系统\n&quot;);
-        break;
-    &#125;
-
-    system(&quot;pause&quot;);
-    return 0;
-&#125;
-</code></pre>
-<p><img src="pic_01.jpg"></p>
-
+            
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：关于猜数字游戏</li>
+        <li>本文标题：C语言教程_06：判断语句二三事</li>
         <li>本文作者：云湍/Cloudstill</li>
-        <li>创建时间：2022-10-05 22:27:23</li>
+        <li>创建时间：2022-12-12 12:09:49</li>
         <li>
-            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/10/05/关于猜数字游戏/
+            本文链接：https://gitee.com/cloudstill/cloudstill.git/2022/12/12/C语言教程-06：判断语句二三事/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -395,45 +237,18 @@ int main()
         
 
         
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item">
-                        <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
 
         
             <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/10/06/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-01/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">菜鸟教程C语言经典100例_01</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
                 
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"
+                           href="/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_01%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">来自云上的湍流</span>
+                                <span class="post-nav-title-item">数据结构_01：什么是数据结构</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
