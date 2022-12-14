@@ -16,13 +16,23 @@
 
     <link rel="shortcut icon" href="/images/%E5%A4%B4%E5%83%8F.jpg">
     
-<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"gitee.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#00CC99","avatar":"/images/头像.jpg","favicon":"/images/头像.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/封面_07.jpg","description":"死并非生的对立面，而是作为生的一部分永存。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/头像.jpg","avatar":"/images/头像.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/封面_07.jpg","description":"死并非生的对立面，而是作为生的一部分永存。","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"Wh3jFmErROxeu2W2QqY0HeiJ-gzGzoHsz","appkey":"AoClJUljWDd4re4rYNjeP9ma","placeholder":"尽情评论吧！"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title=" 云湍小站 " type="application/atom+xml">
 </head>
@@ -36,9 +46,7 @@
 
     
         <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -46,32 +54,52 @@
 <main class="page-container">
 
     
-        <div class="first-screen-container flex-center fade-in-down-animation">
+        
+<div class="first-screen-container flex-center fade-in-down-animation">
     <div class="content flex-center">
-        <div class="description">
-            死并非生的对立面，而是作为生的一部分永存。
-        </div>
+        
+            <div class="description hitokoto">
+                
+                    <div class="desc-item">死并非生的对立面，而是作为生的一部分永存。</div>
+                
+            </div>
+        
+        
         
             <div class="s-icon-list">
                 
                     
                         
-                            <span class="s-icon-item qq">
-                                <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8kOonkD9pM-ostsVHMcIa7HXWI2i1pIc&noverify=0&personal_qrcode_source=3">
-                                    <i class="fab fa-qq"></i>
-                                </a>
-                            </span>
-                        
+                        <div class="tooltip s-icon-item "
+                             data-content="QQ"
+                             data-name="qq"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=w-ji3n3RTtX8vUJk-4phfVGWCcCwLeuV&noverify=0&personal_qrcode_source=4">
+                                        <i class="fab fa-qq"></i>
+                                    </a>
+                                
+                            
+                        </div>
                     
                 
                     
                         
-                            <span class="s-icon-item email">
-                                <a href="mailto:851137399@qq.com">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </span>
-                        
+                        <div class="tooltip s-icon-item "
+                             data-content="微信"
+                             data-name="weixin"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="https://u.wechat.com/EK-0ovGAMnbXw8YEe8TsGrk">
+                                        <i class="fab fa-weixin"></i>
+                                    </a>
+                                
+                            
+                        </div>
                     
                 
             </div>
@@ -81,16 +109,17 @@
 
     
 
-    <div class="page-main-content">
+    <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            <header class="header-wrapper">
+            
+<header class="header-wrapper">
 
     <div class="header-content has-first-screen">
         <div class="left">
             
             <a class="logo-title" href="/">
-                云湍小站
+               云湍小站
             </a>
         </div>
 
@@ -116,17 +145,17 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories"
+                               href="/tags"
                             >
-                                分类
+                                标签
                             </a>
                         </li>
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/tags"
+                               href="/categories"
                             >
-                                标签
+                                分类
                             </a>
                         </li>
                     
@@ -187,12 +216,12 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories">分类</a>
+                       href="/tags">标签</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/tags">标签</a>
+                       href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -238,15 +267,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         Edge评教流程首先打开网址webvpn.wbu.edu.cn，然后不要着急输入账密，按照以下流程操作：1.右上角打开设置,点击默认浏览器：如果上述没有成功，你也可以这样操作：2.开启允许打开IE兼容模式后，我们还要点击右上角设置把IE兼容模式打开：...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Dec 14 2022 12:23:43 GMT+0800">2022-12-14</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 13:41:40 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -275,7 +310,7 @@
         
     </div>
 
-    <a href="/2022/12/14/%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/12/14/%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -290,15 +325,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         问题建立员工工资管理系统,主要完成以下功能：1、输入：函数input把10个员工的工号、姓名、入职年份、基础工资、岗位工资、绩效工资、工龄工资以及总工资放在一个结构体数组中，员工的工号、姓名、入职年份、基础工资、岗位工资、绩效工资可由键盘输入也可由文...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Dec 14 2022 11:57:51 GMT+0800">2022-12-14</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 21:25:23 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -332,7 +373,7 @@
         
     </div>
 
-    <a href="/2022/12/14/C%E8%AF%AD%E8%A8%80%E7%BB%BC%E5%90%88%E5%AE%9E%E8%AE%AD-01/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/12/14/C%E8%AF%AD%E8%A8%80%E7%BB%BC%E5%90%88%E5%AE%9E%E8%AE%AD-01/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -347,20 +388,26 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Dec 12 2022 12:09:49 GMT+0800">2022-12-12</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Dec 12 2022 12:14:48 GMT+0800">
+                2022-12-12
+            </span>
+        </span>
         
         
     </div>
 
-    <a href="/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -375,20 +422,26 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Dec 12 2022 11:58:19 GMT+0800">2022-12-12</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Dec 12 2022 12:12:52 GMT+0800">
+                2022-12-12
+            </span>
+        </span>
         
         
     </div>
 
-    <a href="/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_01%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_01%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -403,15 +456,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         C语言中的输入与输出在第二节我们曾经介绍“#include&lt;stdio.h&gt;”的含义是包含一个标准输入输出的头文件，随即在第三节我们又学习了printf语句。printf是一个最为常见的输出语句，那么除此之外，C语言中还有那些输入输出语句...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Oct 20 2022 08:22:48 GMT+0800">2022-10-20</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 21:29:54 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -445,7 +504,7 @@
         
     </div>
 
-    <a href="/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -460,15 +519,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         生活中变量与常量生活中会遇到很多量：一件商品的价格、每个月的生活费……。这些量可以被分为两类：常量和变量。什么是常量？顾名思义，一个常数、一个不变化的量，我们最熟悉的常量就是PAI、自然对数e。什么是变量？同样是顾名思义，一个变化的量就是变量。常量大...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Oct 19 2022 18:37:08 GMT+0800">2022-10-19</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 21:36:39 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -502,7 +567,7 @@
         
     </div>
 
-    <a href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -517,20 +582,22 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         关于printf在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：
-  #include &lt;stdio.h&gt;
-  int main()
-  &#123;
-      /* 我的第一个 C 程序 */
-    ...
+1234567#include &lt;stdio.h&gt;int main()&#123;    /* 我的第一个 C 程序 */    print...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Oct 19 2022 12:50:15 GMT+0800">2022-10-19</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 21:35:45 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -564,7 +631,7 @@
         
     </div>
 
-    <a href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -579,7 +646,7 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         题目给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
@@ -587,9 +654,15 @@
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Oct 11 2022 23:21:16 GMT+0800">2022-10-11</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Oct 19 2022 00:29:43 GMT+0800">
+                2022-10-19
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -623,7 +696,7 @@
         
     </div>
 
-    <a href="/2022/10/11/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/11/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -638,15 +711,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         问题资源限制内存限制：256.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s问题描述Fibonacci数列的递推公式为：Fn&#x3D;Fn-1+Fn-2，其中F1&#x3D;F...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Oct 09 2022 19:46:21 GMT+0800">2022-10-09</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Oct 19 2022 01:29:27 GMT+0800">
+                2022-10-19
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -680,7 +759,7 @@
         
     </div>
 
-    <a href="/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-Fibonacci%E6%95%B0%E5%88%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-Fibonacci%E6%95%B0%E5%88%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -695,15 +774,21 @@
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         问题源限制内存限制：256.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s问题描述给定圆的半径r，求圆的面积。输入格式输入包含一个整数r，表示圆的半径。输出格式输出一行，包含一个...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Oct 09 2022 16:46:16 GMT+0800">2022-10-09</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 14 2022 21:34:14 GMT+0800">
+                2022-12-14
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -737,7 +822,7 @@
         
     </div>
 
-    <a href="/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/09/%E8%93%9D%E6%A1%A5%E6%9D%AF-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -765,33 +850,34 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
+            
+<footer class="footer">
     <div class="info-container">
         <div class="copyright-info info-item">
             &copy;
             
-              <span>2022</span>
-              -
+                <span>2022</span> -
             
-            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">云湍/Cloudstill</a>
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">云湍/Cloudstill</a>
+            
         </div>
         
-            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="website-count info-item">
                 
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
                 
                 
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
                 
             </div>
         
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
         </div>
         
         
@@ -812,10 +898,6 @@
 
         <li class="tools-item tool-font-adjust-minus flex-center">
             <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -856,10 +938,8 @@
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
@@ -880,7 +960,7 @@
                        class="search-input"
                 >
             </div>
-            <span class="popup-btn-close">
+            <span class="close-popup-btn">
                 <i class="fas fa-times"></i>
             </span>
         </div>
@@ -912,6 +992,8 @@
 
 
 
+
+
     
 <script src="/js/local-search.js"></script>
 
@@ -919,9 +1001,13 @@
 
 
     
-<script src="/js/code-copy.js"></script>
+<script src="/js/code-block.js"></script>
 
 
+
+
+    
+<script src="/js/lazyload.js"></script>
 
 
 
