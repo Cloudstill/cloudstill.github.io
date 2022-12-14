@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-14 21:36:39</span>
+        <span class="pc">2022-12-14 22:01:57</span>
     </span>
     
     
@@ -299,95 +299,89 @@
 <p>注：实际操作中变量名的取名要视环境而定，比如那种写一次就行了的比赛题目，随便取个abcd完全可以。</p>
 <h3 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h3><p>在之前我们就说过int作为关键字所声明的是int型，即整型，可视为整数。有短整型就有长整型，有整数就有小数，有整数型就有小数型。只不过在C语言中小数并不称为小数，小数型也不叫小数型，它们分别称为浮点数和浮点型，除此之外还有一种类型为字符型。<br>整数型和字符型可以并为整数类型，它们遵循以下表格中的规律：</p>
 <table>
-    <thead>
-        <tr>
-            <th>类型</th>
-            <th>存储大小</th>
-            <th>值范围</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>char</td>
-            <td>1 字节</td>
-            <td>-128 到 127 或 0 到 255</td>
-        </tr>
-        <tr>
-            <td>unsigned char</td>
-            <td>1 字节</td>
-            <td>0 到 255</td>
-        </tr>
-        <tr>
-            <td>signed char</td>
-            <td>1 字节</td>
-            <td>-128 到 127</td>
-        </tr>
-        <tr>
-            <td>int</td>
-            <td>2 或 4 字节</td>
-            <td>-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td>
-        </tr>
-        <tr>
-            <td>unsigned int</td>
-            <td>2 或 4 字节</td>
-            <td>0 到 65,535 或 0 到 4,294,967,295</td>
-        </tr>
-        <tr>
-            <td>short</td>
-            <td>2 字节</td>
-            <td>-32,768 到 32,767</td>
-        </tr>
-        <tr>
-            <td>unsigned short</td>
-            <td>2 字节</td>
-            <td>0 到 65,535</td>
-        </tr>
-        <tr>
-            <td>long</td>
-            <td>4 字节</td>
-            <td>-2,147,483,648 到 2,147,483,647</td>
-        </tr>
-        <tr>
-            <td>unsigned long</td>
-            <td>4 字节</td>
-            <td>0 到 4,294,967,295</td>
-        </tr>
-    </tbody>
-</table>
-
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">存储大小</th>
+<th align="center">值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">char</td>
+<td align="center">1 字节</td>
+<td align="center">-128 到 127 或 0 到 255</td>
+</tr>
+<tr>
+<td align="center">unsigned char</td>
+<td align="center">1 字节</td>
+<td align="center">0 到 255</td>
+</tr>
+<tr>
+<td align="center">signed char</td>
+<td align="center">1 字节</td>
+<td align="center">-128 到 127</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">2 或 4 字节</td>
+<td align="center">-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td>
+</tr>
+<tr>
+<td align="center">unsigned int</td>
+<td align="center">2 或 4 字节</td>
+<td align="center">0 到 65,535 或 0 到 4,294,967,295</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">2 字节</td>
+<td align="center">0 到 65,535</td>
+</tr>
+<tr>
+<td align="center">unsigned short</td>
+<td align="center">2 字节</td>
+<td align="center">1.2E-38 到 3.4E+38</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">4 字节</td>
+<td align="center">-2,147,483,648 到 2,147,483,647</td>
+</tr>
+<tr>
+<td align="center">unsigned long</td>
+<td align="center">4 字节</td>
+<td align="center">0 到 4,294,967,295</td>
+</tr>
+</tbody></table>
 <p>注：各种类型的存储大小与系统位数有关，但目前通用的以64位为主。</p>
 <p>而与整数类型相对的浮点类型则遵循以下表格：</p>
 <table>
-    <thead>
-        <tr>
-            <th>类型</th>
-            <th>存储大小</th>
-            <th>值范围</th>
-            <th>精度</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>float</td>
-            <td>4 字节</td>
-            <td>1.2E-38 到 3.4E+38</td>
-            <th>6 位有效位</th>
-        </tr>
-        <tr>
-            <td>double</td>
-            <td>8 字节</td>
-            <td>2.3E-308 到 1.7E+308</td>
-            <th>15 位有效位</th>
-        </tr>
-        <tr>
-            <td>long double</td>
-            <td>16 字节</td>
-            <td>3.4E-4932 到 1.1E+4932</td>
-            <th>19 位有效位</th>
-        </tr>
-    </tbody>
-</table>
-
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">存储大小</th>
+<th align="center">值范围</th>
+<th align="center">精度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">float</td>
+<td align="center">4 字节</td>
+<td align="center">1.2E-38 到 3.4E+38</td>
+<td align="center">6 位有效位</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">8 字节</td>
+<td align="center">2.3E-308 到 1.7E+308</td>
+<td align="center">15 位有效位</td>
+</tr>
+<tr>
+<td align="center">long double</td>
+<td align="center">16 字节</td>
+<td align="center">3.4E-4932 到 1.1E+4932</td>
+<td align="center">19 位有效位</td>
+</tr>
+</tbody></table>
 <p>对于这样的表格记忆是很困难的，我们只需要记住一些基础的就可以应对大多数情况了。<br>我们可以先记住char为字符型，int为短整型，如果数据很大就换成long。如果数据为小数就用单精度浮点型float声明，对精度要求很高或是数据过大就用双精度型double。</p>
 <h3 id="C语言中变量的定义"><a href="#C语言中变量的定义" class="headerlink" title="C语言中变量的定义"></a>C语言中变量的定义</h3><p>当我们声明一个变量后，我们需要对它进行赋值，这个过程就称之为定义，变量的定义可以以多个方式进行，这里我们以int为例，有以下情况：<br>1.声明时定义</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int example_1 = 1；</span><br><span class="line">在声明的同时定义，把1的值赋给变量example_1.</span><br></pre></td></tr></table></figure>

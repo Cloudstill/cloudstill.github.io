@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-14 21:29:54</span>
+        <span class="pc">2022-12-14 21:52:29</span>
     </span>
     
     
@@ -295,36 +295,33 @@
 <h2 id="最常用的输入输出语句：scanf-与printf"><a href="#最常用的输入输出语句：scanf-与printf" class="headerlink" title="最常用的输入输出语句：scanf()与printf()"></a>最常用的输入输出语句：scanf()与printf()</h2><p>作为相对应的输入输出字符，scanf与printf在形式上都是由一个英文单词加上format的缩写f构成，其使用起来也遵循类似的规则，使用起来都需要在括号内加入双引号来限定内容，将双引号内的内容原样输入或输出。正如\n这类转义字符具有特殊作用一样，在scanf和printf中还存在着一个特殊的，具有特殊作用而不被原样输出输出的符号，称之为格式字符。</p>
 <h3 id="scanf与printf语句中的格式字符"><a href="#scanf与printf语句中的格式字符" class="headerlink" title="scanf与printf语句中的格式字符"></a>scanf与printf语句中的格式字符</h3><p>在scanf和printf中，形如%d这类%加字母的就被称之为格式字符。<br>格式字符，顾名思义，是来限定输出内容格式的，为了便于学习，我们在此只陈列一些最为常用的格式字符：</p>
 <table>
-    <thead>
-        <tr>
-            <th>格式字符</th>
-            <th>格式说明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>%d</td>
-            <td>带符号的十进制整数</td>
-        </tr>
-        <tr>
-            <td>%u</td>
-            <td>无符号的十进制整数</td>
-        </tr>
-        <tr>
-            <td>%c</td>
-            <td>一个字符</td>
-        </tr>
-        <tr>
-            <td>%s</td>
-            <td>一个字符串</td>
-        </tr>
-        <tr>
-            <td>%f</td>
-            <td>浮点数，即小数</td>
-        </tr>
-    </tbody>
-</table>
-
+<thead>
+<tr>
+<th align="center">格式字符</th>
+<th align="center">格式说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">带符号的十进制整数</td>
+</tr>
+<tr>
+<td align="center">%u</td>
+<td align="center">无符号的十进制整数</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">一个字符</td>
+</tr>
+<tr>
+<td align="center">%s</td>
+<td align="center">一个字符串</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">浮点数，即小数</td>
+</tr>
+</tbody></table>
 <p>当我们对输入输出的格式进行限定后， 此时我们会发现少了些什么：我们明确了输出输出的格式，却没有明确我们要格式化的对象，接下来我们就将要学习如何在输入输出语句中确定格式化的对象。</p>
 <h3 id="用逗号间隔开来的补充说明：变量的首次运用"><a href="#用逗号间隔开来的补充说明：变量的首次运用" class="headerlink" title="用逗号间隔开来的补充说明：变量的首次运用"></a>用逗号间隔开来的补充说明：变量的首次运用</h3><p>类似于英语中的同位语，我们可以在括号内、引号后的位置使用逗号，从而确定我们要输入输出的对象。这个对象，可以是变量，也可以是含有变量的表达式。下面我们看一个例子来学习：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int example_1;</span><br><span class="line">    float example_2;</span><br><span class="line">    scanf(&quot;%d %f&quot;, &amp;example_1, &amp;example_2);</span><br><span class="line">    printf(&quot;%d %f&quot;, example_1, example_2);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
