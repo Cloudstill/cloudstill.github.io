@@ -32,7 +32,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"gitee.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/头像.jpg","avatar":"/images/头像.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/封面_07.jpg","description":"死并非生的对立面，而是作为生的一部分永存。","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"Wh3jFmErROxeu2W2QqY0HeiJ-gzGzoHsz","appkey":"AoClJUljWDd4re4rYNjeP9ma","placeholder":"尽情评论吧！"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.5.2"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/头像.jpg","avatar":"/images/头像.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/封面_07.jpg","description":"死并非生的对立面，而是作为生的一部分永存。","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"Wh3jFmErROxeu2W2QqY0HeiJ-gzGzoHsz","appkey":"AoClJUljWDd4re4rYNjeP9ma","placeholder":"尽情评论吧！"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
@@ -294,7 +294,7 @@
                 <h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    /* 我的第一个 C 程序 */</span><br><span class="line">     printf(&quot;Hello, World! \n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译</span><br><span class="line">// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</span><br></pre></td></tr></table></figure>
 
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img lazyload alt="image" data-src="/./C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/02.jpg"></p>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="02.jpg"></p>
 <h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由#include打头的部分，二是int main()，三则是{}内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br></pre></td></tr></table></figure> 
 <p>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p>
@@ -661,10 +661,6 @@
 <script src="/js/code-block.js"></script>
 
 
-
-
-    
-<script src="/js/lazyload.js"></script>
 
 
 
