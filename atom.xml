@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-12-15T11:36:25.086Z</updated>
+  <updated>2022-12-16T11:41:55.881Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>备战蓝桥杯_算法_01：递归</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/12/16/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%AE%97%E6%B3%95-01%EF%BC%9A%E9%80%92%E5%BD%92/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/12/16/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%AE%97%E6%B3%95-01%EF%BC%9A%E9%80%92%E5%BD%92/</id>
+    <published>2022-12-16T11:22:02.000Z</published>
+    <updated>2022-12-16T11:41:55.881Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>已经数不清这是开的第几个坑了，蓝桥杯虽然含金量不高，但是对于我这样的初学者而言确是一次很好的历练机会，为了记录我备赛的过程，特此开了这个坑。<br>声明：本系列源于CSDN博主<a class="link" href="https://blog.csdn.net/GD_ONE?type=blog">Androids_lost_Sheep<i class="fas fa-external-link-alt"></i></a>的博文<a class="link" href="https://blog.csdn.net/GD_ONE/article/details/104061907?spm=1001.2014.3001.5502">《蓝桥杯知识点汇总：基础知识和常用算法<i class="fas fa-external-link-alt"></i></a>，博主所采用的编程语言为Java，本系列将采用C语言作为编程语言。</p><h2 id="什么是递归"><a href="#什么是递归" class="headerlink" title="什么是递归"></a>什么是递归</h2><p>递归的含义很好理解，就是一个函数调用自身，难就难在如何确定一个题目的递归式，这就需要多刷题了。<br>一个完整的递归函数包含两个部分:<br>1.递归式<br>2.递归出口<br>以斐波那契数列为例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int f(int n)</span><br><span class="line">&#123;</span><br><span class="line">if(n == 1 || n == 2)</span><br><span class="line">    return 1; // 递归出口</span><br><span class="line">return f(n-1) + f(n-2); // 递归式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>递归式用来递归计算我们想要得到的值， 递归出口用来结束递归。<br>如果没有递归出口，那么就会一直递归下去，就造成了死循环。<br>那么什么题会用到递归呢？<br>子问题和原问题求解方式完全相同的，可以用递归。</p><h3 id="一个递归的例子"><a href="#一个递归的例子" class="headerlink" title="一个递归的例子"></a>一个递归的例子</h3><h4 id="题目：计算n阶行列式"><a href="#题目：计算n阶行列式" class="headerlink" title="题目：计算n阶行列式"></a>题目：计算n阶行列式</h4><p>给定一个N×N的矩阵A，求|A|。<br>输入格式：<br>第一行一个正整数N。 接下来N行，每行N个整数，<br>第i行第j个数字表示A[i][j]。<br>输出格式：<br>一行，输出|A|。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;已经数不清这是开的第几个坑了，蓝桥杯虽然含金量不高，但是对于我这样的初学者而言确是一次很好的历练机会，为了记录我备赛的过程，特此开了这个坑。</summary>
+      
+    
+    
+    
+    <category term="蓝桥杯" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="练习" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E7%BB%83%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>评教教程</title>
