@@ -73,14 +73,14 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/</id>
     <published>2022-12-12T04:09:49.000Z</published>
-    <updated>2022-12-15T14:04:26.858Z</updated>
+    <updated>2023-01-10T12:35:40.818Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="不为谁而作的歌"><a href="#不为谁而作的歌" class="headerlink" title="不为谁而作的歌"></a>不为谁而作的歌</h2><p>当我写下这段文字时。距离上一次更新本教程已经过去了快两个月。之前有想法写这个教程是为了教我的一个朋友，后来没写了也有很大一部分原因是因为她放弃了学习，或许放弃的也不只是学习C语言吧……<br>然而，这世界有太多事情需要一个理由，为什么我们不能为了自己呢？<br>那么请听，这不为谁而作的歌。</p><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>if相信大家都不陌生，在英文中它有着“如果”的意思，它引导的条件状语从句可以翻译为“如果……就……”，而在C语言中，它也有着相同的用法，且看下面的例子：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(......)</span><br><span class="line">&#123;</span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>套用英语中的逻辑来理解这个例子，把它翻译成中文就是“如果小括号里面的内容成立，那么花括号里面的内容也成立”。<br>小括号里面可以填什么呢？数字，变量，表达式，关系式都可以。<br>对于数字和变量，在计算机中，无论它们的值是多少，都只有0和非0的区别，非0又可以理解为1。我们都知道在计算机中0表示假，1表示真。即小括号里的数字和变量如果为0，语句不成立，为1（非0）则成立。<br>对于表达式，程序会先将其进行运算之后，再对其数值进行如对数字和变量相同的操作。<br>对于关系式，它们同样遵循01原则，当关系式成立时它们相当于1，当关系式不成立时它们相当于0。<br>说完小括号我们再来说说花括号，花括号里填写的是函数语句，函数语句的成立意味着执行，这也就是说，一旦小括号里的值为1，那么就会执行花括号里的内容。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="不为谁而作的歌"><a href="#不为谁而作的歌" class="headerlink" title="不为谁而作的歌"></a>不为谁而作的歌</h2><p>当我写下这段文字时。距离上一次更新本教程已经过去了快两个月。<br>两个月的时间，我的心态也发生了很大的变化，再一次更新，更多的不再是为了谁谁。</p><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>if相信大家都不陌生，在英文中它有着“如果”的意思，它引导的条件状语从句可以翻译为“如果……就……”，而在C语言中，它也有着相同的用法，且看下面的例子：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(......)</span><br><span class="line">&#123;</span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>套用英语中的逻辑来理解这个例子，把它翻译成中文就是“如果小括号里面的内容成立，那么花括号里面的内容也成立”。<br>小括号里面可以填什么呢？数字，变量，表达式，关系式都可以。<br>对于数字和变量，在计算机中，无论它们的值是多少，都只有0和非0的区别，非0又可以理解为1。我们都知道在计算机中0表示假，1表示真。即小括号里的数字和变量如果为0，语句不成立，为1（非0）则成立。<br>对于表达式，程序会先将其进行运算之后，再对其数值进行如对数字和变量相同的操作。<br>对于关系式，它们同样遵循01原则，当关系式成立时它们相当于1，当关系式不成立时它们相当于0。<br>说完小括号我们再来说说花括号，花括号里填写的是函数语句，函数语句的成立意味着执行，这也就是说，一旦小括号里的值为1，那么就会执行花括号里的内容。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;不为谁而作的歌&quot;&gt;&lt;a href=&quot;#不为谁而作的歌&quot; class=&quot;headerlink&quot; title=&quot;不为谁而作的歌&quot;&gt;&lt;/a&gt;不为谁而作的歌&lt;/h2&gt;&lt;p&gt;当我写下这段文字时。距离上一次更新本教程已经过去了快两个月。之前有想法写这个教程是为了教我的一个朋友</summary>
+    <summary type="html">&lt;h2 id=&quot;不为谁而作的歌&quot;&gt;&lt;a href=&quot;#不为谁而作的歌&quot; class=&quot;headerlink&quot; title=&quot;不为谁而作的歌&quot;&gt;&lt;/a&gt;不为谁而作的歌&lt;/h2&gt;&lt;p&gt;当我写下这段文字时。距离上一次更新本教程已经过去了快两个月。&lt;br&gt;两个月的时间，我的心态也发生了很</summary>
       
     
     
@@ -99,11 +99,26 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_01%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_01%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-12-12T03:58:19.000Z</published>
-    <updated>2022-12-15T11:37:11.579Z</updated>
+    <updated>2023-01-10T13:38:25.220Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h2><p>一般来说，用计算机解决一个具体问题时，大致需要经过下列几个步骤：首先要从具体问题抽象出一个适当的数学模型，然后设计一个解此数学模型的算法，最后编出程序，进行测试、调整直至得到最终解答。寻求数学模型的实质是分析问题，从中提取操作的对象，并找出这些操作对象之间含有的关系，然后用数学的语言加以描述。例如，求解梁架结构中应力的数学模型为线性方程组；预报人口增长情况的数学模型为微分方程。然而，更多的非数值计算问题无法用数学方程加以描述。<br>在生活中随处可见这样的例子，如图书馆数目检索系统自动化问题，计算机和人对弈问题，多叉路口交通灯的管理问题等等。在这三个例子中，我们描述问题的数学模型是称为“表”“树“和”图“的数据结构而非一个简单的数学方程。<br>因此，简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是数据结构&quot;&gt;&lt;a href=&quot;#什么是数据结构&quot; class=&quot;headerlink&quot; title=&quot;什么是数据结构&quot;&gt;&lt;/a&gt;什么是数据结构&lt;/h2&gt;&lt;p&gt;一般来说，用计算机解决一个具体问题时，大致需要经过下列几个步骤：首先要从具体问题抽象出一个适当的数学</summary>
+      
     
     
     
+    <category term="数据结构" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="数据结构" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -373,7 +388,7 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</id>
     <published>2022-10-06T11:59:16.000Z</published>
-    <updated>2022-12-29T07:24:45.877Z</updated>
+    <updated>2023-01-10T12:40:50.124Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的编译器必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款编译器由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的编译器，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程推荐Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过Visual Studio 2022和其他编译器，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载到Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h3 id="Visual-Studio-2022无法下载"><a href="#Visual-Studio-2022无法下载" class="headerlink" title="Visual Studio 2022无法下载"></a>Visual Studio 2022无法下载</h3><p>目前从官网下载Visual Studio 2022时可能会存在下载进度静止不动的问题，这里提供一种<a class="link" href="https://blog.csdn.net/weixin_66712181/article/details/122719473">解决方案<i class="fas fa-external-link-alt"></i></a></p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的编译器，是许多比赛项目的指定的编译器之一。出于此，本教程选用Dev作为编译环境。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="CLion"><a href="#CLion" class="headerlink" title="CLion"></a>CLion</h2><p>CLion作为JetBrains开发的一款编译器，我们耳熟能详的PyCharm和IntelliJ同时也出自其旗下，官方正版的CLion并不免费，你可以<a class="link" href="https://www.jetbrains.com.cn/clion/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>VS Code作为微软公司开发的另一款编译器，经调试可以支持多种语言，同时具有轻量化的优点，你可以<a class="link" href="https://code.visualstudio.com/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
     
