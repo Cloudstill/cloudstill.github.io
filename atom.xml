@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2022-12-28T12:26:33.718Z</updated>
+  <updated>2023-01-10T16:26:57.537Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据结构_02：顺序表的设计与实现</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2023/01/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-02%EF%BC%9A%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2023/01/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-02%EF%BC%9A%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</id>
+    <published>2023-01-10T15:21:20.000Z</published>
+    <updated>2023-01-10T16:26:57.537Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数组vs表"><a href="#数组vs表" class="headerlink" title="数组vs表"></a>数组vs表</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;数组vs表&quot;&gt;&lt;a href=&quot;#数组vs表&quot; class=&quot;headerlink&quot; title=&quot;数组vs表&quot;&gt;&lt;/a&gt;数组vs表&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    <category term="数据结构" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="数据结构" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>备战蓝桥杯_算法_01：递归</title>
@@ -388,14 +416,14 @@
     <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
     <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</id>
     <published>2022-10-06T11:59:16.000Z</published>
-    <updated>2023-01-10T12:40:50.124Z</updated>
+    <updated>2023-01-11T13:09:36.970Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的编译器必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款编译器由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的编译器，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程推荐Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过Visual Studio 2022和其他编译器，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载到Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h3 id="Visual-Studio-2022无法下载"><a href="#Visual-Studio-2022无法下载" class="headerlink" title="Visual Studio 2022无法下载"></a>Visual Studio 2022无法下载</h3><p>目前从官网下载Visual Studio 2022时可能会存在下载进度静止不动的问题，这里提供一种<a class="link" href="https://blog.csdn.net/weixin_66712181/article/details/122719473">解决方案<i class="fas fa-external-link-alt"></i></a></p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的编译器，是许多比赛项目的指定的编译器之一。出于此，本教程选用Dev作为编译环境。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="CLion"><a href="#CLion" class="headerlink" title="CLion"></a>CLion</h2><p>CLion作为JetBrains开发的一款编译器，我们耳熟能详的PyCharm和IntelliJ同时也出自其旗下，官方正版的CLion并不免费，你可以<a class="link" href="https://www.jetbrains.com.cn/clion/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>VS Code作为微软公司开发的另一款编译器，经调试可以支持多种语言，同时具有轻量化的优点，你可以<a class="link" href="https://code.visualstudio.com/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的ide必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款ide由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的ide，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程推荐Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过Visual Studio 2022和其他ide，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载到Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h3 id="Visual-Studio-2022无法下载"><a href="#Visual-Studio-2022无法下载" class="headerlink" title="Visual Studio 2022无法下载"></a>Visual Studio 2022无法下载</h3><p>目前从官网下载Visual Studio 2022时可能会存在下载进度静止不动的问题，这里提供一种<a class="link" href="https://blog.csdn.net/weixin_66712181/article/details/122719473">解决方案<i class="fas fa-external-link-alt"></i></a></p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的ide，是许多比赛项目的指定的ide之一。出于此，本教程选用Dev作为编译环境。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="CLion"><a href="#CLion" class="headerlink" title="CLion"></a>CLion</h2><p>CLion作为JetBrains开发的一款ide，我们耳熟能详的PyCharm和IntelliJ同时也出自其旗下，官方正版的CLion并不免费，你可以<a class="link" href="https://www.jetbrains.com.cn/clion/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>VS Code作为微软公司开发的另一款ide，经调试可以支持多种语言，同时具有轻量化的优点，你可以<a class="link" href="https://code.visualstudio.com/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;学习C语言，一个好用的编译器必不可少。&lt;br&gt;目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款编译器由微软于1993年推出</summary>
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;学习C语言，一个好用的ide必不可少。&lt;br&gt;目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款ide由微软于1993年推出</summary>
       
     
     
