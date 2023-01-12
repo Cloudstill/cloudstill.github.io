@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-01-11 00:26:57</span>
+        <span class="pc">2023-01-13 00:53:53</span>
     </span>
     
     
@@ -274,12 +274,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>4 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.3k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -295,7 +295,23 @@
             
 
             <div class="article-content keep-markdown-body">
-                <h2 id="数组vs表"><a href="#数组vs表" class="headerlink" title="数组vs表"></a>数组vs表</h2>
+                <h2 id="数组和表的区别"><a href="#数组和表的区别" class="headerlink" title="数组和表的区别"></a>数组和表的区别</h2><p>在开启本教程学习之前，相信大家已经有了一定语言基础，对于数组，大家一定十分熟悉。我们在使用数组时，或多或少会遇到以下几个问题：<br>1.必须在一开始就声明数组的长度；<br>2.无法随时随用地对数组进行扩容，这就导致了一开始声明的数组的长度必须足够大；<br>3.可能会存在未使用的数组，这对内存是一种浪费。<br>而表，就是一种可以解决这些问题的数据结构。<br>关于数组和表，更多的区别需要可能会涉及一些更加深层的知识，这里不做赘述，欢迎自己探知。</p>
+<h2 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h2><p>按照惯例，我们一般需要对顺序表进行一定的介绍：顺序表是用一段物理地址连续的存储单元依次存储数据元素的线性结构，一般情况下采用数组存储。在数组上完成数据的增删查改。<br>为了方便理解，我们可以简单地认为他是一种可以动态变化的连续存储的数组。</p>
+<h3 id="定义结构体"><a href="#定义结构体" class="headerlink" title="定义结构体"></a>定义结构体</h3><p>顺序表的实现有很多方式，其中，我们采取结构体的方式。<br>首先我们需要定义一个结构体：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct list</span><br><span class="line">&#123;</span><br><span class="line">  int* array;</span><br><span class="line">  int capacity;</span><br><span class="line">  int size;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们定义了一个叫list的结构体，它包含了三个成员，整型指针变量array，整型变量capacity和整型变量size。<br>和它们的名字一样，array表示顺序表所占的内存空间，capacity表示顺序表的理论最大容量，size表示顺序表中已经填满的容量，即实际长度。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>当我们定义完结构体后，我们还没有真正创建一个顺序表，即便我们在main函数中创建了一个结构体变量，它也不能真正算得上一个顺序表。<br>一个顺序表的实现必须要对其进行初始化，为了便于多次使用，我们采取自定义一个初始化函数的方式实现，<br>在此之前，为了便于后续操作，我们可以使用typedef函数将结构体指针struct list*重命名为arraylist，即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typedef struct list* arraylist;</span><br></pre></td></tr></table></figure>
+<p>此后涉及struct list*的内容我们一律用arraylist代替，请根据需求自行代换。<br>根据我们此前定义的结构体的三个成员内存array，容量capacity，长度size，我们可以设想到初始化需要进行的操作。<br>我们都知道计算机在存储数据时需要用到内存空间，所以我们在初始化时，需要使用malloc函数申请一块内存空间，使用此函数前我们需要引入新的头文件&lt;stdlib.h&gt;，即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdlib.h&gt;</span><br></pre></td></tr></table></figure>
+<p>接着，我们需要用变量表示顺序表初始的最大容量和实际长度。<br>综上，初始化一个顺序表需要实现以下三个功能：<br>1.向计算机申请一块内存空间；<br>2.表示顺序表初始最大容量；<br>3.表示顺序表初始实际长度，即0；<br>实现这三个功能并不难，即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void setuplist(arraylist list)</span><br><span class="line">&#123;</span><br><span class="line">  list-&gt;capacity=1;//此处初始化顺序表容量为1，实际可更改</span><br><span class="line">  list-&gt;array=malloc(sizeof(int)*list-&gt;capacity);</span><br><span class="line">  list-&gt;size=0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>观察上述代码块，有几点值得我们注意：<br>1.在学习函数章节时，我们已经知道了函数传值和传地址的区别，此处由于我们需要对顺序表地址进行操作，故需要用到结构体指针；<br>2.表示结构体指针的成员需要用到-&gt;符号，或者也可以用(*指针名).成员名表示；<br>3.sizeof()函数会根据括号内的数据类型换算成对应的内存大小；<br>当我们深入了解malloc函数后，我们会知道有时malloc函数也会申请内存失败，此时它会返回NULL，同时申请失败也就意味着初始化失败，我们可以采取一种方式来表示初始化的成功与否。<br>我们可以用布尔型返回true和false来表示初始化的结果，但是我们都知道true&#x3D;1，false&#x3D;0，又因为C语言中可能存在没有布尔型的情况，此处我们仅仅展示一个在部分C语言标准下存在的代码块，后续涉及判断内容我们一律采用int型，代码块即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">#include&lt;stdbool.h&gt;</span><br><span class="line">...</span><br><span class="line">_Bool test_1=true;</span><br><span class="line">bool test_2=false;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>对于增加判断申请内存失败与否的初始化函数，即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int setuplist(arraylist list)</span><br><span class="line">&#123;</span><br><span class="line">  list-&gt;capacity=1;</span><br><span class="line">  list-&gt;array=malloc(sizeof(int)*list-&gt;capacity);</span><br><span class="line">  if(list-&gt;array==NULL)</span><br><span class="line">    return 0;</span><br><span class="line">  list-&gt;size=0;</span><br><span class="line">  return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此，我们已经实现了顺序表的初始化功能。</p>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><h3 id="查找长度"><a href="#查找长度" class="headerlink" title="查找长度"></a>查找长度</h3><h3 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h3><h3 id="查找索引"><a href="#查找索引" class="headerlink" title="查找索引"></a>查找索引</h3><h3 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
             </div>
 
             
@@ -449,7 +465,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84vs%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">数组vs表</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">数组和表的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">顺序表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.1.</span> <span class="nav-text">定义结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5"><span class="nav-number">2.3.</span> <span class="nav-text">插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">扩容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">2.5.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E9%95%BF%E5%BA%A6"><span class="nav-number">2.6.</span> <span class="nav-text">查找长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.</span> <span class="nav-text">查找元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%B4%A2%E5%BC%95"><span class="nav-number">2.8.</span> <span class="nav-text">查找索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8D%B0"><span class="nav-number">2.9.</span> <span class="nav-text">打印</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol>
     </div>
 </div>
 
