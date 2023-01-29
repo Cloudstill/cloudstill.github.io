@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-15 19:39:30</span>
+        <span class="pc">2023-01-30 01:45:23</span>
     </span>
     
     
@@ -291,13 +291,11 @@
             
 
             <div class="article-content keep-markdown-body">
-                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>源限制<br>内存限制：256.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s<br>问题描述<br>给定圆的半径r，求圆的面积。<br>输入格式<br>输入包含一个整数r，表示圆的半径。<br>输出格式<br>输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。<br>说明：在本题中，输入是一个整数，但是输出是一个实数。</p>
-<p>对于实数输出的问题，请一定看清楚实数输出的要求，比如本题中要求保留小数点后7位，则你的程序必须严格的输出7位小数，输出过多或者过少的小数位数都是不行的，都会被认为错误。</p>
-<p>实数输出的问题如果没有特别说明，舍入都是按四舍五入进行。</p>
-<p>样例输入<br>4<br>样例输出<br>50.2654825<br>数据规模与约定<br>1 &lt;&#x3D; r &lt;&#x3D; 10000。<br>提示<br>本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比如PI&#x3D;3.14159265358979323，也可以使用数学公式来求π，比如PI&#x3D;atan(1.0)*4。</p>
+                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>源限制<br>内存限制：256.0MB   C&#x2F;C++时间限制：1.0s   Java时间限制：3.0s   Python时间限制：5.0s<br>问题描述<br>给定圆的半径r，求圆的面积。<br>输入格式<br>输入包含一个整数r，表示圆的半径。<br>输出格式<br>输出一行，包含一个实数，四舍五入保留小数点后7位，表示圆的面积。<br>说明：在本题中，输入是一个整数，但是输出是一个实数。<br>对于实数输出的问题，请一定看清楚实数输出的要求，比如本题中要求保留小数点后7位，则你的程序必须严格的输出7位小数，输出过多或者过少的小数位数都是不行的，都会被认为错误。<br>实数输出的问题如果没有特别说明，舍入都是按四舍五入进行。<br>样例输入<br>4<br>样例输出<br>50.2654825<br>数据规模与约定<br>1 &lt;&#x3D; r &lt;&#x3D; 10000。<br>提示<br>本题对精度要求较高，请注意π的值应该取较精确的值。你可以使用常量来表示π，比如PI&#x3D;3.14159265358979323，也可以使用数学公式来求π，比如PI&#x3D;atan(1.0)*4。  </p>
+</blockquote>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>简单运算，注意数据类型。</p>
-<h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#define PI 3.14159265358979323</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int r;</span><br><span class="line">    double c;</span><br><span class="line">    scanf_s(&quot;%d&quot;, &amp;r);</span><br><span class="line">    c = (double)r * r * PI;</span><br><span class="line">    printf(&quot;%0.7lf\n&quot;, c + 0.00000005);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159265358979323</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> r;</span><br><span class="line">    <span class="type">double</span> c;</span><br><span class="line">    scanf_s(<span class="string">&quot;%d&quot;</span>, &amp;r);</span><br><span class="line">    c = (<span class="type">double</span>)r * r * PI;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%0.7lf\n&quot;</span>, c + <span class="number">0.00000005</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
             </div>
 
             

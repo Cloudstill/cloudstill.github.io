@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-15 19:38:48</span>
+        <span class="pc">2023-01-30 01:08:43</span>
     </span>
     
     
@@ -291,9 +291,9 @@
             
 
             <div class="article-content keep-markdown-body">
-                <h2 id="C语言中的输入与输出"><a href="#C语言中的输入与输出" class="headerlink" title="C语言中的输入与输出"></a>C语言中的输入与输出</h2><p>在第二节我们曾经介绍“#include&lt;stdio.h&gt;”的含义是包含一个标准输入输出的头文件，随即在第三节我们又学习了printf语句。printf是一个最为常见的输出语句，那么除此之外，C语言中还有那些输入输出语句呢？<br>C语言中有三对输入输出语句，由于格式相似，我们分三对介绍。</p>
-<h2 id="最常用的输入输出语句：scanf-与printf"><a href="#最常用的输入输出语句：scanf-与printf" class="headerlink" title="最常用的输入输出语句：scanf()与printf()"></a>最常用的输入输出语句：scanf()与printf()</h2><p>作为相对应的输入输出字符，scanf与printf在形式上都是由一个英文单词加上format的缩写f构成，其使用起来也遵循类似的规则，使用起来都需要在括号内加入双引号来限定内容，将双引号内的内容原样输入或输出。正如\n这类转义字符具有特殊作用一样，在scanf和printf中还存在着一个特殊的，具有特殊作用而不被原样输出输出的符号，称之为格式字符。</p>
-<h3 id="scanf与printf语句中的格式字符"><a href="#scanf与printf语句中的格式字符" class="headerlink" title="scanf与printf语句中的格式字符"></a>scanf与printf语句中的格式字符</h3><p>在scanf和printf中，形如%d这类%加字母的就被称之为格式字符。<br>格式字符，顾名思义，是来限定输出内容格式的，为了便于学习，我们在此只陈列一些最为常用的格式字符：</p>
+                <h2 id="C语言中的输入与输出"><a href="#C语言中的输入与输出" class="headerlink" title="C语言中的输入与输出"></a>C语言中的输入与输出</h2><p>在第二节我们曾经介绍<code>#include&lt;stdio.h&gt;</code>的含义是包含一个标准输入输出的头文件，随即在第三节我们又学习了printf()语句。printf()是一个最为常见的输出语句，那么除此之外，C语言中还有那些输入输出语句呢？<br>C语言中有三对输入输出语句，由于格式相似，我们分三对介绍。</p>
+<h2 id="最常用的输入输出语句：scanf-与printf"><a href="#最常用的输入输出语句：scanf-与printf" class="headerlink" title="最常用的输入输出语句：scanf()与printf()"></a>最常用的输入输出语句：scanf()与printf()</h2><p>作为相对应的输入输出字符，scanf()与printf()在形式上都是由一个英文单词加上format的缩写f构成，其使用起来也遵循类似的规则，使用起来都需要在括号内加入双引号来限定内容，将双引号内的内容原样输入或输出。正如\n这类转义字符具有特殊作用一样，在scanf()和printf()中还存在着一个特殊的，具有特殊作用而不被原样输出输出的符号，称之为格式字符。</p>
+<h3 id="scanf-与printf-语句中的格式字符"><a href="#scanf-与printf-语句中的格式字符" class="headerlink" title="scanf()与printf()语句中的格式字符"></a>scanf()与printf()语句中的格式字符</h3><p>在scanf()和printf()中，形如%d这类%加字母的就被称之为格式字符。<br>格式字符，顾名思义，是来限定输出内容格式的，为了便于学习，我们在此只陈列一些最为常用的格式字符：</p>
 <table>
 <thead>
 <tr>
@@ -324,16 +324,30 @@
 </tbody></table>
 <p>当我们对输入输出的格式进行限定后， 此时我们会发现少了些什么：我们明确了输出输出的格式，却没有明确我们要格式化的对象，接下来我们就将要学习如何在输入输出语句中确定格式化的对象。</p>
 <h3 id="用逗号间隔开来的补充说明：变量的首次运用"><a href="#用逗号间隔开来的补充说明：变量的首次运用" class="headerlink" title="用逗号间隔开来的补充说明：变量的首次运用"></a>用逗号间隔开来的补充说明：变量的首次运用</h3><p>类似于英语中的同位语，我们可以在括号内、引号后的位置使用逗号，从而确定我们要输入输出的对象。这个对象，可以是变量，也可以是含有变量的表达式。下面我们看一个例子来学习：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int example_1;</span><br><span class="line">    float example_2;</span><br><span class="line">    scanf(&quot;%d %f&quot;, &amp;example_1, &amp;example_2);</span><br><span class="line">    printf(&quot;%d %f&quot;, example_1, example_2);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> example_1;</span><br><span class="line">    <span class="type">float</span> example_2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %f&quot;</span>, &amp;example_1, &amp;example_2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %f&quot;</span>, example_1, example_2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="1.png"></p>
-<p>通过这个例子，我们可以总结出3点规律：<br>1.引号内内容应当原样输入输出，包括空格和其他字符；<br>2.引用变量时的格式字符应该与声明时的对应，不一致的格式可能会造成数据丢失或者报错；<br>3.输入语句scanf中引用变量时要用上&amp;，&amp;的名称是取地址符，整个scanf语句的意思就是将输入的值赋给变量所分配的地址，关于地址的更多详情，我们会在指针一节中提及，这里我们可以看做将输入的值赋给&amp;后的变量；</p>
+<p>通过这个例子，我们可以总结出3点规律：</p>
+<ol>
+<li>引号内内容应当原样输入输出，包括空格和其他字符；</li>
+<li>引用变量时的格式字符应该与声明时的对应，不一致的格式可能会造成数据丢失或者报错；</li>
+<li>输入语句scanf()中引用变量时要用上&amp;，&amp;的名称是取地址符，整个scanf()语句的意思就是将输入的值赋给变量所分配的地址，关于地址的更多详情，我们会在指针一节中提及，这里我们可以看做将输入的值赋给&amp;后的变量；</li>
+</ol>
 <h3 id="对格式字符的附加修饰"><a href="#对格式字符的附加修饰" class="headerlink" title="对格式字符的附加修饰"></a>对格式字符的附加修饰</h3><p>在实际运用中，我们可能还要对格式进行进一步要求，这里就引入了对格式字符的附加修饰字符，由于输出输出语句中修饰字符存在细微差别，我们这里分别介绍。<br>在输入语句中我们以整型%d为例，*%d表示数据在输入后不进行赋值，%nd表示将输入数据的前n位赋值，%hd表示输入短整型，%ld表示输入长整型。<br>在输出语句中我们以浮点型%f为例，%lf表示输出双精度double型，%mf表示输出数据最小宽度为m格，%mf表示输出数据最小宽度为m格且少的位置用0补齐，%.nf表示输出数据小数点后有n位，%-f表示输出数据想左靠。</p>
 <h2 id="适用于字符的输入输出语句：getchar-与putchar"><a href="#适用于字符的输入输出语句：getchar-与putchar" class="headerlink" title="适用于字符的输入输出语句：getchar()与putchar()"></a>适用于字符的输入输出语句：getchar()与putchar()</h2><p>对于字符型乃至接下来所说的字符串型，它们也同样遵循上文我们所总结出来的第二条规律，即格式的相统一。<br>而不同它们和第一类相比，也有着许多不同之处，这里我们以输入输出的顺序依次介绍。</p>
-<h3 id="关于getchar"><a href="#关于getchar" class="headerlink" title="关于getchar()"></a>关于getchar()</h3><p>作为简单的输入语句，getchar()在使用时有一下几点需要注意：<br>1.getchar()会接收键盘输入的第一个字符，无论它是符号、数字、字母甚至是空格；<br>2.getchar()的赋值可以直接用等号，例如：变量名 &#x3D; getchar；</p>
-<h3 id="关于putchar"><a href="#关于putchar" class="headerlink" title="关于putchar()"></a>关于putchar()</h3><p>作为简单的输出语句，putchar()在使用时有一下几点需要注意：<br>1.在对字符字符进行原样输出是括号内用的是单引号而非双引号；<br>2.括号内引号中可以是转义字符，例如’\101’就会输出A；<br>3.可以直接在括号内输入变量名来输出它所对应的字符；  </p>
+<h3 id="关于getchar"><a href="#关于getchar" class="headerlink" title="关于getchar()"></a>关于getchar()</h3><p>作为简单的输入语句，getchar()在使用时有一下几点需要注意：</p>
+<ol>
+<li>getchar()会接收键盘输入的第一个字符，无论它是符号、数字、字母甚至是空格；</li>
+<li>getchar()的赋值可以直接用等号，例如：<code>name = getchar</code>；</li>
+</ol>
+<h3 id="关于putchar"><a href="#关于putchar" class="headerlink" title="关于putchar()"></a>关于putchar()</h3><p>作为简单的输出语句，putchar()在使用时有一下几点需要注意：</p>
+<ol>
+<li>在对字符字符进行原样输出是括号内用的是单引号而非双引号；</li>
+<li>括号内引号中可以是转义字符，例如<code>\101</code>就会输出<code>A</code>；</li>
+<li>可以直接在括号内输入变量名来输出它所对应的字符；</li>
+</ol>
 <h2 id="适用于字符串的输入输出语句：gets-与puts"><a href="#适用于字符串的输入输出语句：gets-与puts" class="headerlink" title="适用于字符串的输入输出语句：gets()与puts()"></a>适用于字符串的输入输出语句：gets()与puts()</h2><p>字符串的输入输出可能会涉及指针等后续内容，本节内容我们将在指针后介绍。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>作为最常用的输入输出语句scanf与printf，学好它们以及配套的格式字符、修饰字符便足以应对大多数环境。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>作为最常用的输入输出语句scanf()与printf()，学好它们以及配套的格式字符、修饰字符便足以应对大多数环境。</p>
 
             </div>
 
@@ -499,7 +513,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="nav-number">1.</span> <span class="nav-text">C语言中的输入与输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Ascanf-%E4%B8%8Eprintf"><span class="nav-number">2.</span> <span class="nav-text">最常用的输入输出语句：scanf()与printf()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scanf%E4%B8%8Eprintf%E8%AF%AD%E5%8F%A5%E4%B8%AD%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6"><span class="nav-number">2.1.</span> <span class="nav-text">scanf与printf语句中的格式字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E9%80%97%E5%8F%B7%E9%97%B4%E9%9A%94%E5%BC%80%E6%9D%A5%E7%9A%84%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%8F%98%E9%87%8F%E7%9A%84%E9%A6%96%E6%AC%A1%E8%BF%90%E7%94%A8"><span class="nav-number">2.2.</span> <span class="nav-text">用逗号间隔开来的补充说明：变量的首次运用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E7%9A%84%E9%99%84%E5%8A%A0%E4%BF%AE%E9%A5%B0"><span class="nav-number">2.3.</span> <span class="nav-text">对格式字符的附加修饰</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Agetchar-%E4%B8%8Eputchar"><span class="nav-number">3.</span> <span class="nav-text">适用于字符的输入输出语句：getchar()与putchar()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Egetchar"><span class="nav-number">3.1.</span> <span class="nav-text">关于getchar()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Eputchar"><span class="nav-number">3.2.</span> <span class="nav-text">关于putchar()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Agets-%E4%B8%8Eputs"><span class="nav-number">4.</span> <span class="nav-text">适用于字符串的输入输出语句：gets()与puts()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">5.</span> <span class="nav-text">结语</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="nav-number">1.</span> <span class="nav-text">C语言中的输入与输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Ascanf-%E4%B8%8Eprintf"><span class="nav-number">2.</span> <span class="nav-text">最常用的输入输出语句：scanf()与printf()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scanf-%E4%B8%8Eprintf-%E8%AF%AD%E5%8F%A5%E4%B8%AD%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6"><span class="nav-number">2.1.</span> <span class="nav-text">scanf()与printf()语句中的格式字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E9%80%97%E5%8F%B7%E9%97%B4%E9%9A%94%E5%BC%80%E6%9D%A5%E7%9A%84%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%8F%98%E9%87%8F%E7%9A%84%E9%A6%96%E6%AC%A1%E8%BF%90%E7%94%A8"><span class="nav-number">2.2.</span> <span class="nav-text">用逗号间隔开来的补充说明：变量的首次运用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E7%9A%84%E9%99%84%E5%8A%A0%E4%BF%AE%E9%A5%B0"><span class="nav-number">2.3.</span> <span class="nav-text">对格式字符的附加修饰</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Agetchar-%E4%B8%8Eputchar"><span class="nav-number">3.</span> <span class="nav-text">适用于字符的输入输出语句：getchar()与putchar()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Egetchar"><span class="nav-number">3.1.</span> <span class="nav-text">关于getchar()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Eputchar"><span class="nav-number">3.2.</span> <span class="nav-text">关于putchar()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%EF%BC%9Agets-%E4%B8%8Eputs"><span class="nav-number">4.</span> <span class="nav-text">适用于字符串的输入输出语句：gets()与puts()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">5.</span> <span class="nav-text">结语</span></a></li></ol>
     </div>
 </div>
 

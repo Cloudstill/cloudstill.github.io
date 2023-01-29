@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-15 19:38:34</span>
+        <span class="pc">2023-01-30 01:10:42</span>
     </span>
     
     
@@ -270,7 +270,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>893 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>904 字</span>
         </span>
     
     
@@ -292,17 +292,21 @@
 
             <div class="article-content keep-markdown-body">
                 <h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    /* 我的第一个 C 程序 */</span><br><span class="line">     printf(&quot;Hello, World! \n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译</span><br><span class="line">// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* 我的第一个 C 程序 */</span></span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;Hello, World! \n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译</span></span><br><span class="line"><span class="comment">// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="02.jpg"></p>
-<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由#include打头的部分，二是int main()，三则是{}内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br></pre></td></tr></table></figure> 
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由<code>#include</code>打头的部分，二是<code>int main()</code>，三则是<code>&#123;&#125;</code>内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <p>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+
 <p>int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数。在程序中这一部分称为函数头。main函数作为C程序中至关重要的部分，在每一个C程序中都会有一个main函数，作为一个程序的入口部分，也就是说程序都是从main函数头开始执行，然后进入到main函数中，执行其中语句的。()内的内容是我们可以填充的，初学C程序，可以暂且不管。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是format的缩写，意为格式化，故printf的意思就是格式化输出。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return 0;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;......&quot;</span>);</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf()作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是format的缩写，意为格式化，故printf()的意思就是格式化输出括号内的内容。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
 <p>return 0并不属于执行语句，我们将其称之为return语句。return的作用是向程序返回一个值，在这里就是0，而0又恰好是一个整数，符合int类型。<br>值得一提的是，C程序是严格区分中英文的，一切语句都要用英文进行书写，且在函数体内部的内容，执行语句和return语句末尾，都要加上；表示一条语句的结束，这也就意味着，C程序在编译时会跳过空格以及空行（和注释）直接跳到下一条语句。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对这样一个代码进行逐字分析后，相信大家对于C程序的概念有了一个具体的认知，并且，对于C语言不再过于恐惧。</p>
 
