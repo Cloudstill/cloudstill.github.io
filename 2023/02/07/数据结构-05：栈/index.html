@@ -9,7 +9,7 @@
     
     <title>
         
-            数据结构_04：特殊链表 |
+            数据结构_05：栈 |
         
         云湍小站
     </title>
@@ -207,7 +207,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">数据结构_04：特殊链表</span>
+                <span class="title-hover-animation">数据结构_05：栈</span>
             </div>
 
             
@@ -229,13 +229,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-02-07 00:56:15</span>
-        <span class="mobile">2023-02-07 00:56</span>
+        <span class="pc">2023-02-07 15:56:39</span>
+        <span class="mobile">2023-02-07 15:56</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-02-07 16:29:39</span>
+        <span class="pc">2023-02-07 22:43:05</span>
     </span>
     
     
@@ -274,12 +274,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>894 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -295,23 +295,45 @@
             
 
             <div class="article-content keep-markdown-body">
-                <h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p>在单链表，也就是上一节提到的普通链表中，当我们需要完成插入或者删除操作时，我们通常需要找到需要操作的链结的上一个链结，为了解决这个问题，双向链表应运而生。双向链表的结构如下图所示：<br><img src="1.jpg"><br>基于双向链表的不同结构，我们需要对定义结构体，初始化，插入和删除功能进行更新，而其他功能的实现则与单链表相同。</p>
-<h3 id="定义结构体"><a href="#定义结构体" class="headerlink" title="定义结构体"></a>定义结构体</h3><p>对于双向链表需要指向前一个链结的功能，我们需要在结构体中添加一个结构体指针变量来指向前一个结点，即：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">listnode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="type">int</span> element;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listnode</span>* <span class="title">next</span>;</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listnode</span>* <span class="title">prev</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <h2 id="栈的概念"><a href="#栈的概念" class="headerlink" title="栈的概念"></a>栈的概念</h2><p>汉语中对栈字的解释是存储货物或供旅客住宿的房屋，对应的，在计算机中栈指的是数据暂时存储的地方。<br>栈的特点，就像我们玩的俄罗斯方块一样，我们只能在最顶部进行操作。对此，我们总结为先进后出、后进先出。<br>对此，我们可以有流程图便于理解：<br><img src="1.jpg"></p>
+<h2 id="顺序表实现栈"><a href="#顺序表实现栈" class="headerlink" title="顺序表实现栈"></a>顺序表实现栈</h2><p>栈的实现可以基于顺序表或是链表，这里我们先用顺序表实现，这里我们需要实现两个新的功能：</p>
+<ol>
+<li>入栈（push）：入栈操作，向栈中压入一个新的元素；</li>
+<li>出栈（pop）：出栈操作，从栈顶取出一个元素。</li>
+</ol>
+<h3 id="定义结构体"><a href="#定义结构体" class="headerlink" title="定义结构体"></a>定义结构体</h3><p>这里我们基于顺序表设计，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="type">int</span>* <span class="built_in">array</span>;</span><br><span class="line">  <span class="type">int</span> capacity;</span><br><span class="line">  <span class="type">int</span> top;<span class="comment">//当前的栈顶</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>由于已经有了单链表基础，对于定义结构体此处不再过多赘述。</p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>双向链表在初始化时只需要将前链也设置为NULL即可，其余的和本教程中单链表一样，在初始化时仅对头链结进行进行初始化，同时对结构体指针重命名以便于后续操作，即：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">listnode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setuphead</span><span class="params">(Node headnode)</span></span><br><span class="line">&#123;</span><br><span class="line">  headnode=<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> listnode));</span><br><span class="line">  headnode-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">  headnode-&gt;prev=<span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>这里我们基于顺序表设计，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">stack</span>* <span class="title">arraystack</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">setupstack</span><span class="params">(arraystack stack_)</span></span><br><span class="line">&#123;</span><br><span class="line">  stack_-&gt;<span class="built_in">array</span>=<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">10</span>);<span class="comment">//初始容量为10</span></span><br><span class="line">  <span class="keyword">if</span>(stack_-&gt;<span class="built_in">array</span>==<span class="literal">NULL</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    stack_-&gt;capacity=<span class="number">10</span>;</span><br><span class="line">    stack_-&gt;top=<span class="number">-1</span>;<span class="comment">//由于没有元素，栈顶默认为-1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>和单链表不同的是，双向链表在插入时需要操作的链更多，这里我们依然用一个流程图来解释全过程：<br><img src="2.jpg"><br>基于此流程图，我们可以设计出一下代码，即：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">insertlist</span><span class="params">(Node head, <span class="type">int</span> element, <span class="type">int</span> index)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(index&lt;<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(--index)</span><br><span class="line">  &#123;</span><br><span class="line">    head=head-&gt;next;<span class="comment">//向后寻找到插入结点的前结点</span></span><br><span class="line">    <span class="keyword">if</span>(head==<span class="literal">NULL</span>)<span class="comment">//插入位置非法</span></span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  Node node=<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> listnode));<span class="comment">//新建一个链结并为其申请内存</span></span><br><span class="line">  <span class="keyword">if</span>(node==<span class="literal">NULL</span>)<span class="comment">//判断申请内存是否失败，失败返回0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  node-&gt;element=element;</span><br><span class="line">  <span class="keyword">if</span>(head-&gt;next)<span class="comment">//先处理后结点，若存在</span></span><br><span class="line">  &#123;</span><br><span class="line">    node-&gt;next=head-&gt;next;</span><br><span class="line">    head-&gt;next-&gt;prev=node;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span><span class="comment">//若后结点不存在</span></span><br><span class="line">  &#123;</span><br><span class="line">    node-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  head-&gt;next=node;<span class="comment">//操作前结点</span></span><br><span class="line">  node-&gt;prev=head;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><p>在正式开始设计入栈功能之前，我们可以预料到在入栈时可能会产生容量不够的情况，故我们可以先设计扩容功能，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">extendstack</span><span class="params">(arraystack stack_)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> newcapacity=stack_-&gt;capacity*<span class="number">2</span>;<span class="comment">//内存扩展两倍</span></span><br><span class="line">  <span class="type">int</span>* newarray=<span class="built_in">realloc</span>(stack_-&gt;<span class="built_in">array</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>)*newcapacity);</span><br><span class="line">  <span class="keyword">if</span>(newarray==<span class="literal">NULL</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  stack_-&gt;<span class="built_in">array</span>=newarray;</span><br><span class="line">  stack_-&gt;capacity=newcapacity;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>再完成这一系列操作后，我们可以将其正向反向分别遍历一遍以测试效果。</p>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>删除操作相较于插入较为简单，先看流程图：<br><img src="3.jpg"><br>据此，我们很容易设计出代码，即：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">deletelist</span><span class="params">(Node head, <span class="type">int</span> index)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(index &lt; <span class="number">1</span>)<span class="comment">//先找到位置</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(--index)</span><br><span class="line">  &#123;</span><br><span class="line">    head=head-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(head == <span class="literal">NULL</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(head-&gt;next==<span class="literal">NULL</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  Node tmp=head-&gt;next;</span><br><span class="line">  <span class="keyword">if</span>(head-&gt;next-&gt;next)<span class="comment">//删除非尾结点</span></span><br><span class="line">  &#123;</span><br><span class="line">    head-&gt;next-&gt;next-&gt;prev=head;</span><br><span class="line">    head-&gt;next=head-&gt;next-&gt;next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    head-&gt;next=<span class="literal">NULL</span>;<span class="comment">//删除尾结点</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">free</span>(tmp);</span><br><span class="line">  tmp=<span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>双向链表的其他操作与单链表大致相同，这里就不做介绍了。</p>
-<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><p>相对于普通链表，循环链表多了一个尾结点指向头结点的链，这样的链表从任意结点出发都可以达到任意结点，结构如下图所示：<br><img src="4.jpg"><br>循环链表的代码较为简单，仅仅需要在普通链表的基础上将尾结点指向头结点即可，这里不做赘述。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>双向链表和循环链表本质上还是链表，它们只是链表为了适应不同环境的产物，这也就启发我们在实际运用数据结构时也要根据实际情况进行变化。</p>
+<h3 id="入栈"><a href="#入栈" class="headerlink" title="入栈"></a>入栈</h3><p>由于栈只能从尾部插入，所以入栈操作实现起来非常简单，同时我们需要用上刚刚设计好的扩容，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">pushstack</span><span class="params">(arraystack satck_, <span class="type">int</span> element)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(stack_-&gt;top+<span class="number">1</span>==<span class="built_in">stack</span>-&gt;capacity)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span>(!extendstack(stack_))</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  stack_-&gt;<span class="built_in">array</span>[<span class="built_in">stack</span>-&gt;top+<span class="number">1</span>]=element;</span><br><span class="line">  stack_-&gt;top++;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判空"><a href="#判空" class="headerlink" title="判空"></a>判空</h3><p>在出栈之前，我们需要判断一下栈是否为空，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">isempty</span><span class="params">(arraystack stack_)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(!stack_-&gt;+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//为空时返回0，不为空时返回1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出栈"><a href="#出栈" class="headerlink" title="出栈"></a>出栈</h3><p>出栈操作便更加简单了，只需要将栈顶元素取出即可，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">popstack</span><span class="params">(arraystack stack_)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> stack_-&gt;<span class="built_in">array</span>[stack_-&gt;top--]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="共享栈"><a href="#共享栈" class="headerlink" title="共享栈"></a>共享栈</h2><p>为了提高栈的利用率，我们可以将一个固定长度的数组共享给两个栈来使用，将数组的两头作为两个栈的栈底，当两个栈的栈顶想要时表示栈已满。</p>
+<h2 id="链表实现栈"><a href="#链表实现栈" class="headerlink" title="链表实现栈"></a>链表实现栈</h2><p>在上文中我们介绍了用顺序表实现栈，然而在实际中，使用链表来实现栈会显得更加方便。<br>我们规定链表表头指向栈顶，而栈顶指向后续的元素直至栈底。<br>每当有新的元素入栈，我们只需要在链表头部插入新的结点即可。</p>
+<h3 id="初始化-1"><a href="#初始化-1" class="headerlink" title="初始化"></a>初始化</h3><p>有链表作为基础，我们可以很容易初始化，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">listnode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="type">int</span> element;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listnode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">listnode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setuplist</span><span class="params">(Node head)</span></span><br><span class="line">&#123;</span><br><span class="line">  head-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="入栈-1"><a href="#入栈-1" class="headerlink" title="入栈"></a>入栈</h3><p>有链表作为基础，我们可以很容易的入栈，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">pushstack</span><span class="params">(Node head, <span class="type">int</span> element)</span></span><br><span class="line">&#123;</span><br><span class="line">  Node node=<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> listnode));</span><br><span class="line">  <span class="keyword">if</span>(node==<span class="literal">NULL</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  node-&gt;next=head-&gt;next;</span><br><span class="line">  node-&gt;element=element;</span><br><span class="line">  head-&gt;next=node;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判空-1"><a href="#判空-1" class="headerlink" title="判空"></a>判空</h3><p>在出栈之前我们需要判断栈是否为空，和链表类似的，我们只需要看头结点即可，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">isempty</span><span class="params">(Node head)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(head-&gt;next)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出栈-1"><a href="#出栈-1" class="headerlink" title="出栈"></a>出栈</h3><p>有上文和链表作为基础，我们可以很容易实现出栈，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">popstack</span><span class="params">(Node head)</span></span><br><span class="line">&#123;</span><br><span class="line">  Node top=head-&gt;next;</span><br><span class="line">  head-&gt;next=head-&gt;next-&gt;next;</span><br><span class="line">  <span class="type">int</span> tmp=top-&gt;element;</span><br><span class="line">  <span class="built_in">free</span>(top);</span><br><span class="line">  top=NUll;</span><br><span class="line">  <span class="keyword">return</span> tmp;<span class="comment">//返回栈顶元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>栈本质上是基于前面所说的两种线性表的一种特殊线性表，有前面的学习作为基础，在学习时并不会产生多大困难。<br>相似的，下一节所讲的队列也是一种特殊的线性表。</p>
 <h2 id="返回目录"><a href="#返回目录" class="headerlink" title="返回目录"></a>返回目录</h2><p>你可以<a href="/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01%EF%BC%9A%E6%A6%82%E8%AE%BA/" title="点击此处">点击此处</a>返回或查看目录。</p>
 
             </div>
@@ -321,16 +343,16 @@
                     <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li>
-            <span class="type">本文标题</span>：<span class="content">数据结构_04：特殊链表</span>
+            <span class="type">本文标题</span>：<span class="content">数据结构_05：栈</span>
         </li>
         <li>
             <span class="type">本文作者</span>：<span class="content">云湍/Cloudstill</span>
         </li>
         <li>
-            <span class="type">创建时间</span>：<span class="content">2023-02-07 00:56:15</span>
+            <span class="type">创建时间</span>：<span class="content">2023-02-07 15:56:39</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/02/07/数据结构-04：特殊链表/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/02/07/数据结构-05：栈/</span>
         </li>
         <li>
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -362,29 +384,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/02/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-05%EF%BC%9A%E6%A0%88/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">数据结构_05：栈</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/01/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-03%EF%BC%9A%E9%93%BE%E8%A1%A8/"
+                               href="/2023/02/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-04%EF%BC%9A%E7%89%B9%E6%AE%8A%E9%93%BE%E8%A1%A8/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">数据结构_03：链表</span>
+                                <span class="post-nav-title-item">数据结构_04：特殊链表</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -482,7 +489,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">双向链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">1.1.</span> <span class="nav-text">定义结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5"><span class="nav-number">1.3.</span> <span class="nav-text">插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">1.4.</span> <span class="nav-text">删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">循环链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E7%9B%AE%E5%BD%95"><span class="nav-number">4.</span> <span class="nav-text">返回目录</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">栈的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="nav-number">2.</span> <span class="nav-text">顺序表实现栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.1.</span> <span class="nav-text">定义结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%AE%B9"><span class="nav-number">2.3.</span> <span class="nav-text">扩容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E6%A0%88"><span class="nav-number">2.4.</span> <span class="nav-text">入栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E7%A9%BA"><span class="nav-number">2.5.</span> <span class="nav-text">判空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BA%E6%A0%88"><span class="nav-number">2.6.</span> <span class="nav-text">出栈</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E6%A0%88"><span class="nav-number">3.</span> <span class="nav-text">共享栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="nav-number">4.</span> <span class="nav-text">链表实现栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-1"><span class="nav-number">4.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E6%A0%88-1"><span class="nav-number">4.2.</span> <span class="nav-text">入栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E7%A9%BA-1"><span class="nav-number">4.3.</span> <span class="nav-text">判空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BA%E6%A0%88-1"><span class="nav-number">4.4.</span> <span class="nav-text">出栈</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E7%9B%AE%E5%BD%95"><span class="nav-number">6.</span> <span class="nav-text">返回目录</span></a></li></ol>
     </div>
 </div>
 
