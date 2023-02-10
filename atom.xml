@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2023-02-07T14:43:05.149Z</updated>
+  <updated>2023-02-10T06:28:15.940Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ADarkRoom</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2023/02/10/ADarkRoom/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2023/02/10/ADarkRoom/</id>
+    <published>2023-02-10T06:20:05.000Z</published>
+    <updated>2023-02-10T06:28:15.940Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在2020上网课时期，我在互联网上找到了一款名为小黑屋的页游，简洁的界面和言简意赅的剧情一下子吸引了我，但游戏内容却在进入太空后戛然而止。基于此，我们决定开启ADarkRoom计划，本计划仅作为学习交流所用，如有侵权请联系删除。</p><h2 id="原版"><a href="#原版" class="headerlink" title="原版"></a>原版</h2><p>你可以<a href="../html/html/adarkroom/index.html">点击这里</a>或者从html导航栏中找到ADarkRoom。</p><h2 id="项目进程"><a href="#项目进程" class="headerlink" title="项目进程"></a>项目进程</h2><ol><li>暂无</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在2020上网课时期，我在互联网上找到了一款名为小黑屋的页游，简洁的界面和言简意赅的剧情一下子吸引了我，但游戏内容却在进入太空后戛然而止。基</summary>
+      
+    
+    
+    
+    <category term="游戏" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="游戏" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构_05：栈</title>
@@ -523,34 +547,6 @@
     <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
     
     <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>菜鸟教程C语言经典100例_01</title>
-    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-01/"/>
-    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B-01/</id>
-    <published>2022-10-06T05:11:20.000Z</published>
-    <updated>2023-01-29T17:47:34.915Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote><p>有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？</p></blockquote><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>可填在百位、十位、个位的数字都是 1、2、3、4，组成所有的排列后再去掉不满足条件的排列。</p><h3 id="程序实例"><a href="#程序实例" class="headerlink" title="程序实例"></a>程序实例</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j,k;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;<span class="number">5</span>;i++)<span class="comment">// 以下为三重循环</span></span><br><span class="line">    &#123; </span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;<span class="number">5</span>;j++) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (k=<span class="number">1</span>;k&lt;<span class="number">5</span>;k++) <span class="comment">// 确保i、j、k三位互不相同</span></span><br><span class="line">            &#123; </span><br><span class="line">                <span class="keyword">if</span> (i!=k&amp;&amp;i!=j&amp;&amp;j!=k) </span><br><span class="line">                &#123; </span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d,%d\n&quot;</span>,i,j,k);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure><h3 id="实例输出"><a href="#实例输出" class="headerlink" title="实例输出"></a>实例输出</h3><p>以上实例输出结果为：</p><pre><code>1,2,31,2,41,3,21,3,41,4,21,4,32,1,32,1,42,3,12,3,42,4,12,4,33,1,23,1,43,2,13,2,43,4,13,4,24,1,24,1,34,2,14,2,34,3,14,3,2</code></pre><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>如果取五个不连续的数进行以上排列，如何完成？</p><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>考虑使用数组使其变为连续的数。</p><h3 id="程序实例-1"><a href="#程序实例-1" class="headerlink" title="程序实例"></a>程序实例</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> NUM[<span class="number">5</span>];</span><br><span class="line">    <span class="type">int</span> a, b, c, d, e;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输入要操作的五个数字\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d%d&quot;</span>, &amp;NUM[<span class="number">0</span>], &amp;NUM[<span class="number">1</span>], &amp;NUM[<span class="number">2</span>], &amp;NUM[<span class="number">3</span>], &amp;NUM[<span class="number">4</span>]);</span><br><span class="line">    <span class="keyword">for</span> (a = <span class="number">0</span>; a &lt; <span class="number">5</span>; a++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (b = <span class="number">0</span>; b &lt; <span class="number">5</span>; b++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (c = <span class="number">0</span>; c &lt; <span class="number">5</span>; c++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (d = <span class="number">0</span>; d &lt; <span class="number">5</span>; d++) </span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (e = <span class="number">0</span>; e &lt; <span class="number">5</span>; e++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (a != b &amp;&amp; b != c &amp;&amp; c != d &amp;&amp; d != e &amp;&amp; a != c &amp;&amp; a != d &amp;&amp; a != e &amp;&amp; b != d &amp;&amp; b != e &amp;&amp; c != d &amp;&amp; c != e &amp;&amp; d != e )</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d %d %d\n&quot;</span>, NUM[a], NUM[b], NUM[c], NUM[d], NUM[e]);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="进阶方向"><a href="#进阶方向" class="headerlink" title="进阶方向"></a>进阶方向</h2><p>考虑采用一种方式简化if语句中去重的步骤以简化。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？&lt;/p&gt;
-&lt;/blockquot</summary>
-      
-    
-    
-    
-    <category term="菜鸟教程C语言经典100例练习" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8BC%E8%AF%AD%E8%A8%80%E7%BB%8F%E5%85%B8100%E4%BE%8B%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="练习" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
