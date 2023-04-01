@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2023-02-10T06:28:15.940Z</updated>
+  <updated>2023-04-01T18:53:17.736Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数论杂记</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2023/04/02/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2023/04/02/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/</id>
+    <published>2023-04-01T16:36:17.000Z</published>
+    <updated>2023-04-01T18:53:17.736Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原本打算将这篇博客取名数论基础，然而想想实在狂妄，本文仅仅记录了一些在做编程题时可能会用到的数学方法，离正统的数论还相差甚远，就数论杂记一名仍有蹭热度之嫌，不甚惶恐，留下这篇杂记。</p><h2 id="最大公约数-——-Greatest-Common-Divisor-GCD"><a href="#最大公约数-——-Greatest-Common-Divisor-GCD" class="headerlink" title="最大公约数 —— Greatest Common Divisor(GCD)"></a>最大公约数 —— Greatest Common Divisor(GCD)</h2><p>朴素的暴力法求最大公约数和辗转相除法的思想这里都不做赘述，我们仅仅介绍两种超快的求最大公约数算法：</p><ol><li><p>位运算法（a*b!&#x3D;0）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span>(b^=a^=b^=a%=b);</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>if+while+位运算法</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(b) <span class="keyword">while</span>((a%=b)&amp;&amp;(b%=a));</span><br><span class="line">  <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><h2 id="质数判断"><a href="#质数判断" class="headerlink" title="质数判断"></a>质数判断</h2><p>朴素的暴力法这里不再赘述，我们仅仅介绍一种超快的判断质数方法：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">prime</span><span class="params">(<span class="type">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num==<span class="number">1</span>)  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">if</span>(num==<span class="number">2</span>||num==<span class="number">3</span>)  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">if</span>(num%<span class="number">6</span>!=<span class="number">1</span>&amp;&amp;num%<span class="number">6</span>!=<span class="number">5</span>)  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="type">int</span> tmp=<span class="built_in">sqrt</span>(num);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">5</span>;i&lt;=tmp;i+=<span class="number">6</span>)</span><br><span class="line">    <span class="keyword">if</span>(num%i==<span class="number">0</span>||num%(i+<span class="number">2</span>)==<span class="number">0</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><h2 id="分解质数"><a href="#分解质数" class="headerlink" title="分解质数"></a>分解质数</h2><p>已知一个数可以分解成1和其本身相乘形式、或一种确定的若干个的质数相乘的形式，我们可以设计一种算法统计这些形式的长度（其中不包括1）：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> n=<span class="number">0</span>,m=<span class="number">2</span>;</span><br><span class="line">  <span class="keyword">while</span>(i!=<span class="number">1</span>&amp;&amp;m&lt;=<span class="built_in">sqrt</span>(i))</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">while</span>(i%m==<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      n++;</span><br><span class="line">      i/=m;</span><br><span class="line">    &#125;</span><br><span class="line">    m++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(i!=<span class="number">1</span>)  n++;</span><br><span class="line">  <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们也可以设计一个朴素的算法来输出这个序列：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">prim</span><span class="params">(<span class="type">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(m&gt;=n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(m%n) n++;</span><br><span class="line">        cout&lt;&lt;n&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        m/=n;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h2><p>在上文中我们提到了任何一个数都可以分解为质数相乘的形式，我们很容易联想到一个数的约数个数会和其质数数量呈现某种联系，实际上用也也确实如此：</p><blockquote><p>对于数$a$，有 $a&#x3D;m^{n_1}_1<em>m^{n_2}_2</em>m^{n_3}<em>3<em>\dots</em>m^{n</em>{i-1}}_{i-1}<em>m^{n_i}_i$，那么对于其约数的个数$b$，有$b&#x3D;(n_1+1)</em>(n_1+1)<em>(n_1+1)<em>\dots</em>(n_{i-1}+1)</em>(n_i+1)$。</p></blockquote><h2 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h2><p>对于最小公倍数的计算，我们首先可以基于gcd的基础得到一个简单的算法：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">ans</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a*b/<span class="built_in">gcd</span>(a,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;原本打算将这篇博客取名数论基础，然而想想实在狂妄，本文仅仅记录了一些在做编程题时可能会用到的数学方法，离正统的数论还相差甚远，就数论杂记一名</summary>
+      
+    
+    
+    
+    <category term="杂项" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="C++" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C/"/>
+    
+    <category term="数论" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>ADarkRoom</title>
@@ -511,32 +537,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;一个简单的C程序&quot;&gt;&lt;a href=&quot;#一个简单的C程序&quot; class=&quot;headerlink&quot; title=&quot;一个简单的C程序&quot;&gt;&lt;/a&gt;一个简单的C程序&lt;/h2&gt;&lt;p&gt;在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且</summary>
-      
-    
-    
-    
-    <category term="C语言教程" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言教程_01：编译环境</title>
-    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
-    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</id>
-    <published>2022-10-06T11:59:16.000Z</published>
-    <updated>2023-01-29T17:05:06.830Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的ide必不可少。<br>目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款ide由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的ide，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程推荐Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过&#96;Visual Studio 2022和其他ide，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h3 id="Visual-Studio-2022无法下载"><a href="#Visual-Studio-2022无法下载" class="headerlink" title="Visual Studio 2022无法下载"></a>Visual Studio 2022无法下载</h3><p>目前从官网下载Visual Studio 2022时可能会存在下载进度静止不动的问题，这里提供一种<a class="link" href="https://blog.csdn.net/weixin_66712181/article/details/122719473">解决方案<i class="fas fa-external-link-alt"></i></a></p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的ide，是许多比赛项目的指定的ide之一。出于此，本教程选用Dev作为编译环境。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="CLion"><a href="#CLion" class="headerlink" title="CLion"></a>CLion</h2><p>CLion作为JetBrains开发的一款ide，我们耳熟能详的PyCharm和IntelliJ同时也出自其旗下，官方正版的CLion并不免费，你可以<a class="link" href="https://www.jetbrains.com.cn/clion/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>VS Code作为微软公司开发的另一款ide，经调试可以支持多种语言，同时具有轻量化的优点，你可以<a class="link" href="https://code.visualstudio.com/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;学习C语言，一个好用的ide必不可少。&lt;br&gt;目前各大高校大多采用的是VC++6.0作为编译环境，众所周知，这款ide由微软于1993年推出</summary>
       
     
     

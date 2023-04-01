@@ -9,7 +9,7 @@
     
     <title>
         
-            ADarkRoom |
+            数论杂记 |
         
         云湍小站
     </title>
@@ -207,7 +207,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">ADarkRoom</span>
+                <span class="title-hover-animation">数论杂记</span>
             </div>
 
             
@@ -229,13 +229,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-02-10 14:20:05</span>
-        <span class="mobile">2023-02-10 14:20</span>
+        <span class="pc">2023-04-02 00:36:17</span>
+        <span class="mobile">2023-04-02 00:36</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-02-10 14:28:15</span>
+        <span class="pc">2023-04-02 02:53:17</span>
     </span>
     
     
@@ -244,7 +244,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>&nbsp;
+                        <a href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>&nbsp;
                     </li>
                 
             </ul>
@@ -256,7 +256,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>&nbsp;
+                        <a href="/tags/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%B0%E8%AE%BA/">数论</a>&nbsp;
                     </li>
                 
             </ul>
@@ -266,12 +270,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>122 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>606 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -287,12 +291,29 @@
             
 
             <div class="article-content keep-markdown-body">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在2020上网课时期，我在互联网上找到了一款名为小黑屋的页游，简洁的界面和言简意赅的剧情一下子吸引了我，但游戏内容却在进入太空后戛然而止。基于此，我们决定开启ADarkRoom计划，本计划仅作为学习交流所用，如有侵权请联系删除。</p>
-<h2 id="原版"><a href="#原版" class="headerlink" title="原版"></a>原版</h2><p>你可以<a href="../html/html/adarkroom/index.html">点击这里</a>或者从html导航栏中找到ADarkRoom。</p>
-<h2 id="项目进程"><a href="#项目进程" class="headerlink" title="项目进程"></a>项目进程</h2><ol>
-<li>暂无</li>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原本打算将这篇博客取名数论基础，然而想想实在狂妄，本文仅仅记录了一些在做编程题时可能会用到的数学方法，离正统的数论还相差甚远，就数论杂记一名仍有蹭热度之嫌，不甚惶恐，留下这篇杂记。</p>
+<h2 id="最大公约数-——-Greatest-Common-Divisor-GCD"><a href="#最大公约数-——-Greatest-Common-Divisor-GCD" class="headerlink" title="最大公约数 —— Greatest Common Divisor(GCD)"></a>最大公约数 —— Greatest Common Divisor(GCD)</h2><p>朴素的暴力法求最大公约数和辗转相除法的思想这里都不做赘述，我们仅仅介绍两种超快的求最大公约数算法：</p>
+<ol>
+<li><p>位运算法（a*b!&#x3D;0）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span>(b^=a^=b^=a%=b);</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>if+while+位运算法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(b) <span class="keyword">while</span>((a%=b)&amp;&amp;(b%=a));</span><br><span class="line">  <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h2 id="质数判断"><a href="#质数判断" class="headerlink" title="质数判断"></a>质数判断</h2><p>朴素的暴力法这里不再赘述，我们仅仅介绍一种超快的判断质数方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">prime</span><span class="params">(<span class="type">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num==<span class="number">1</span>)  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">if</span>(num==<span class="number">2</span>||num==<span class="number">3</span>)  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">if</span>(num%<span class="number">6</span>!=<span class="number">1</span>&amp;&amp;num%<span class="number">6</span>!=<span class="number">5</span>)  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="type">int</span> tmp=<span class="built_in">sqrt</span>(num);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">5</span>;i&lt;=tmp;i+=<span class="number">6</span>)</span><br><span class="line">    <span class="keyword">if</span>(num%i==<span class="number">0</span>||num%(i+<span class="number">2</span>)==<span class="number">0</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
+<h2 id="分解质数"><a href="#分解质数" class="headerlink" title="分解质数"></a>分解质数</h2><p>已知一个数可以分解成1和其本身相乘形式、或一种确定的若干个的质数相乘的形式，我们可以设计一种算法统计这些形式的长度（其中不包括1）：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> n=<span class="number">0</span>,m=<span class="number">2</span>;</span><br><span class="line">  <span class="keyword">while</span>(i!=<span class="number">1</span>&amp;&amp;m&lt;=<span class="built_in">sqrt</span>(i))</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">while</span>(i%m==<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      n++;</span><br><span class="line">      i/=m;</span><br><span class="line">    &#125;</span><br><span class="line">    m++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(i!=<span class="number">1</span>)  n++;</span><br><span class="line">  <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们也可以设计一个朴素的算法来输出这个序列：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">prim</span><span class="params">(<span class="type">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(m&gt;=n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(m%n) n++;</span><br><span class="line">        cout&lt;&lt;n&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        m/=n;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h2><p>在上文中我们提到了任何一个数都可以分解为质数相乘的形式，我们很容易联想到一个数的约数个数会和其质数数量呈现某种联系，实际上用也也确实如此：</p>
+<blockquote>
+<p>对于数$a$，有 $a&#x3D;m^{n_1}_1<em>m^{n_2}_2</em>m^{n_3}<em>3<em>\dots</em>m^{n</em>{i-1}}_{i-1}<em>m^{n_i}_i$，那么对于其约数的个数$b$，有$b&#x3D;(n_1+1)</em>(n_1+1)<em>(n_1+1)<em>\dots</em>(n_{i-1}+1)</em>(n_i+1)$。</p>
+</blockquote>
+<h2 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h2><p>对于最小公倍数的计算，我们首先可以基于gcd的基础得到一个简单的算法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">ans</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a*b/<span class="built_in">gcd</span>(a,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
             </div>
 
             
@@ -300,16 +321,16 @@
                     <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li>
-            <span class="type">本文标题</span>：<span class="content">ADarkRoom</span>
+            <span class="type">本文标题</span>：<span class="content">数论杂记</span>
         </li>
         <li>
             <span class="type">本文作者</span>：<span class="content">云湍/Cloudstill</span>
         </li>
         <li>
-            <span class="type">创建时间</span>：<span class="content">2023-02-10 14:20:05</span>
+            <span class="type">创建时间</span>：<span class="content">2023-04-02 00:36:17</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/02/10/ADarkRoom/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/04/02/数论基础/</span>
         </li>
         <li>
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -324,7 +345,11 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>&nbsp;
+                            <a href="/tags/C/">#C++</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E8%AE%BA/">#数论</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -333,29 +358,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/04/02/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">数论杂记</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/02/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-05%EF%BC%9A%E6%A0%88/"
+                               href="/2023/02/10/ADarkRoom/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">数据结构_05：栈</span>
+                                <span class="post-nav-title-item">ADarkRoom</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -453,7 +463,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">原版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">项目进程</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0-%E2%80%94%E2%80%94-Greatest-Common-Divisor-GCD"><span class="nav-number">2.</span> <span class="nav-text">最大公约数 —— Greatest Common Divisor(GCD)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E6%95%B0%E5%88%A4%E6%96%AD"><span class="nav-number">3.</span> <span class="nav-text">质数判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E8%A7%A3%E8%B4%A8%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">分解质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A6%E6%95%B0%E4%B8%AA%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">约数个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">最小公倍数</span></a></li></ol>
     </div>
 </div>
 
