@@ -235,7 +235,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-02 02:53:17</span>
+        <span class="pc">2023-04-02 11:22:47</span>
     </span>
     
     
@@ -270,7 +270,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>606 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>674 字</span>
         </span>
     
     
@@ -308,12 +308,17 @@
 <p>我们也可以设计一个朴素的算法来输出这个序列：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">prim</span><span class="params">(<span class="type">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(m&gt;=n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(m%n) n++;</span><br><span class="line">        cout&lt;&lt;n&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        m/=n;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h2><p>在上文中我们提到了任何一个数都可以分解为质数相乘的形式，我们很容易联想到一个数的约数个数会和其质数数量呈现某种联系，实际上用也也确实如此：</p>
+<h2 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h2><p>在上文中我们提到了任何一个数都可以分解为质数相乘的形式，我们很容易联想到一个数的约数个数会和其质数数量存在某种联系，实际上也确实如此：</p>
 <blockquote>
-<p>对于数$a$，有 $a&#x3D;m^{n_1}_1<em>m^{n_2}_2</em>m^{n_3}<em>3<em>\dots</em>m^{n</em>{i-1}}_{i-1}<em>m^{n_i}_i$，那么对于其约数的个数$b$，有$b&#x3D;(n_1+1)</em>(n_1+1)<em>(n_1+1)<em>\dots</em>(n_{i-1}+1)</em>(n_i+1)$。</p>
+<p>一个数约数的个数等于其分解成的各个质数的幂次数加一之和的积。</p>
 </blockquote>
 <h2 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h2><p>对于最小公倍数的计算，我们首先可以基于gcd的基础得到一个简单的算法：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">ans</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a*b/<span class="built_in">gcd</span>(a,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们还可以根据上文的约数分解逆推出求其最小公倍数的公式，我们知道如果某个数a含有约数b，那么数a的倍数也含有这个约数b，因此有结论：</p>
+<blockquote>
+<p>最小公倍数等于各个数字分解而成的各个质数在所有数字中最大幂次的积。</p>
+</blockquote>
+
             </div>
 
             
@@ -330,7 +335,7 @@
             <span class="type">创建时间</span>：<span class="content">2023-04-02 00:36:17</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/04/02/数论基础/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/04/02/数论杂记/</span>
         </li>
         <li>
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
