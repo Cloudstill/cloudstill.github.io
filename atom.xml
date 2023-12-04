@@ -6,7 +6,7 @@
   <link href="https://gitee.com/cloudstill/cloudstill.git/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/cloudstill/cloudstill.git/"/>
-  <updated>2023-10-25T12:14:59.354Z</updated>
+  <updated>2023-08-04T15:39:27.878Z</updated>
   <id>https://gitee.com/cloudstill/cloudstill.git/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>work1</title>
-    <link href="https://gitee.com/cloudstill/cloudstill.git/2023/10/25/work1/"/>
-    <id>https://gitee.com/cloudstill/cloudstill.git/2023/10/25/work1/</id>
-    <published>2023-10-25T11:30:15.000Z</published>
-    <updated>2023-10-25T12:14:59.354Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>截至10月25日采编组六名新同学均已提交第一次推文，均以策划案和双节推文为模板做成，效率很高值得表扬。</p><p>在内容上，有一些语言表达上采用的是策划案原文，不适合用来活动宣传，活动宣传上可以运用更多的生动的文字。详略方面需要更加突出重点的同时，也可以运用不同的样式来强调一些关键信息。</p><p>本次对提交的样式没有要求，但是还是有三份推文具备了很好的样式。本次点评只对文字内容展开。</p><p>在提交版本上，有一名同学提交了135编辑器版本，一名同学提交pdf版本，一名同学提交了wps版本，其余三名均以docx版本提交。易班在编辑器上要以秀米为主，大致操作与135编辑器类似，建议所有同学学习。</p><p>另，本周末有采编组相关培训，据说有彩蛋。</p><h2 id="点评"><a href="#点评" class="headerlink" title="点评"></a>点评</h2><p>以下单独对作品进行点评，概况所提及的问题不再赘述。</p><h3 id="一"><a href="#一" class="headerlink" title="一"></a>一</h3><p><img src="bym.jpg"></p><p>本篇推文和后面的第五篇较为相似，缺乏文学性和互动性，基本只是对策划案的提炼。</p><h3 id="二"><a href="#二" class="headerlink" title="二"></a>二</h3><p><img src="hwx.jpg"></p><p>本篇推文以pdf格式提交，完成度很高。在内容上很符合活动宣传推文要求，如果可以更突出一点重点就更好了。</p><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><p><img src="lsy.jpg"></p><p>本篇推文有意识地以宣传的口吻进行行文，但部分细节做的不够到位。其他内容也基本是策划案的表达，有待改进。</p><h3 id="四"><a href="#四" class="headerlink" title="四"></a>四</h3><p><img src="lyt.jpg"></p><p>本篇推文使用了135编辑器，完成度也很高，基本格式可以采用这版，但在文字上还是很通病的有些局限于策划的文字表述中。</p><h3 id="五"><a href="#五" class="headerlink" title="五"></a>五</h3><p><img src="xly.jpg"></p><p>和其他提交的推文一样，本篇推文也大部分是对策划案的提炼，没能做到一篇推文需要有的文学性和互动性。</p><h3 id="六"><a href="#六" class="headerlink" title="六"></a>六</h3><p><img src="tdw.jpg"></p><p>本篇推文条理很清晰，运用到表格清晰明了地展现出关键信息，但不建议作为主要表达手段，有失文学性。<br>另外作为一篇宣传推文，一些策划中需要描述的东西，如奖品清单，报名表都不适合出现。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h2&gt;&lt;p&gt;截至10月25日采编组六名新同学均已提交第一次推文，均以策划案和双节推文为模板做成，效率很高值得表扬。&lt;/p&gt;
-&lt;p&gt;在内容上，有一些语言表</summary>
-      
-    
-    
-    
-    <category term="易班" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/%E6%98%93%E7%8F%AD/"/>
-    
-    
-    <category term="易班" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%98%93%E7%8F%AD/"/>
-    
-  </entry>
   
   <entry>
     <title>数据结构_15：排序算法</title>
@@ -397,6 +372,32 @@
     <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="数据结构" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_05：输入与输出</title>
+    <link href="https://gitee.com/cloudstill/cloudstill.git/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/"/>
+    <id>https://gitee.com/cloudstill/cloudstill.git/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/</id>
+    <published>2022-10-20T00:22:48.000Z</published>
+    <updated>2023-01-29T17:08:43.733Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="C语言中的输入与输出"><a href="#C语言中的输入与输出" class="headerlink" title="C语言中的输入与输出"></a>C语言中的输入与输出</h2><p>在第二节我们曾经介绍<code>#include&lt;stdio.h&gt;</code>的含义是包含一个标准输入输出的头文件，随即在第三节我们又学习了printf()语句。printf()是一个最为常见的输出语句，那么除此之外，C语言中还有那些输入输出语句呢？<br>C语言中有三对输入输出语句，由于格式相似，我们分三对介绍。</p><h2 id="最常用的输入输出语句：scanf-与printf"><a href="#最常用的输入输出语句：scanf-与printf" class="headerlink" title="最常用的输入输出语句：scanf()与printf()"></a>最常用的输入输出语句：scanf()与printf()</h2><p>作为相对应的输入输出字符，scanf()与printf()在形式上都是由一个英文单词加上format的缩写f构成，其使用起来也遵循类似的规则，使用起来都需要在括号内加入双引号来限定内容，将双引号内的内容原样输入或输出。正如\n这类转义字符具有特殊作用一样，在scanf()和printf()中还存在着一个特殊的，具有特殊作用而不被原样输出输出的符号，称之为格式字符。</p><h3 id="scanf-与printf-语句中的格式字符"><a href="#scanf-与printf-语句中的格式字符" class="headerlink" title="scanf()与printf()语句中的格式字符"></a>scanf()与printf()语句中的格式字符</h3><p>在scanf()和printf()中，形如%d这类%加字母的就被称之为格式字符。<br>格式字符，顾名思义，是来限定输出内容格式的，为了便于学习，我们在此只陈列一些最为常用的格式字符：</p><table><thead><tr><th align="center">格式字符</th><th align="center">格式说明</th></tr></thead><tbody><tr><td align="center">%d</td><td align="center">带符号的十进制整数</td></tr><tr><td align="center">%u</td><td align="center">无符号的十进制整数</td></tr><tr><td align="center">%c</td><td align="center">一个字符</td></tr><tr><td align="center">%s</td><td align="center">一个字符串</td></tr><tr><td align="center">%f</td><td align="center">浮点数，即小数</td></tr></tbody></table><p>当我们对输入输出的格式进行限定后， 此时我们会发现少了些什么：我们明确了输出输出的格式，却没有明确我们要格式化的对象，接下来我们就将要学习如何在输入输出语句中确定格式化的对象。</p><h3 id="用逗号间隔开来的补充说明：变量的首次运用"><a href="#用逗号间隔开来的补充说明：变量的首次运用" class="headerlink" title="用逗号间隔开来的补充说明：变量的首次运用"></a>用逗号间隔开来的补充说明：变量的首次运用</h3><p>类似于英语中的同位语，我们可以在括号内、引号后的位置使用逗号，从而确定我们要输入输出的对象。这个对象，可以是变量，也可以是含有变量的表达式。下面我们看一个例子来学习：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> example_1;</span><br><span class="line">    <span class="type">float</span> example_2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %f&quot;</span>, &amp;example_1, &amp;example_2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %f&quot;</span>, example_1, example_2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="1.png"></p><p>通过这个例子，我们可以总结出3点规律：</p><ol><li>引号内内容应当原样输入输出，包括空格和其他字符；</li><li>引用变量时的格式字符应该与声明时的对应，不一致的格式可能会造成数据丢失或者报错；</li><li>输入语句scanf()中引用变量时要用上&amp;，&amp;的名称是取地址符，整个scanf()语句的意思就是将输入的值赋给变量所分配的地址，关于地址的更多详情，我们会在指针一节中提及，这里我们可以看做将输入的值赋给&amp;后的变量；</li></ol><h3 id="对格式字符的附加修饰"><a href="#对格式字符的附加修饰" class="headerlink" title="对格式字符的附加修饰"></a>对格式字符的附加修饰</h3><p>在实际运用中，我们可能还要对格式进行进一步要求，这里就引入了对格式字符的附加修饰字符，由于输出输出语句中修饰字符存在细微差别，我们这里分别介绍。<br>在输入语句中我们以整型%d为例，*%d表示数据在输入后不进行赋值，%nd表示将输入数据的前n位赋值，%hd表示输入短整型，%ld表示输入长整型。<br>在输出语句中我们以浮点型%f为例，%lf表示输出双精度double型，%mf表示输出数据最小宽度为m格，%mf表示输出数据最小宽度为m格且少的位置用0补齐，%.nf表示输出数据小数点后有n位，%-f表示输出数据想左靠。</p><h2 id="适用于字符的输入输出语句：getchar-与putchar"><a href="#适用于字符的输入输出语句：getchar-与putchar" class="headerlink" title="适用于字符的输入输出语句：getchar()与putchar()"></a>适用于字符的输入输出语句：getchar()与putchar()</h2><p>对于字符型乃至接下来所说的字符串型，它们也同样遵循上文我们所总结出来的第二条规律，即格式的相统一。<br>而不同它们和第一类相比，也有着许多不同之处，这里我们以输入输出的顺序依次介绍。</p><h3 id="关于getchar"><a href="#关于getchar" class="headerlink" title="关于getchar()"></a>关于getchar()</h3><p>作为简单的输入语句，getchar()在使用时有一下几点需要注意：</p><ol><li>getchar()会接收键盘输入的第一个字符，无论它是符号、数字、字母甚至是空格；</li><li>getchar()的赋值可以直接用等号，例如：<code>name = getchar</code>；</li></ol><h3 id="关于putchar"><a href="#关于putchar" class="headerlink" title="关于putchar()"></a>关于putchar()</h3><p>作为简单的输出语句，putchar()在使用时有一下几点需要注意：</p><ol><li>在对字符字符进行原样输出是括号内用的是单引号而非双引号；</li><li>括号内引号中可以是转义字符，例如<code>\101</code>就会输出<code>A</code>；</li><li>可以直接在括号内输入变量名来输出它所对应的字符；</li></ol><h2 id="适用于字符串的输入输出语句：gets-与puts"><a href="#适用于字符串的输入输出语句：gets-与puts" class="headerlink" title="适用于字符串的输入输出语句：gets()与puts()"></a>适用于字符串的输入输出语句：gets()与puts()</h2><p>字符串的输入输出可能会涉及指针等后续内容，本节内容我们将在指针后介绍。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>作为最常用的输入输出语句scanf()与printf()，学好它们以及配套的格式字符、修饰字符便足以应对大多数环境。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;C语言中的输入与输出&quot;&gt;&lt;a href=&quot;#C语言中的输入与输出&quot; class=&quot;headerlink&quot; title=&quot;C语言中的输入与输出&quot;&gt;&lt;/a&gt;C语言中的输入与输出&lt;/h2&gt;&lt;p&gt;在第二节我们曾经介绍&lt;code&gt;#include&amp;lt;stdio.h&amp;gt</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://gitee.com/cloudstill/cloudstill.git/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://gitee.com/cloudstill/cloudstill.git/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
