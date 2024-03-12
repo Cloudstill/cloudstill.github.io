@@ -1,0 +1,88 @@
+.SimHeader{
+    text-align: center;
+    padding: 5rem;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    background-image: url(https://img.zcool.cn/community/016afc60169eb411013e399147fee6.jpg);
+    background-position-y: -2rem;
+    background-size: 160%;
+    backdrop-filter: blur(100rem);
+    position: relative;
+    text-shadow: 0px 0px 20px black, 0px 0px 20px black;
+    color:white;
+    font-weight: bolder;
+}
+.MainPanel{
+    border-top: 0.05rem solid #525252;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0px -19px 20px 0px rgba(0,0,0,0.3);
+    z-index:5;
+    & .LeftSide {
+        left: 0;
+        height: -webkit-fill-available;
+        min-width: max-content;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-right: 0.2rem solid #cecece;
+        & div{
+            font-size: 3.5rem;
+            background-color: #dcdcdc;
+            color: #525252;
+            min-width: 15rem;
+            padding: 4rem 3rem;
+            &.selected{
+                color:black;
+                background-color: white;
+                box-shadow: inset 15px 0px 0px 0px red, -2px 7px 13px 0px rgba(0,0,0,0.2);
+                z-index:10
+            }
+        }
+    }
+    & .RightSide{
+        flex-grow: 1;
+        font-size: 3rem;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: -7px 2px 11px 0px rgba(0,0,0,0.3);
+        z-index: 15;
+        & div{
+            padding: 3rem 2.5rem;
+            border-bottom: 2px solid rgba(0,0,0,0.3);
+            min-width: -webkit-fill-available;
+            &.title{
+                top: 0;
+                font-size: 4rem;
+                position: relative;
+                align-self: center;
+                text-align: center;
+            }
+            & img{
+                width: 100%;
+                margin-top: 2rem;
+                border-radius: 2rem;
+            }
+            &.content{
+                display: inline-flex;
+                flex-direction: column;
+                &::before{
+                    content:url('data:image/svg+xml;base64,PHN2ZyB0PSIxNzA5OTg2OTgwNzkwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjM1MTYiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNNTEyIDQyLjY2NjY2N0MyNTIuNzkzMzMzIDQyLjY2NjY2NyA0Mi42NjY2NjcgMjUyLjc5MzMzMyA0Mi42NjY2NjcgNTEyczIxMC4xMjY2NjcgNDY5LjMzMzMzMyA0NjkuMzMzMzMzIDQ2OS4zMzMzMzMgNDY5LjMzMzMzMy0yMTAuMTI2NjY3IDQ2OS4zMzMzMzMtNDY5LjMzMzMzM1M3NzEuMjA2NjY3IDQyLjY2NjY2NyA1MTIgNDIuNjY2NjY3eiBtMCA4OTZjLTIzNS42NCAwLTQyNi42NjY2NjctMTkxLjAyNjY2Ny00MjYuNjY2NjY3LTQyNi42NjY2NjdzMTkxLjAyNjY2Ny00MjYuNjY2NjY3IDQyNi42NjY2NjctNDI2LjY2NjY2NyA0MjYuNjY2NjY3IDE5MS4wMjY2NjcgNDI2LjY2NjY2NyA0MjYuNjY2NjY3LTE5MS4wMjY2NjcgNDI2LjY2NjY2Ny00MjYuNjY2NjY3IDQyNi42NjY2Njd6IG0tNzQuNjY2NjY3LTIxMy4zOGE1My4zNzMzMzMgNTMuMzczMzMzIDAgMCAxLTUzLjMzMzMzMy01My4zMzMzMzRWMzUyLjA2NjY2N0E1My4zMzMzMzMgNTMuMzMzMzMzIDAgMCAxIDQ2Ny4zNzMzMzMgMzA4TDcwMiA0NjcuOTMzMzMzYTUzLjMzMzMzMyA1My4zMzMzMzMgMCAwIDEgMCA4OC4xMzMzMzRMNDY3LjM3MzMzMyA3MTZhNTMuMjg2NjY3IDUzLjI4NjY2NyAwIDAgMS0zMC4wNCA5LjI4NjY2N3ogbTAuMDgtMzgzLjkzMzMzNGExMS4wOTMzMzMgMTEuMDkzMzMzIDAgMCAwLTUuMDggMS4yOCAxMC40NDY2NjcgMTAuNDQ2NjY3IDAgMCAwLTUuNjY2NjY2IDkuNDMzMzM0djMxOS44NjY2NjZhMTAuNjY2NjY3IDEwLjY2NjY2NyAwIDAgMCAxNi42NjY2NjYgOC44MmwyMzQuNjY2NjY3LTE1OS45NGExMC42NjY2NjcgMTAuNjY2NjY3IDAgMCAwIDAtMTcuNjI2NjY2bC0yMzQuNjY2NjY3LTE1OS45MzMzMzRhMTAuMzEzMzMzIDEwLjMxMzMzMyAwIDAgMC01LjkwNjY2Ni0xLjkyeiIgZmlsbD0iI0ZGRkZGRiIgcC1pZD0iMzUxNyI+PC9wYXRoPjwvc3ZnPg==');
+                    display: inline-flex;
+                    width: -webkit-fill-available;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    margin-top: 19.5%;
+                    padding-right: 2.5rem;
+                    opacity: 0.95;
+                }
+            }
+        }
+    }
+}
