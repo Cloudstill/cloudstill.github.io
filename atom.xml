@@ -6,7 +6,7 @@
   <link href="https://cloudstill.github.io/rapids.github.io/atom.xml" rel="self"/>
   
   <link href="https://cloudstill.github.io/rapids.github.io/"/>
-  <updated>2024-01-13T09:09:02.601Z</updated>
+  <updated>2023-12-06T17:32:07.435Z</updated>
   <id>https://cloudstill.github.io/rapids.github.io/</id>
   
   <author>
@@ -15,67 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2024年1月15日刷题记录</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2024/01/13/2024%E5%B9%B41%E6%9C%8815%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2024/01/13/2024%E5%B9%B41%E6%9C%8815%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
-    <published>2024-01-13T09:09:02.000Z</published>
-    <updated>2024-01-13T09:09:02.601Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2024年1月7日每周总结</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2024/01/06/2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2024/01/06/2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
-    <published>2024-01-06T04:14:38.000Z</published>
-    <updated>2024-01-08T12:08:20.363Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="牛客小白月赛85"><a href="#牛客小白月赛85" class="headerlink" title="牛客小白月赛85"></a>牛客小白月赛85</h2><p>半小时不到开出A、B、C，后面两小时（包括赛后半小时）没开出来D，赛场上浅看了一下E没做，赛后补出来E，F题DP不会做，贪心过了40%，看大佬代码补。</p><h3 id="A-ACCEPT"><a href="#A-ACCEPT" class="headerlink" title="A-ACCEPT"></a>A-ACCEPT</h3><h4 id="题目详情"><a href="#题目详情" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic1.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/A">https://ac.nowcoder.com/acm/contest/72980/A<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>签到，字符哈希处理出现次数找到最小值（C取一半），有一点木桶效应的意思。</p><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        cin &gt;&gt; n;</span><br><span class="line">        string str;</span><br><span class="line">        cin &gt;&gt; str;</span><br><span class="line">        map&lt;<span class="type">char</span>, <span class="type">int</span>&gt; mci;</span><br><span class="line">        mci[<span class="string">&#x27;A&#x27;</span>] = <span class="number">0</span>;</span><br><span class="line">        mci[<span class="string">&#x27;C&#x27;</span>] = <span class="number">0</span>;</span><br><span class="line">        mci[<span class="string">&#x27;E&#x27;</span>] = <span class="number">0</span>;</span><br><span class="line">        mci[<span class="string">&#x27;P&#x27;</span>] = <span class="number">0</span>;</span><br><span class="line">        mci[<span class="string">&#x27;T&#x27;</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(str[i] == <span class="string">&#x27;A&#x27;</span> || str[i] == <span class="string">&#x27;C&#x27;</span> || str[i] == <span class="string">&#x27;E&#x27;</span> || str[i] == <span class="string">&#x27;P&#x27;</span> || str[i] == <span class="string">&#x27;T&#x27;</span>)</span><br><span class="line">                mci[str[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> ans = n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i : mci)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> tmp = i.y;</span><br><span class="line">            <span class="keyword">if</span>(i.x == <span class="string">&#x27;C&#x27;</span>)    tmp /= <span class="number">2</span>;</span><br><span class="line">            ans = <span class="built_in">min</span>(ans, tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="B-咕呱蛙"><a href="#B-咕呱蛙" class="headerlink" title="B-咕呱蛙"></a>B-咕呱蛙</h3><h4 id="题目详情-1"><a href="#题目详情-1" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic2.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/B">https://ac.nowcoder.com/acm/contest/72980/B<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h4><p>签到题，有规律如下：奇奇偶偶，故得解。</p><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; n + ((n - <span class="number">1</span>) / <span class="number">2</span> + <span class="number">1</span>) * <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="C-得分显示"><a href="#C-得分显示" class="headerlink" title="C-得分显示"></a>C-得分显示</h3><h4 id="题目详情-2"><a href="#题目详情-2" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic3.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/C">https://ac.nowcoder.com/acm/contest/72980/C<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h4><p>对于每一关的得分都计算平均得分，求出其中最大值。因为每天的得分只保留整数，故对每天的得分都加1，最后输出结果再减0.00000000001。</p><h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> p[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">long</span> <span class="type">double</span> x = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        cin &gt;&gt; p[i];</span><br><span class="line">    x = p[n - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">double</span> tmp = (<span class="type">long</span> <span class="type">double</span>)(p[i] + <span class="number">1</span>) / (i + <span class="number">1</span>);</span><br><span class="line">        x = <span class="built_in">min</span>(x, tmp);</span><br><span class="line">    &#125;  </span><br><span class="line">    x -= <span class="number">0.00000000001</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.10llf&quot;</span>, x);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="D-阿里马马与四十大盗"><a href="#D-阿里马马与四十大盗" class="headerlink" title="D-阿里马马与四十大盗"></a>D-阿里马马与四十大盗</h3><h4 id="题目详情-3"><a href="#题目详情-3" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic4.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/D">https://ac.nowcoder.com/acm/contest/72980/D<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h4><p>先判断是否满足逃生要求，若满足要求则尽可能提前最后一次恢复的时间，该时间之前所有的陷阱所扣血量加上每一步自然消耗的时间即为答案。</p><h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span> ;</span><br><span class="line"></span><br><span class="line">ll a[N], s[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line">cin &gt;&gt; a[i];</span><br><span class="line">s[i] = s[i - <span class="number">1</span>] + a[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ll sum = <span class="number">0</span>, ans = <span class="number">1e18</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (a[i] == <span class="number">0</span>) sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span> sum += a[i];</span><br><span class="line"><span class="keyword">if</span> (sum &gt;= m)</span><br><span class="line">&#123;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line"><span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = n; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">&#123;</span><br><span class="line">sum += a[i];</span><br><span class="line"><span class="keyword">if</span> (a[i] == <span class="number">0</span> &amp;&amp; sum &lt; m) ans = <span class="built_in">min</span>(ans, s[i - <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">cout &lt;&lt; ans + n - <span class="number">1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"><span class="built_in">solve</span>();</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="E-烙饼"><a href="#E-烙饼" class="headerlink" title="E-烙饼"></a>E-烙饼</h3><h4 id="题目详情-4"><a href="#题目详情-4" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic5.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/E">https://ac.nowcoder.com/acm/contest/72980/E<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h4><p>根据题意有以下两个结论：</p><ul><li>总花费的时间等于$max(a_i,\frac{\sum_{1}^{n} a_i}{n})$</li><li>一张饼所花费的烙饼时间小于两倍的总时间，即一张饼只需要两个烙饼机。</li></ul><p>故只需要先求出总花费的时间并遍历每一张饼判断与总时间的关系，据此将烙饼信息添加到数组中，最后输出数组内容即可。</p><h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">2</span> * N;</span><br><span class="line">ll a[N];</span><br><span class="line">ll id1[M], id2[M], l[M], r[M];</span><br><span class="line">ll si = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(ll a, ll b, ll c, ll d)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    id1[si] = a;</span><br><span class="line">    id2[si] = b;</span><br><span class="line">    l[si] = c;</span><br><span class="line">    r[si] = d;</span><br><span class="line">    si += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll n, m, ma = <span class="number">0</span>, s = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)    </span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        s += a[i];</span><br><span class="line">        ma = <span class="built_in">max</span>(ma, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    ll top = <span class="built_in">max</span>(ma, (s + m - <span class="number">1</span>) / m);</span><br><span class="line">    ll x = <span class="number">1</span>, y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] + y &gt;= top)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">add</span>(i, x, y, top);</span><br><span class="line">            a[i] -= top - y;</span><br><span class="line">            x += <span class="number">1</span>;</span><br><span class="line">            y = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i] != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">add</span>(i, x, y, y + a[i]);</span><br><span class="line">            y += a[i];   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; si &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; si; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; id1[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        cout &lt;&lt; id2[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        cout &lt;&lt; l[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        cout &lt;&lt; r[i] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="F-龙吸水（EASY）"><a href="#F-龙吸水（EASY）" class="headerlink" title="F-龙吸水（EASY）"></a>F-龙吸水（EASY）</h3><h4 id="题目详情-5"><a href="#题目详情-5" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic6.png"></p><p>原题链接<a class="link" href="https://ac.nowcoder.com/acm/contest/72980/F">https://ac.nowcoder.com/acm/contest/72980/F<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h4><p>本来以为是贪心结果只过了40%，后来知道了是DP题但有点难，还没想明白，等有这个能力的时候再补完。</p><h4 id="40-贪心代码"><a href="#40-贪心代码" class="headerlink" title="40%贪心代码"></a>40%贪心代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e4</span>;</span><br><span class="line"><span class="type">int</span> a[N], b[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n, l, r;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; l &gt;&gt; r;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        b[i] = a[i] - a[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] = <span class="built_in">max</span>(<span class="number">0</span>, a[i - <span class="number">1</span>] + b[i]);</span><br><span class="line">        <span class="keyword">if</span>(a[i] &gt; r)    a[i] = r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">if</span>(l &lt;= a[i] &amp;&amp; a[i] &lt;= r)</span><br><span class="line">            ans += <span class="number">1</span>;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="CF-Hello-2024"><a href="#CF-Hello-2024" class="headerlink" title="CF Hello 2024"></a>CF Hello 2024</h2><h3 id="A-Wallet-Exchange"><a href="#A-Wallet-Exchange" class="headerlink" title="A. Wallet Exchange"></a>A. Wallet Exchange</h3><h4 id="题目详情-6"><a href="#题目详情-6" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic7.png"></p><p>原题链接<a class="link" href="https://codeforces.com/contest/1919/problem/A">https://codeforces.com/contest/1919/problem/A<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h4><p>签到题，根据总和的奇偶性可以判断胜负。</p><h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> t;</span><br><span class="line">cin &gt;&gt; t;</span><br><span class="line"><span class="keyword">while</span>(t--)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a, b;</span><br><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line"><span class="type">int</span> tmp = <span class="built_in">abs</span>(a - b);</span><br><span class="line"><span class="keyword">if</span>(tmp % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;Bob\n&quot;</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;Alice\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="B-Plus-Minus-Split"><a href="#B-Plus-Minus-Split" class="headerlink" title="B. Plus-Minus Split"></a>B. Plus-Minus Split</h3><h4 id="题目详情-7"><a href="#题目详情-7" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic8.png"></p><p>原题链接<a class="link" href="https://codeforces.com/contest/1919/problem/B">https://codeforces.com/contest/1919/problem/B<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h4><p>根据样例不难得出答案为两符号个数之差的绝对值。</p><h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> t;</span><br><span class="line">cin &gt;&gt; t;</span><br><span class="line"><span class="keyword">while</span>(t--)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">string str;</span><br><span class="line"><span class="type">int</span> add = <span class="number">0</span>, sub = <span class="number">0</span>;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; str;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line"><span class="keyword">if</span>(str[i] == <span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">add += <span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span>sub += <span class="number">1</span>;</span><br><span class="line">cout &lt;&lt; <span class="built_in">abs</span>(add - sub) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="C-Grouping-Increases"><a href="#C-Grouping-Increases" class="headerlink" title="C. Grouping Increases"></a>C. Grouping Increases</h3><h4 id="题目详情-8"><a href="#题目详情-8" class="headerlink" title="题目详情"></a>题目详情</h4><p><img lazyload alt="image" data-src="/./2024%E5%B9%B41%E6%9C%885%E6%97%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/pic9.png"></p><p>原题链接<a class="link" href="https://codeforces.com/contest/1919/problem/C">https://codeforces.com/contest/1919/problem/C<i class="fas fa-external-link-alt"></i></a></p><h4 id="解题思路-8"><a href="#解题思路-8" class="headerlink" title="解题思路"></a>解题思路</h4><p>一开始以为贪心但是wa了后来觉得可能是dp但还是没过，看别人代码大概理解了自己的贪心少了保证一个序列的最后一个元素小于另一个的这一步。</p><p>解题流程就是遍历原序列将元素加到a或b序列中，优先构造逆序对，若无法构造逆序对则将其加入到a序列并计数加一，同时保证a序列的最后一个元素永远小于b序列，最后输出计数即可。</p><h4 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> t;</span><br><span class="line">cin &gt;&gt; t;</span><br><span class="line"><span class="keyword">while</span> (t--)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line"><span class="type">int</span> a = <span class="number">1e9</span>, b = <span class="number">1e9</span>, x = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span>&amp; i : v)</span><br><span class="line">&#123;</span><br><span class="line">cin &gt;&gt; i;</span><br><span class="line"><span class="keyword">if</span>(a &gt; b) <span class="built_in">swap</span>(a, b);</span><br><span class="line"><span class="keyword">if</span>(i &lt;= a) a = i;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(i &lt;= b) b = i;</span><br><span class="line"><span class="keyword">else</span> a = i, x += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;牛客小白月赛85&quot;&gt;&lt;a href=&quot;#牛客小白月赛85&quot; class=&quot;headerlink&quot; title=&quot;牛客小白月赛85&quot;&gt;&lt;/a&gt;牛客小白月赛85&lt;/h2&gt;&lt;p&gt;半小时不到开出A、B、C，后面两小时（包括赛后半小时）没开出来D，赛场上浅看了一下E没做，赛</summary>
-      
-    
-    
-    
-    <category term="刷题" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E5%88%B7%E9%A2%98/"/>
-    
-    
-    <category term="算法" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法期末可能的重点</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/12/15/%E7%AE%97%E6%B3%95%E6%9C%9F%E6%9C%AB%E5%8F%AF%E8%83%BD%E7%9A%84%E9%87%8D%E7%82%B9/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/12/15/%E7%AE%97%E6%B3%95%E6%9C%9F%E6%9C%AB%E5%8F%AF%E8%83%BD%E7%9A%84%E9%87%8D%E7%82%B9/</id>
-    <published>2023-12-15T09:36:17.000Z</published>
-    <updated>2023-12-16T11:44:23.606Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>该篇只是个人基于自己对算法课程的理解以及对期末考试可能涉及的知识点的预测，并不具备权威性质，请读者自行甄别，合理选择复习内容，一切后果请自己承担。</p><h2 id="第1章-算法概述"><a href="#第1章-算法概述" class="headerlink" title="第1章 算法概述"></a>第1章 算法概述</h2><h3 id="1-1-算法和程序"><a href="#1-1-算法和程序" class="headerlink" title="1.1 算法和程序"></a>1.1 算法和程序</h3><p>1.算法的概念：通俗的讲，算法是指解决问题的一种方法或一个过程。</p><blockquote><p>算是一个非常基础的内容，感觉应该是必考</p></blockquote><p>2.算法的性质：</p><ul><li>输入：有零个或多个由外部提供的量作为算法的输入。</li><li>输出：算法产生至少一个量作为输出。</li><li>确定性：组成算法的每条指令</li><li>有限性：算法中每条指令的执行次数是有限的，执行每条指令的时间也是有限的。</li></ul><blockquote><p>算法的四个性质，把意思记住和关键词记住就行，输入和输出的个数要想明白</p></blockquote><p>3.算法与程序的关系：程序与算法不同。程序是算法用某种程序设计语言的具体实现。程序可以不满足算法的有限性。</p><blockquote><p>感觉考的概率很高，记住程序可以不满足算法的有限性</p></blockquote><h3 id="1-2-算法复杂性分析"><a href="#1-2-算法复杂性分析" class="headerlink" title="1.2 算法复杂性分析"></a>1.2 算法复杂性分析</h3><p>1.算法复杂性的概念：算法所需要的计算机资源，有时间复杂性和空间复杂性之分。</p><blockquote><p>基本概念，考的可能不大，但要知道</p></blockquote><p>2.算法复杂度的区别：算法复杂性有最坏情况，最好情况和平均情况下之分。其中，可操作性最好且最具有实际价值的是最坏情况下的时间复杂性。</p><blockquote><p>要了解到最坏情况下时间复杂性的实际价值，并会求</p></blockquote><p>3.算法渐近复杂性：通俗的说，算法渐近复杂性是问题输入规模趋近于无穷时算法的复杂性，渐近意义下有四个记号，这里在书中第3页有具体的说明，其中最常用的是大写的字母O，其概念是复杂性的一个上界。</p><blockquote><p>很繁琐的概念，看需求复习，但大写字母O是重点</p></blockquote><p>EX.算法复杂性的求法：因为绝大情况下在求算法复杂性的时候会求最坏情况下的渐近复杂性，也就是大写字母O所表示的复杂性，而写法往往又是问题规模n的一个表达式或是常数1，这个时候我们求复杂性的时候可以从大局上来看而不斤斤计较于细枝末节，一些经验比如二分往往和log，一个for往往代表n的一次幂等。</p><blockquote><p>个人经验，可跳过</p></blockquote><h2 id="第2章-递归和分治策略"><a href="#第2章-递归和分治策略" class="headerlink" title="第2章 递归和分治策略"></a>第2章 递归和分治策略</h2><h3 id="2-1-递归的概念"><a href="#2-1-递归的概念" class="headerlink" title="2.1 递归的概念"></a>2.1 递归的概念</h3><p>1.递归算法的概念：直接或间接地调用自身的算法称为递归算法</p><blockquote><p>基本概念，简单记记</p></blockquote><p>2.递归函数的概念：用函数自身给出的定义的函数称为递归函数。</p><blockquote><p>同上</p></blockquote><p>3.递归算法的例子：Fibonacci数列、Hanoi塔问题等</p><blockquote><p>列举的两个是非常经典的问题，均易于理解，前者方便实现</p></blockquote><p>EX：递归函数的设计：在设计递归函数时往往需要具备两个结构，一个是终止层，一个是递归层。</p><blockquote><p>我记得好像讲了，但是翻书没找到</p></blockquote><h3 id="2-2-分治法的基本思想"><a href="#2-2-分治法的基本思想" class="headerlink" title="2.2 分治法的基本思想"></a>2.2 分治法的基本思想</h3><p>1.分治法的基本思想：分治法的基本思想是将一个规模为n的问题分解为k个规模较小的子问题，这些子问题相互独立且与原问题相同。</p><blockquote><p>书上概念</p></blockquote><p>2.分治法的解题方向：自底向上。</p><blockquote><p>概念</p></blockquote><h3 id="2-3-2-8-递归-分治的一些算法"><a href="#2-3-2-8-递归-分治的一些算法" class="headerlink" title="2.3 - 2.8 递归+分治的一些算法"></a>2.3 - 2.8 递归+分治的一些算法</h3><p>从2.3到2.8总共介绍了6种递归+分治的例子，根据算法实现难易程度和算法常用程度大致有以下分级：</p><ul><li><p>二分搜索技术：最常用而且最易实现，建议熟读代码，考代码的概率很大。</p></li><li><p>大整数的乘法：实现起来有一定难度，领略思维即可。</p></li><li><p>Strassen矩阵乘法：实现起来有一定难度，领略思维即可。</p></li><li><p>棋盘覆盖：实现起来有一定难度，领略思维即可。</p></li><li><p>合并排序：常用较容易实现，熟悉代码。</p></li><li><p>合并排序：常用较容易实现，熟悉代码。</p></li></ul><h2 id="第3章-动态规划"><a href="#第3章-动态规划" class="headerlink" title="第3章 动态规划"></a>第3章 动态规划</h2><p>动态规划算法适用于解最优化问题，通常可按以下4个步骤设计：</p><ul><li><p>找出最优的性质，并刻画其结构特征。</p></li><li><p>递归地定义最优值。</p></li><li><p>以自底向上的方式计算最优值。</p></li><li><p>根据计算最优值时得到的信息，构造最优解。</p></li></ul><p>其中关于最优值和最优解的概念，最优值一般是一个答案，而最优解是得到这个答案的过程。</p><h3 id="3-1-矩阵连乘问题"><a href="#3-1-矩阵连乘问题" class="headerlink" title="3.1 矩阵连乘问题"></a>3.1 矩阵连乘问题</h3><p>矩阵乘法属于线性代数问题，忘了的可以简单看看，矩阵连乘问题代码实现起来很复杂，属于是几乎不会考代码，但是由这个例子引出的求解动态规划问题的基本框架需要记住，即：</p><ul><li><p>分析最优解的结构</p></li><li><p>建立递归关系</p></li><li><p>计算最优值</p></li><li><p>构造最优解</p></li></ul><h3 id="3-2-动态规划算法的基本要素"><a href="#3-2-动态规划算法的基本要素" class="headerlink" title="3.2 动态规划算法的基本要素"></a>3.2 动态规划算法的基本要素</h3><p>动态规划算法一般具备两个基本要素：</p><ul><li><p>最优子结构：当问题的最优解包含了其子问题的最优解时，称该问题具有最优子结构性质。</p></li><li><p>重叠子问题：当用递归算法自顶向下解此问题时，每次产生的子问题并不总是新问题，有些子问题被反复计算。</p></li></ul><p>此外，备忘录算法是一种与动态规划算法相似的算法，它们都使用表格来保存已解决的子问题的答案，备忘录方法是动态规划算法的变形。</p><table><thead><tr><th align="center">属性</th><th align="center">动态规划</th><th align="center">备忘录方法</th></tr></thead><tbody><tr><td align="center">递归方式</td><td align="center">自底向上</td><td align="center">自底向下</td></tr><tr><td align="center">求解内容</td><td align="center">全部求解</td><td align="center">按需求解</td></tr></tbody></table><h3 id="3-3-最长公共子序列"><a href="#3-3-最长公共子序列" class="headerlink" title="3.3 最长公共子序列"></a>3.3 最长公共子序列</h3><p>很经典的动态规划问题，但是代码具有一定难度，大概率不会手写，建议熟悉代码。</p><h3 id="3-4-最长子段和"><a href="#3-4-最长子段和" class="headerlink" title="3.4 最长子段和"></a>3.4 最长子段和</h3><p>很经典的动态规划问题，但是代码具有一定难度，大概率不会手写，建议熟悉代码。</p><h3 id="3-10-0-1背包问题"><a href="#3-10-0-1背包问题" class="headerlink" title="3.10 0-1背包问题"></a>3.10 0-1背包问题</h3><p>非常经典的动态规划问题，考代码的可能性很大，建议认真复习，能够写出代码。</p><h2 id="第4章-贪心算法"><a href="#第4章-贪心算法" class="headerlink" title="第4章 贪心算法"></a>第4章 贪心算法</h2><p>当一个问题具有最优子结构性质时，可用动态规划法求解。有时会有更简单有效的算法，即贪心算法。贪心算法往往通过实现局部最优解得到一个整体最优解。</p><h3 id="4-1-活动安排问题"><a href="#4-1-活动安排问题" class="headerlink" title="4.1 活动安排问题"></a>4.1 活动安排问题</h3><p>很简单很经典的问题，建议熟悉并能写出来。</p><p>该问题采用的贪心选择策略是：每次选择可选择的活动中结束时间最早的那个。</p><h3 id="4-2-贪心算法的基本要素"><a href="#4-2-贪心算法的基本要素" class="headerlink" title="4.2 贪心算法的基本要素"></a>4.2 贪心算法的基本要素</h3><p>贪心算法有两个重要性质：</p><ul><li><p>贪心选择性质：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。</p></li><li><p>最优子结构性质：当一个问题的最优解包含其子问题的最优解时，称此问题具有最优子结构性质。</p></li></ul><p>贪心算法的这两个性质在根本上决定了它和动态规划法的异同之处，在解决贪心问题时，要能够分析出它的贪心选择策略，即贪心选择的方法。</p><h3 id="4-3-最优装载"><a href="#4-3-最优装载" class="headerlink" title="4.3 最优装载"></a>4.3 最优装载</h3><p>很简单很经典的问题，建议熟悉并能写出来。</p><p>该问题采用的贪心选择策略是：重量最轻者先装。</p><h3 id="4-4-哈夫曼编码"><a href="#4-4-哈夫曼编码" class="headerlink" title="4.4 哈夫曼编码"></a>4.4 哈夫曼编码</h3><p>很经典的问题，但代码具备难度，不太可能手写，要理解思路。</p><p>该问题采用的贪心选择策略是：每次选择频率最小的两个字符组合。</p><h3 id="4-5-单源最短路径"><a href="#4-5-单源最短路径" class="headerlink" title="4.5 单源最短路径"></a>4.5 单源最短路径</h3><p>很经典的问题，但代码具备难度，不太可能手写，要理解思路。</p><p>该问题采用的贪心选择策略是：每次将所有未添加的点中与集合距离最短的点添加到集合中。</p><h3 id="4-6-最小生成树"><a href="#4-6-最小生成树" class="headerlink" title="4.6 最小生成树"></a>4.6 最小生成树</h3><p>最小生成树可以通过Prim和kruskal两种算法实现，其中实现方式，即贪心选择策略有所不同：</p><ul><li><p>Prim算法：每次将所有未添加的边中与集合距离最短的边添加到集合中。</p></li><li><p>kruskal算法：每次将非同一集合中距离最短的两个边连接，直至形成一个集合。</p></li></ul><h2 id="第5章-回溯法"><a href="#第5章-回溯法" class="headerlink" title="第5章 回溯法"></a>第5章 回溯法</h2><p>回溯法是一种以深度优先方式系统搜索问题解的算法，可以系统地搜索一个问题的所有解或任一解。</p><h3 id="5-1-回溯法的算法框架"><a href="#5-1-回溯法的算法框架" class="headerlink" title="5.1 回溯法的算法框架"></a>5.1 回溯法的算法框架</h3><p>1.问题的解空间</p><p>一般用树或图的方式组织解空间，要会画图。</p><p>其中解空间树分为两类：</p><ul><li><p>子集树：子集树对于问题的排列并无要求，不同的排列属于问题的一个答案。</p></li><li><p>排列树：排列树对于问题的排列有要求，不同的排列构成不同的答案。</p></li></ul><p>2.回溯法在搜索解空间树时通常采取两种方式来避免无效搜索：</p><ul><li><p>约束函数：在扩展结点处剪去不满足约束的子树。</p></li><li><p>限界函数：剪去得不到最优解的子树。</p></li></ul><p>单看这两种方式可能并不能明白其中不同，有一个例子：</p><blockquote><p>在1、2、3、4、5、6、7、8中取两个奇数，求最小和。</p></blockquote><p>虽然这个例子非常简单，明眼人一看便知道答案是1+3&#x3D;4，但不妨套入回溯法的解题框架。</p><p>在回溯法中，程序每次都会选择一个奇数相加，当选择了两个奇数后便会比较当前的最小值与两个奇数的和，将更小的那个作为最小值。</p><p>在这个例子中，程序每次都会先判断当前选择的数是不是奇数，这就是约束函数；当得到了1+3&#x3D;4这个值后，若程序选择第一个奇数为5，显然5大于4不可能得到一个更小的值，此时程序就没必要选择第二个奇数，这就是限界函数。</p><p>3.实现回溯法的两个方法：</p><ul><li><p>递归回溯：使用递归实现，建议熟练掌握。</p></li><li><p>迭代回溯：使用循环实现，代码很难，建议熟悉。</p></li></ul><h3 id="5-2-装载问题"><a href="#5-2-装载问题" class="headerlink" title="5.2 装载问题"></a>5.2 装载问题</h3><p>代码实现起来有难度，应该不会考手写，建议熟悉。</p><p>该问题的解空间树为子集树。</p><p>该问题的约束函数为：判断当前货物重量是否小于剩余集装箱的重量。</p><p>该问题上界函数，即限界函数为：若当前载重量与剩余集装箱重量之和小于当前最优载重量，则不考虑不装当前货物的情况。</p><h3 id="5-5-n后问题"><a href="#5-5-n后问题" class="headerlink" title="5.5 n后问题"></a>5.5 n后问题</h3><p>代码实现起来有难度，应该不会考手写，建议熟悉。</p><p>该问题的解空间树为排列树。</p><p>该问题的约束函数为：判断当前位置上是否属于其他皇后的同行、列以及对角线。</p><p>该问题无限界函数。</p><p>因为皇后之间不能同行且棋盘为矩形，所以一般遍历时按行遍历即可，无需对每个位置都判断一下。</p><h3 id="5-6-0-1背包问题"><a href="#5-6-0-1背包问题" class="headerlink" title="5.6 0-1背包问题"></a>5.6 0-1背包问题</h3><p>代码实现起来有难度，应该不会考手写，建议熟悉。</p><p>该问题的解空间树为子集树。</p><p>该问题的约束函数为：判断当前物品重量是否小于剩余背包的重量。</p><p>该问题上界函数，即限界函数为：若当前价值与剩余物品价值之和小于当前最优价值，则不考虑不装当前物品的情况。</p><p>计算右子树的上界时可以将物品按单位重量价值递减的顺序加入，若出现放不下一个完整的物品的情况，可取该物品的一部分将背包填满。</p><p>左子树的上界与父节点相同。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>暂时更新到这里，有问题可以联系QQ：851137399。</p><p>后续会根据反馈调整内容。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;免责声明&quot;&gt;&lt;a href=&quot;#免责声明&quot; class=&quot;headerlink&quot; title=&quot;免责声明&quot;&gt;&lt;/a&gt;免责声明&lt;/h2&gt;&lt;p&gt;该篇只是个人基于自己对算法课程的理解以及对期末考试可能涉及的知识点的预测，并不具备权威性质，请读者自行甄别，合理选择复习内容</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
   
   <entry>
     <title>基于油猴的一些wbu脚本</title>
@@ -98,149 +37,6 @@
     
     
     <category term="脚本" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_15：排序算法</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-15%EF%BC%9A%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-15%EF%BC%9A%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
-    <published>2023-08-04T15:39:27.000Z</published>
-    <updated>2023-08-04T15:39:27.878Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_14：图应用</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-14%EF%BC%9A%E5%9B%BE%E5%BA%94%E7%94%A8/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-14%EF%BC%9A%E5%9B%BE%E5%BA%94%E7%94%A8/</id>
-    <published>2023-08-04T15:39:11.000Z</published>
-    <updated>2023-08-04T15:39:11.923Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_13：图</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-13%EF%BC%9A%E5%9B%BE/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-13%EF%BC%9A%E5%9B%BE/</id>
-    <published>2023-08-04T15:38:54.000Z</published>
-    <updated>2023-08-04T15:38:54.252Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_12：散列表</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-12%EF%BC%9A%E6%95%A3%E5%88%97%E8%A1%A8/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-12%EF%BC%9A%E6%95%A3%E5%88%97%E8%A1%A8/</id>
-    <published>2023-08-04T15:38:42.000Z</published>
-    <updated>2023-08-04T15:38:42.051Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_11：树实战</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-11%EF%BC%9A%E6%A0%91%E5%AE%9E%E6%88%98/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-11%EF%BC%9A%E6%A0%91%E5%AE%9E%E6%88%98/</id>
-    <published>2023-08-04T15:38:28.000Z</published>
-    <updated>2023-08-04T15:38:28.808Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_13：排序算法</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-13%EF%BC%9A%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-13%EF%BC%9A%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
-    <published>2023-08-04T15:37:28.000Z</published>
-    <updated>2023-08-04T15:37:28.748Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_10：其他树</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-10%EF%BC%9A%E5%85%B6%E4%BB%96%E6%A0%91/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-10%EF%BC%9A%E5%85%B6%E4%BB%96%E6%A0%91/</id>
-    <published>2023-08-04T15:36:21.000Z</published>
-    <updated>2023-08-04T15:36:21.295Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_09：高级树</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-09%EF%BC%9A%E9%AB%98%E7%BA%A7%E6%A0%91/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-09%EF%BC%9A%E9%AB%98%E7%BA%A7%E6%A0%91/</id>
-    <published>2023-08-04T15:35:43.000Z</published>
-    <updated>2023-08-04T15:35:43.530Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_08：二叉树</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-08%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-08%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
-    <published>2023-08-04T15:35:16.000Z</published>
-    <updated>2023-08-04T15:35:16.625Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_07：线性表实战</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-07%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8%E5%AE%9E%E6%88%98/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-07%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8%E5%AE%9E%E6%88%98/</id>
-    <published>2023-08-04T15:34:40.000Z</published>
-    <updated>2023-08-04T15:34:40.811Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_06：队列</title>
-    <link href="https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-06%EF%BC%9A%E9%98%9F%E5%88%97/"/>
-    <id>https://cloudstill.github.io/rapids.github.io/2023/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-06%EF%BC%9A%E9%98%9F%E5%88%97/</id>
-    <published>2023-08-04T15:34:09.000Z</published>
-    <updated>2023-08-04T15:34:09.601Z</updated>
-    
-    
-    
-    
     
   </entry>
   
@@ -379,6 +175,238 @@
     <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="数据结构" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>评教教程</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/12/14/%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/12/14/%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/</id>
+    <published>2022-12-14T04:23:43.000Z</published>
+    <updated>2023-01-29T17:30:03.761Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Edge评教流程"><a href="#Edge评教流程" class="headerlink" title="Edge评教流程"></a>Edge评教流程</h2><p>首先打开网址<a class="link" href="https://webvpn.wbu.edu.cn/">webvpn.wbu.edu.cn<i class="fas fa-external-link-alt"></i></a>，然后不要着急输入账密，按照以下流程操作：</p><ol><li>右上角打开设置,点击默认浏览器：<br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/1.png"><br>如果上述没有成功，你也可以这样操作：<br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/1.5.png"></li><li>开启允许打开IE兼容模式后，我们还要点击右上角设置把IE兼容模式打开：<br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/2.jpg"><br>如果你在第一步中选择了第二种方式，此时你可以：<br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/2.5.png"></li><li>完成了上述步骤后就可以输入密码了，后面的步骤非常简单<br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/3.png"><br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/4.png"><br><img lazyload alt="image" data-src="/./%E8%AF%84%E6%95%99%E6%95%99%E7%A8%8B/5.png"></li></ol><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li>评教时不可以全打一样的分，也就是说最高打93分。</li><li>直接提交后可能会发现还是显示的0分，但是再进去就会发现已经有分了。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Edge评教流程&quot;&gt;&lt;a href=&quot;#Edge评教流程&quot; class=&quot;headerlink&quot; title=&quot;Edge评教流程&quot;&gt;&lt;/a&gt;Edge评教流程&lt;/h2&gt;&lt;p&gt;首先打开网址&lt;a class=&quot;link&quot; href=&quot;https://webvpn.wbu</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_06：判断语句二三事</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/12/12/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-06%EF%BC%9A%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E4%BA%8C%E4%B8%89%E4%BA%8B/</id>
+    <published>2022-12-12T04:09:49.000Z</published>
+    <updated>2023-09-26T07:53:03.755Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>if相信大家都不陌生，在英文中它有着“如果”的意思，它引导的条件状语从句可以翻译为“如果……就……”，而在C语言中，它也有着相同的用法，且看下面的例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(......)</span><br><span class="line">&#123;</span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>套用英语中的逻辑来理解这个例子，把它翻译成中文就是“如果小括号里面的内容成立，那么花括号里面的内容也成立”。<br>小括号里面可以填什么呢？数字，变量，表达式，关系式都可以。<br>对于数字和变量，在计算机中，无论它们的值是多少，都只有0和非0的区别，非0又可以理解为1。我们都知道在计算机中0表示假，1表示真。即小括号里的数字和变量如果为0，语句不成立，为1（非0）则成立。<br>对于表达式，程序会先将其进行运算之后，再对其数值进行如对数字和变量相同的操作。<br>对于关系式，它们同样遵循01原则，当关系式成立时它们相当于1，当关系式不成立时它们相当于0。<br>说完小括号我们再来说说花括号，花括号里填写的是函数语句，函数语句的成立意味着执行，这也就是说，一旦小括号里的值为1，那么就会执行花括号里的内容。<br>尽管以上方式极易理解，但需要声明的是括号中的内容实际上会进行一次隐式类型转换，即根据表达式的成立与否转换为true或者false。</p><h2 id="if与else不得不说的故事"><a href="#if与else不得不说的故事" class="headerlink" title="if与else不得不说的故事"></a>if与else不得不说的故事</h2><h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;if语句&quot;&gt;&lt;a href=&quot;#if语句&quot; class=&quot;headerlink&quot; title=&quot;if语句&quot;&gt;&lt;/a&gt;if语句&lt;/h2&gt;&lt;p&gt;if相信大家都不陌生，在英文中它有着“如果”的意思，它引导的条件状语从句可以翻译为“如果……就……”，而在C语言中，它也有着</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构_01：概论</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01%EF%BC%9A%E6%A6%82%E8%AE%BA/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01%EF%BC%9A%E6%A6%82%E8%AE%BA/</id>
+    <published>2022-12-12T03:58:19.000Z</published>
+    <updated>2023-08-04T15:39:32.935Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h2><p>一般来说，用计算机解决一个具体问题时，大致需要经过下列几个步骤：首先要从具体问题抽象出一个适当的数学模型，然后设计一个解此数学模型的算法，最后编出程序，进行测试、调整直至得到最终解答。寻求数学模型的实质是分析问题，从中提取操作的对象，并找出这些操作对象之间含有的关系，然后用数学的语言加以描述。例如，求解梁架结构中应力的数学模型为线性方程组；预报人口增长情况的数学模型为微分方程。然而，更多的非数值计算问题无法用数学方程加以描述。<br>在生活中随处可见这样的例子，如图书馆数目检索系统自动化问题，计算机和人对弈问题，多叉路口交通灯的管理问题等等。在这三个例子中，我们描述问题的数学模型是称为“表”“树“和”图“的数据结构而非一个简单的数学方程。<br>因此，简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol><li><a href="/2023/01/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-02%EF%BC%9A%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title="顺序表">顺序表</a></li><li><a href="/2023/01/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-03%EF%BC%9A%E9%93%BE%E8%A1%A8/" title="链表">链表</a></li><li><a href="/2023/02/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-04%EF%BC%9A%E7%89%B9%E6%AE%8A%E9%93%BE%E8%A1%A8/" title="特殊链表">特殊链表</a></li><li><a href="/2023/02/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-05%EF%BC%9A%E6%A0%88/" title="栈">栈</a></li><li><a href="#">Post not found: 数据结构-06：队列 队列（未更新）</a></li><li><a href="#">Post not found: 数据结构-07：线性表实战 线性表实战（未更新）</a></li><li><a href="#">Post not found: 数据结构-08：二叉树 二叉树（未更新）</a></li><li><a href="#">Post not found: 数据结构-09：高级树 高级树（未更新）</a></li><li><a href="#">Post not found: 数据结构-10：其他树 其他树（未更新）</a></li><li><a href="#">Post not found: 数据结构-11：树实战 树实战（未更新）</a></li><li><a href="#">Post not found: 数据结构-12：散列表 散列表（未更新）</a></li><li><a href="#">Post not found: 数据结构-13：图 图（未更新）</a></li><li><a href="#">Post not found: 数据结构-14：图应用 图应用（未更新）</a></li><li><a href="#">Post not found: 数据结构-15：排序算法 排序算法（未更新）</a></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是数据结构&quot;&gt;&lt;a href=&quot;#什么是数据结构&quot; class=&quot;headerlink&quot; title=&quot;什么是数据结构&quot;&gt;&lt;/a&gt;什么是数据结构&lt;/h2&gt;&lt;p&gt;一般来说，用计算机解决一个具体问题时，大致需要经过下列几个步骤：首先要从具体问题抽象出一个适当的数学</summary>
+      
+    
+    
+    
+    <category term="数据结构" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="数据结构" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_05：输入与输出</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/10/20/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/</id>
+    <published>2022-10-20T00:22:48.000Z</published>
+    <updated>2023-01-29T17:08:43.733Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="C语言中的输入与输出"><a href="#C语言中的输入与输出" class="headerlink" title="C语言中的输入与输出"></a>C语言中的输入与输出</h2><p>在第二节我们曾经介绍<code>#include&lt;stdio.h&gt;</code>的含义是包含一个标准输入输出的头文件，随即在第三节我们又学习了printf()语句。printf()是一个最为常见的输出语句，那么除此之外，C语言中还有那些输入输出语句呢？<br>C语言中有三对输入输出语句，由于格式相似，我们分三对介绍。</p><h2 id="最常用的输入输出语句：scanf-与printf"><a href="#最常用的输入输出语句：scanf-与printf" class="headerlink" title="最常用的输入输出语句：scanf()与printf()"></a>最常用的输入输出语句：scanf()与printf()</h2><p>作为相对应的输入输出字符，scanf()与printf()在形式上都是由一个英文单词加上format的缩写f构成，其使用起来也遵循类似的规则，使用起来都需要在括号内加入双引号来限定内容，将双引号内的内容原样输入或输出。正如\n这类转义字符具有特殊作用一样，在scanf()和printf()中还存在着一个特殊的，具有特殊作用而不被原样输出输出的符号，称之为格式字符。</p><h3 id="scanf-与printf-语句中的格式字符"><a href="#scanf-与printf-语句中的格式字符" class="headerlink" title="scanf()与printf()语句中的格式字符"></a>scanf()与printf()语句中的格式字符</h3><p>在scanf()和printf()中，形如%d这类%加字母的就被称之为格式字符。<br>格式字符，顾名思义，是来限定输出内容格式的，为了便于学习，我们在此只陈列一些最为常用的格式字符：</p><table><thead><tr><th align="center">格式字符</th><th align="center">格式说明</th></tr></thead><tbody><tr><td align="center">%d</td><td align="center">带符号的十进制整数</td></tr><tr><td align="center">%u</td><td align="center">无符号的十进制整数</td></tr><tr><td align="center">%c</td><td align="center">一个字符</td></tr><tr><td align="center">%s</td><td align="center">一个字符串</td></tr><tr><td align="center">%f</td><td align="center">浮点数，即小数</td></tr></tbody></table><p>当我们对输入输出的格式进行限定后， 此时我们会发现少了些什么：我们明确了输出输出的格式，却没有明确我们要格式化的对象，接下来我们就将要学习如何在输入输出语句中确定格式化的对象。</p><h3 id="用逗号间隔开来的补充说明：变量的首次运用"><a href="#用逗号间隔开来的补充说明：变量的首次运用" class="headerlink" title="用逗号间隔开来的补充说明：变量的首次运用"></a>用逗号间隔开来的补充说明：变量的首次运用</h3><p>类似于英语中的同位语，我们可以在括号内、引号后的位置使用逗号，从而确定我们要输入输出的对象。这个对象，可以是变量，也可以是含有变量的表达式。下面我们看一个例子来学习：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> example_1;</span><br><span class="line">    <span class="type">float</span> example_2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %f&quot;</span>, &amp;example_1, &amp;example_2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %f&quot;</span>, example_1, example_2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img lazyload alt="image" data-src="/./C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_05%EF%BC%9A%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/1.png"></p><p>通过这个例子，我们可以总结出3点规律：</p><ol><li>引号内内容应当原样输入输出，包括空格和其他字符；</li><li>引用变量时的格式字符应该与声明时的对应，不一致的格式可能会造成数据丢失或者报错；</li><li>输入语句scanf()中引用变量时要用上&amp;，&amp;的名称是取地址符，整个scanf()语句的意思就是将输入的值赋给变量所分配的地址，关于地址的更多详情，我们会在指针一节中提及，这里我们可以看做将输入的值赋给&amp;后的变量；</li></ol><h3 id="对格式字符的附加修饰"><a href="#对格式字符的附加修饰" class="headerlink" title="对格式字符的附加修饰"></a>对格式字符的附加修饰</h3><p>在实际运用中，我们可能还要对格式进行进一步要求，这里就引入了对格式字符的附加修饰字符，由于输出输出语句中修饰字符存在细微差别，我们这里分别介绍。<br>在输入语句中我们以整型%d为例，*%d表示数据在输入后不进行赋值，%nd表示将输入数据的前n位赋值，%hd表示输入短整型，%ld表示输入长整型。<br>在输出语句中我们以浮点型%f为例，%lf表示输出双精度double型，%mf表示输出数据最小宽度为m格，%mf表示输出数据最小宽度为m格且少的位置用0补齐，%.nf表示输出数据小数点后有n位，%-f表示输出数据想左靠。</p><h2 id="适用于字符的输入输出语句：getchar-与putchar"><a href="#适用于字符的输入输出语句：getchar-与putchar" class="headerlink" title="适用于字符的输入输出语句：getchar()与putchar()"></a>适用于字符的输入输出语句：getchar()与putchar()</h2><p>对于字符型乃至接下来所说的字符串型，它们也同样遵循上文我们所总结出来的第二条规律，即格式的相统一。<br>而不同它们和第一类相比，也有着许多不同之处，这里我们以输入输出的顺序依次介绍。</p><h3 id="关于getchar"><a href="#关于getchar" class="headerlink" title="关于getchar()"></a>关于getchar()</h3><p>作为简单的输入语句，getchar()在使用时有一下几点需要注意：</p><ol><li>getchar()会接收键盘输入的第一个字符，无论它是符号、数字、字母甚至是空格；</li><li>getchar()的赋值可以直接用等号，例如：<code>name = getchar</code>；</li></ol><h3 id="关于putchar"><a href="#关于putchar" class="headerlink" title="关于putchar()"></a>关于putchar()</h3><p>作为简单的输出语句，putchar()在使用时有一下几点需要注意：</p><ol><li>在对字符字符进行原样输出是括号内用的是单引号而非双引号；</li><li>括号内引号中可以是转义字符，例如<code>\101</code>就会输出<code>A</code>；</li><li>可以直接在括号内输入变量名来输出它所对应的字符；</li></ol><h2 id="适用于字符串的输入输出语句：gets-与puts"><a href="#适用于字符串的输入输出语句：gets-与puts" class="headerlink" title="适用于字符串的输入输出语句：gets()与puts()"></a>适用于字符串的输入输出语句：gets()与puts()</h2><p>字符串的输入输出可能会涉及指针等后续内容，本节内容我们将在指针后介绍。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>作为最常用的输入输出语句scanf()与printf()，学好它们以及配套的格式字符、修饰字符便足以应对大多数环境。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;C语言中的输入与输出&quot;&gt;&lt;a href=&quot;#C语言中的输入与输出&quot; class=&quot;headerlink&quot; title=&quot;C语言中的输入与输出&quot;&gt;&lt;/a&gt;C语言中的输入与输出&lt;/h2&gt;&lt;p&gt;在第二节我们曾经介绍&lt;code&gt;#include&amp;lt;stdio.h&amp;gt</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_04：变量与常量</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/</id>
+    <published>2022-10-19T10:37:08.000Z</published>
+    <updated>2023-09-24T15:51:59.415Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="生活中变量与常量"><a href="#生活中变量与常量" class="headerlink" title="生活中变量与常量"></a>生活中变量与常量</h2><p>生活中会遇到很多量：一件商品的价格、每个月的生活费……这些量可以被分为两类：常量和变量。</p><ul><li>什么是常量？<br>顾名思义，一个常数、一个不变化的量，我们最熟悉的常量就是PAI、自然对数e。</li><li>什么是变量？<br>同样是顾名思义，一个变化的量就是变量。</li><li>常量大家都可以理解，可变量未必理解得容易，这里我们以《植物大战僵尸》为例。<br><img lazyload alt="image" data-src="/./C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_04%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/1.png"><br>在上图中，我们拥有100阳光，而一株豌豆的阳光价格为100。<br>对于阳光，我们所持有的阳光数量会随着我们对阳光的获取和消耗变化，这就是变量。<br>与此同时，豌豆的价格却始终是100，这就是一个常量。</li></ul><h2 id="C语言中的变量与常量"><a href="#C语言中的变量与常量" class="headerlink" title="C语言中的变量与常量"></a>C语言中的变量与常量</h2><p>生活中的变量和常量我们已经了解，那么C语言中的呢？<br>在C语言中，对应一个量而言，我们可以对其进行声明和定义两类操作。任何一个量，它的初始化，也就是声明都是必不可少的。这也就意味着，如果你没有对其进行定义，系统会随机对其定义一个值。<br>一个不变化的变量可以发挥常量的作用，可一个常量却不能随意变化，为了便于学习，我们在本节只介绍变量。</p><h3 id="C语言中变量的声明"><a href="#C语言中变量的声明" class="headerlink" title="C语言中变量的声明"></a>C语言中变量的声明</h3><p>在最开始我们介绍C程序时，我们说过一句话“int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数”，当时你可能对这句话不太理解，没关系当我们介绍完变量的声明后，你就会明白。<br>首先我们必须要理解为什么要声明变量，在C语言中会有很多字符，如果我们不声明一个字符，我们就无法判定这个字符是一个变量名，更别说它的类型了。<br>敏锐的读者会注意到上述文字中的两个关键点，变量名和变量的类型</p><h3 id="变量名的命名规范与艺术"><a href="#变量名的命名规范与艺术" class="headerlink" title="变量名的命名规范与艺术"></a>变量名的命名规范与艺术</h3><p>如同人有名字一样，每一个变量也有着它的名字，作为程序员的我们，就像变量的父母一样，拥有着给它们取名的权利。同样，正如现实生活中取名字有一定规范一样，我们给变量取名也要遵循一定的规则，具体规则如下：</p><ol><li>变量名的开头必须为字母或下划线，大小写均可；</li><li>变量名中不可以有符号，但是可以有下划线，也就是“_”；</li><li>变量名中允许使用任意的大小写字母以及数字；</li><li>变量名不能与关键字同名；</li></ol><p>如同人有名字一样，变量名也有“好听”与“不好听”的区别。只不过不同于人对名字的要求，变量名遵循一个简单的原则，即“顾名思义”。<br>一个好的变量名应当是简洁明了的，用abcd来表示四个变量这样简单的命名方式固然方便快捷，可在一个有着很多变量的程序中轻易就会被混淆，加之很少有人会有勤写注释的习惯，一个自己写的程序过上几天也会看得一头雾水。<br>而用number_1，number_2来表示两个变量这样的命名方式呢？<br>这样的命名方式确实做到了顾名思义，也值得我们倡导，可在实际编写中，number不如简化成num，num_1,num_2这样的命名方式会更加简明。<br>一个好的C程序并不是说没有bug就可以了，变量名的艺术也值得我们深入研究。</p><p>注：实际操作中变量名的取名要视环境而定，比如那种写一次就行了的比赛题目，随便取个abcd完全可以。</p><h3 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h3><p>在之前我们就说过int作为关键字所声明的是int型，即整型，可视为整数。有短整型就有长整型，有整数就有小数，有整数型就有小数型。只不过在C语言中小数并不称为小数，小数型也不叫小数型，它们分别称为浮点数和浮点型，除此之外还有一种类型为字符型。<br>整数型和字符型可以并为整数类型，它们遵循以下表格中的规律：</p><table><thead><tr><th align="center">类型</th><th align="center">存储大小</th><th align="center">值范围</th></tr></thead><tbody><tr><td align="center">char</td><td align="center">1 字节</td><td align="center">-128 到 127 或 0 到 255</td></tr><tr><td align="center">unsigned char</td><td align="center">1 字节</td><td align="center">0 到 255</td></tr><tr><td align="center">signed char</td><td align="center">1 字节</td><td align="center">-128 到 127</td></tr><tr><td align="center">int</td><td align="center">2 或 4 字节</td><td align="center">-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td></tr><tr><td align="center">unsigned int</td><td align="center">2 或 4 字节</td><td align="center">0 到 65,535 或 0 到 4,294,967,295</td></tr><tr><td align="center">short</td><td align="center">2 字节</td><td align="center">0 到 65,535</td></tr><tr><td align="center">unsigned short</td><td align="center">2 字节</td><td align="center">1.2E-38 到 3.4E+38</td></tr><tr><td align="center">long</td><td align="center">4 字节</td><td align="center">-2,147,483,648 到 2,147,483,647</td></tr><tr><td align="center">unsigned long</td><td align="center">4 字节</td><td align="center">0 到 4,294,967,295</td></tr></tbody></table><p>注：各种类型的存储大小与系统位数有关，但目前通用的以64位为主。</p><p>而与整数类型相对的浮点类型则遵循以下表格：</p><table><thead><tr><th align="center">类型</th><th align="center">存储大小</th><th align="center">值范围</th><th align="center">精度</th></tr></thead><tbody><tr><td align="center">float</td><td align="center">4 字节</td><td align="center">1.2E-38 到 3.4E+38</td><td align="center">6 位有效位</td></tr><tr><td align="center">double</td><td align="center">8 字节</td><td align="center">2.3E-308 到 1.7E+308</td><td align="center">15 位有效位</td></tr><tr><td align="center">long double</td><td align="center">16 字节</td><td align="center">3.4E-4932 到 1.1E+4932</td><td align="center">19 位有效位</td></tr></tbody></table><p>对于这样的表格记忆是很困难的，我们只需要记住一些基础的就可以应对大多数情况了。<br>我们可以先记住char为字符型，int为短整型，如果数据很大就换成long。如果数据为小数就用单精度浮点型float声明，对精度要求很高或是数据过大就用双精度型double。</p><h3 id="C语言中变量的定义"><a href="#C语言中变量的定义" class="headerlink" title="C语言中变量的定义"></a>C语言中变量的定义</h3><p>当我们声明一个变量后，我们需要对它进行赋值，这个过程就称之为定义，变量的定义可以以多个方式进行，这里我们以int为例，有以下情况：<br>1.声明时定义</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> example_1 = <span class="number">1</span>;</span><br></pre></td></tr></table></figure><p>在声明的同时定义，把1的值赋给变量example_1.<br>2.声明后定义</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> example_2;</span><br><span class="line">emaxple_2 = <span class="number">2</span>;</span><br></pre></td></tr></table></figure><p>在声明后定义，将2的值赋给变量example_2.<br>变量的定义相对自由，&#x3D;后面可以跟其他变量和表达式（如 <code>加+</code> <code>减-</code> <code>乘*</code> <code>除/</code> <code>取余%</code> 所连接的式子）。<br>值得注意的是，在上面我介绍<code>=</code>时我所用的是赋值而非相等，这是一个比较严谨的称呼，在C语言中判断是否相等时我们需要用的是<code>==</code>；另一个值得注意的点是，当<code>=</code>左右数据类型不相等时，会转化成左边变量的数据类型，这也就意味着，将浮点型赋值给整数型时会损失小数点后的内容，将高精度浮点型赋值给低精度浮点型时会损失所相差的那一部分精度。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Frank曾经说过，变量是玩会的而不是学会的，这也就是为什么我要以《植物大战僵尸》为例的原因。<br>单纯的介绍变量并不能让人完全理解它，在下一节我们将学习C语言中的输入与输出（我们已经学过的printf()就是一个输出语句），届时我们就能领会到变量的神奇之处。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;生活中变量与常量&quot;&gt;&lt;a href=&quot;#生活中变量与常量&quot; class=&quot;headerlink&quot; title=&quot;生活中变量与常量&quot;&gt;&lt;/a&gt;生活中变量与常量&lt;/h2&gt;&lt;p&gt;生活中会遇到很多量：一件商品的价格、每个月的生活费……这些量可以被分为两类：常量和变量。&lt;/</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_03：printf()与转义字符</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/10/19/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-03%EF%BC%9Aprintf%E4%B8%8E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</id>
+    <published>2022-10-19T04:50:15.000Z</published>
+    <updated>2023-01-29T17:15:24.201Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于printf"><a href="#关于printf" class="headerlink" title="关于printf()"></a>关于printf()</h2><p>在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* 我的第一个 C 程序 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, World! \n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在上一节我们介绍C程序结构时，我们并没有探讨printf()后面跟的()以及其中的内容。以上述程序为例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World! \n&quot;</span>);</span><br></pre></td></tr></table></figure><p>括号所构成的一个整体可以看作printf()的一个宾语，相当于语言学中的动宾结构。<br>而括号内的内容我们可以看到是由一对引号包裹在内的，并且当我们实际运行该程序时，这个引号并没有显示出来，而引号内的其他内容（除了\n）都被原样打印了出来。<br>由此我们可以知道printf()在打印时，会原样地打印出括号内引号所包裹的大部分内容。<br>那么，为什么\n不会被打印呢？</p><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>转义字符（Escape character），所有的ASCII码都可以用“\”加数字（一般是8进制数字）来表示。而C中定义了一些字母前加”&quot;来表示常见的那些不能显示的ASCII字符，如\0,\t,\n等，就称为转义字符，因为后面的字符，都不是它本来的ASCII字符意思了。<br>关于ASCII码大家可以自行或<a class="link" href="http://c.biancheng.net/c/ascii/">点击此处<i class="fas fa-external-link-alt"></i></a>了解更多。</p><h3 id="关于-n"><a href="#关于-n" class="headerlink" title="关于\n"></a>关于\n</h3><p>在介绍printf()时，我们曾疑惑于为何\n不会被打印出来，而在刚刚我们了解到了转义字符，明白了转义字符的意义，同时也知道了转义字符不会被显示出来的机制。<br>那么\n所代表的是什么意思呢？<br>如果你尝试过在我们演示的代码里加入多行printf()而不加\n，你会发现这些内容前后连接到了一起；而如果你加入了\n，你会发现它们一行一行分布。<br>由此我们很容易才想到\n所起到的是换行的作用。<br>那么除了\n，还有哪些转义字符呢？</p><h3 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h3><table><thead><tr><th align="center">转义字符</th><th align="center">意义</th><th align="center">ASCII码值（十进制）</th></tr></thead><tbody><tr><td align="center">\a</td><td align="center">响铃(BEL)</td><td align="center">007</td></tr><tr><td align="center">\b</td><td align="center">退格(BS) ，将当前位置移到前一列</td><td align="center">008</td></tr><tr><td align="center">\f</td><td align="center">换页(FF)，将当前位置移到下页开头</td><td align="center">012</td></tr><tr><td align="center">\n</td><td align="center">换行(LF) ，将当前位置移到下一行开头</td><td align="center">010</td></tr><tr><td align="center">\r</td><td align="center">回车(CR) ，将当前位置移到本行开头</td><td align="center">013</td></tr><tr><td align="center">\t</td><td align="center">水平制表(HT)</td><td align="center">009</td></tr><tr><td align="center">\v</td><td align="center">垂直制表(VT)</td><td align="center">011</td></tr><tr><td align="center">\‘</td><td align="center">单引号</td><td align="center">039</td></tr><tr><td align="center">\“</td><td align="center">双引号</td><td align="center">034</td></tr><tr><td align="center">\\</td><td align="center">反斜杠</td><td align="center">092</td></tr></tbody></table><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>转义字符是C语言中为数不多需要记忆的东西，但我们并不倡导死记硬背，你应当去尝试上述每一个转义字符，在实践中感受它们的作用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关于printf&quot;&gt;&lt;a href=&quot;#关于printf&quot; class=&quot;headerlink&quot; title=&quot;关于printf()&quot;&gt;&lt;/a&gt;关于printf()&lt;/h2&gt;&lt;p&gt;在上一节中我们以一个程序为例展开我们C语言学习的第一步，这节我们将再次以它为例：&lt;/</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_02：一个简单的C程序</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/</id>
+    <published>2022-10-06T12:20:11.000Z</published>
+    <updated>2023-01-29T17:10:42.963Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一个简单的C程序"><a href="#一个简单的C程序" class="headerlink" title="一个简单的C程序"></a>一个简单的C程序</h2><p>在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且看代码：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* 我的第一个 C 程序 */</span></span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;Hello, World! \n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注：以//打头的某一行或者用/**/括起来的数行在程序中统称为注释，不会被编译器所编译</span></span><br><span class="line"><span class="comment">// 一个好的注释对于程序而言是很重要的，它不仅可以让别人看懂你的代码，也可以便于自我的纠察</span></span><br></pre></td></tr></table></figure><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img lazyload alt="image" data-src="/./C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B_02%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84C%E7%A8%8B%E5%BA%8F/02.jpg"></p><h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>观察这个程序代码，大家会发现它非常的简单，然而，作为一个程序它却相当完整。<br>我们可以简单将其分为三个部分，一是由<code>#include</code>打头的部分，二是<code>int main()</code>，三则是<code>&#123;&#125;</code>内的内容，这三个部分的存在，也就构成了一个完整的C程序<br>接下来将对这三个部分进行逐一分析。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure><p>#号所起的是一个标识的作用，是一个规范，可以看作无实际意义。include在英文中有包含的意思。stdio.h可以分为四个部分解读，std是standard的缩写，standard意为标准；i是input的缩写，input意为输入；o是output的缩写，output意为输出；h是head的缩写，head意为头，而.h顾名思义则是头文件的后缀。将这样一段代码逐字分析后拼接在一起，清晰指向了一个信息“这个程序可能包含一个标准输入输出的头文件”。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br></pre></td></tr></table></figure><p>int被称为关键字，其作用是指定义main函数返回值的类型为int型，int型即整型，暂且可以将其等价于整数。在程序中这一部分称为函数头。main函数作为C程序中至关重要的部分，在每一个C程序中都会有一个main函数，作为一个程序的入口部分，也就是说程序都是从main函数头开始执行，然后进入到main函数中，执行其中语句的。()内的内容是我们可以填充的，初学C程序，可以暂且不管。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;......&quot;</span>);</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>{}可以起到一个囊括的作用，其内部作为一个整体，称之为函数体。printf()作为其中的一部分，我们将其成为执行语句，其中print的意思为打印或者输出，而f是format的缩写，意为格式化，故printf()的意思就是格式化输出括号内的内容。这里我们提到一个词输出，正是我们之前所提到了的“标准输入输出”中的“输出”。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure><p>return 0并不属于执行语句，我们将其称之为return语句。return的作用是向程序返回一个值，在这里就是0，而0又恰好是一个整数，符合int类型。<br>值得一提的是，C程序是严格区分中英文的，一切语句都要用英文进行书写，且在函数体内部的内容，执行语句和return语句末尾，都要加上；表示一条语句的结束，这也就意味着，C程序在编译时会跳过空格以及空行（和注释）直接跳到下一条语句。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对这样一个代码进行逐字分析后，相信大家对于C程序的概念有了一个具体的认知，并且，对于C语言不再过于恐惧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一个简单的C程序&quot;&gt;&lt;a href=&quot;#一个简单的C程序&quot; class=&quot;headerlink&quot; title=&quot;一个简单的C程序&quot;&gt;&lt;/a&gt;一个简单的C程序&lt;/h2&gt;&lt;p&gt;在接触C语言之前，大家或多或少会对C语言产生敬畏之心，认为它是一门很高深的语言，实则不然，且</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言教程_01：编译环境</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/10/06/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-01%EF%BC%9A%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</id>
+    <published>2022-10-06T11:59:16.000Z</published>
+    <updated>2023-09-24T15:50:08.197Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习C语言，一个好用的ide必不可少。<br>ide即集成开发环境，它将编辑、构建、测试和打包等功能结合到一起，相较于手动编译要方便不少。<br>目前各大高校在教学时大多采用的是VC++6.0作为编译环境，众所周知，这款ide由微软于1993年推出，其年龄相较于我而言也要大上10岁。<br>计算机学科本身就是一门走在时代前沿需要创新的学科，一款落后于时代的ide，即使它十分经典，在笔者看来，也是可以被优化的。</p><h2 id="Visual-Studio-2022"><a href="#Visual-Studio-2022" class="headerlink" title="Visual Studio 2022"></a>Visual Studio 2022</h2><p>本教程推荐Visual Studio 2022作为编译环境，其原因有以下几点，一是由于它够新，对于新手学习C语言而言其相对比较友好，一旦体验过&#96;Visual Studio 2022和其他ide，如上文所提及的VC++6.0，你就明显感觉到它的好用；二则是你可以在Visual Studio官网免费下载Visual Studio Community 2022。<br>你可以通过搜索引擎搜索Visual Studio 2022到官网下载，你也可以<a class="link" href="https://visualstudio.microsoft.com/zh-hans/vs/">点击此处<i class="fas fa-external-link-alt"></i></a>进行下载。</p><h3 id="Visual-Studio-2022使用教学"><a href="#Visual-Studio-2022使用教学" class="headerlink" title="Visual Studio 2022使用教学"></a>Visual Studio 2022使用教学</h3><p>关于Visual Studio 2022的使用教学，受限于文字形式，无法具体地和大家展开，这里推荐B站的一位up主，同时也是我C语言的启蒙老师：<a class="link" href="https://space.bilibili.com/19658621">Micro_Frank<i class="fas fa-external-link-alt"></i></a><br>你也可以在B站搜索由他创作的 vs2022(Visual Studio 2022)权威指南&amp;&amp;C语言&amp;&amp;软件工程开发的方向&amp;&amp;技巧要领<br>你可以<a class="link" href="https://www.bilibili.com/video/BV1Xt411g7jT/">点击此处<i class="fas fa-external-link-alt"></i></a>直接观看教程</p><h3 id="Visual-Studio-2022无法下载"><a href="#Visual-Studio-2022无法下载" class="headerlink" title="Visual Studio 2022无法下载"></a>Visual Studio 2022无法下载</h3><p>目前从官网下载Visual Studio 2022时可能会存在下载进度静止不动的问题，这里提供一种<a class="link" href="https://blog.csdn.net/weixin_66712181/article/details/122719473">解决方案<i class="fas fa-external-link-alt"></i></a></p><h2 id="Dev-C"><a href="#Dev-C" class="headerlink" title="Dev-C++"></a>Dev-C++</h2><p>此外你也可以选用Dev-C++作为你的编译环境，Dev-C++作为一款较为简单的ide，是许多比赛项目的指定的ide之一。出于此，本教程选用Dev作为编译环境。<br>同样你可以<a class="link" href="https://sourceforge.net/projects/orwelldevcpp/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="CLion"><a href="#CLion" class="headerlink" title="CLion"></a>CLion</h2><p>CLion作为JetBrains开发的一款ide，我们耳熟能详的PyCharm和IntelliJ同时也出自其旗下，官方正版的CLion并不免费，你可以<a class="link" href="https://www.jetbrains.com.cn/clion/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p><h2 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h2><p>VS Code作为微软公司开发的另一款ide，经调试可以支持多种语言，同时具有轻量化的优点，你可以<a class="link" href="https://code.visualstudio.com/">点击此处<i class="fas fa-external-link-alt"></i></a>下载。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;学习C语言，一个好用的ide必不可少。&lt;br&gt;ide即集成开发环境，它将编辑、构建、测试和打包等功能结合到一起，相较于手动编译要方便不少。&lt;</summary>
+      
+    
+    
+    
+    <category term="C语言教程" scheme="https://cloudstill.github.io/rapids.github.io/categories/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C语言" scheme="https://cloudstill.github.io/rapids.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="教程" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>来自云上的湍流</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2022/09/07/%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/</id>
+    <published>2022-09-07T02:13:09.000Z</published>
+    <updated>2022-12-15T11:36:57.171Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到本blog，很高兴在此与大家相识！<br><img lazyload alt="image" data-src="/./%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/test_01.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到本blog，很高兴在此与大家相识！&lt;br&gt;&lt;img lazyload alt=&quot;image&quot; data-src=&quot;/./%E6%9D%A5%E8%87%AA%E4%BA%91%E4%B8%8A%E7%9A%84%E6%B9%8D%E6%B5%81/test_01.j</summary>
+      
+    
+    
+    
+    <category term="杂项" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="杂项" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E6%9D%82%E9%A1%B9/"/>
     
   </entry>
   
