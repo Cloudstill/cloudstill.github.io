@@ -6,7 +6,7 @@
   <link href="https://cloudstill.github.io/rapids.github.io/atom.xml" rel="self"/>
   
   <link href="https://cloudstill.github.io/rapids.github.io/"/>
-  <updated>2023-12-06T17:32:07.435Z</updated>
+  <updated>2024-07-25T14:54:42.706Z</updated>
   <id>https://cloudstill.github.io/rapids.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024睿抗CAIP编程技能赛本科组省赛</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2024/07/25/2024%E7%9D%BF%E6%8A%97CAIP%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD%E8%B5%9B%E6%9C%AC%E7%A7%91%E7%BB%84%E7%9C%81%E8%B5%9B/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2024/07/25/2024%E7%9D%BF%E6%8A%97CAIP%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD%E8%B5%9B%E6%9C%AC%E7%A7%91%E7%BB%84%E7%9C%81%E8%B5%9B/</id>
+    <published>2024-07-25T14:52:11.000Z</published>
+    <updated>2024-07-25T14:54:42.706Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="RC-u1"><a href="#RC-u1" class="headerlink" title="RC-u1"></a>RC-u1</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给出$温度大于35度</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;RC-u1&quot;&gt;&lt;a href=&quot;#RC-u1&quot; class=&quot;headerlink&quot; title=&quot;RC-u1&quot;&gt;&lt;/a&gt;RC-u1&lt;/h2&gt;&lt;h3 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;</summary>
+      
+    
+    
+    
+    <category term="题解" scheme="https://cloudstill.github.io/rapids.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="睿抗" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E7%9D%BF%E6%8A%97/"/>
+    
+    <category term="IOI" scheme="https://cloudstill.github.io/rapids.github.io/tags/IOI/"/>
+    
+    <category term="题解" scheme="https://cloudstill.github.io/rapids.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023-2024ACM协会总结</title>
+    <link href="https://cloudstill.github.io/rapids.github.io/2024/07/24/2023-2024ACM%E5%8D%8F%E4%BC%9A%E6%80%BB%E7%BB%93/"/>
+    <id>https://cloudstill.github.io/rapids.github.io/2024/07/24/2023-2024ACM%E5%8D%8F%E4%BC%9A%E6%80%BB%E7%BB%93/</id>
+    <published>2024-07-24T10:03:11.000Z</published>
+    <updated>2024-07-24T10:03:11.691Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>基于油猴的一些wbu脚本</title>
